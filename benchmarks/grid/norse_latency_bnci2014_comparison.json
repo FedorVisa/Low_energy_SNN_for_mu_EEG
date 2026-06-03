@@ -1,0 +1,147 @@
+{
+  "run_name": "norse_latency_window_all9_e3",
+  "model": "NORSE_LATENCY_CONV_LIF_READOUT",
+  "result_mean": 25.154333333333334,
+  "result_std": 0.0,
+  "trial_means": [
+    25.154333333333334
+  ],
+  "records": [
+    {
+      "seed": 23,
+      "subject": 1,
+      "accuracy": 23.2639,
+      "test_loss": 1.4314332723617553
+    },
+    {
+      "seed": 23,
+      "subject": 2,
+      "accuracy": 25.0,
+      "test_loss": 2.9539653301239013
+    },
+    {
+      "seed": 23,
+      "subject": 3,
+      "accuracy": 26.0417,
+      "test_loss": 1.6088725566864013
+    },
+    {
+      "seed": 23,
+      "subject": 4,
+      "accuracy": 24.3056,
+      "test_loss": 1.7860694885253907
+    },
+    {
+      "seed": 23,
+      "subject": 5,
+      "accuracy": 25.0,
+      "test_loss": 1.7669689893722533
+    },
+    {
+      "seed": 23,
+      "subject": 6,
+      "accuracy": 27.0833,
+      "test_loss": 2.3467596054077147
+    },
+    {
+      "seed": 23,
+      "subject": 7,
+      "accuracy": 24.6528,
+      "test_loss": 1.4894479274749757
+    },
+    {
+      "seed": 23,
+      "subject": 8,
+      "accuracy": 26.0417,
+      "test_loss": 2.869479513168335
+    },
+    {
+      "seed": 23,
+      "subject": 9,
+      "accuracy": 25.0,
+      "test_loss": 2.308622646331787
+    }
+  ],
+  "params": {
+    "dataset": 0,
+    "prep": "250Hz_preprocess_eeg",
+    "device": 0,
+    "seed": 23,
+    "trial_num": 1,
+    "subject_id": 0,
+    "trial_time_step": 1000,
+    "segment_len": 250,
+    "batch_size": 64,
+    "epoch": 3,
+    "epoch2": 1,
+    "patience": 3,
+    "lr": 0.003,
+    "lr2": 0.0001,
+    "optimizer": "adamw",
+    "weight_decay": 0.0001,
+    "scheduler": "cosine",
+    "beta": 2.0,
+    "latency_topk": 16,
+    "latency_window": 10,
+    "lif_v_threshold": 0.5,
+    "readout_v_threshold": 0.2,
+    "lif_input_scale": 2.5,
+    "readout_input_scale": 2.5,
+    "tau_mem_ms": 20.0,
+    "tau_syn_ms": 5.0,
+    "dropout": 0.05,
+    "augment_train": false,
+    "aug_copies": 1,
+    "aug_reverse_prob": 0.0,
+    "aug_gaussian_std_min": 0.005,
+    "aug_gaussian_std_max": 0.02,
+    "aug_scale_min": 0.95,
+    "aug_scale_max": 1.05,
+    "aug_shift_max": 5,
+    "zscore": true,
+    "loo": false,
+    "EA": false,
+    "run_name": "norse_latency_window_all9_e3",
+    "log_dir": "logs\\training\\norse_latency_snn",
+    "out_json": "benchmarks\\grid\\norse_latency_bnci2014_comparison.json",
+    "skip_power": false,
+    "power_batch_size": 128,
+    "power_warmup": 3,
+    "power_repeat": 10,
+    "power_min_seconds": 3.0,
+    "power_sample_interval": 0.1
+  },
+  "cupy_lif_readout_reference": {
+    "source": "benchmarks\\grid\\big_snn_experiments_seed23.json",
+    "run_name": "max_lif_readout_seed23_adamw_lr3e3",
+    "mean_accuracy_percent": 68.17666666666666,
+    "std_percent": 0.8672284504011493
+  },
+  "cupy_lif_readout_energy_reference": {
+    "source": "benchmarks\\model_efficiency\\bnci2014_001_params_power_metrics.csv",
+    "parameters": 2609,
+    "peak_power_w": 136.65,
+    "mean_power_w": 120.56461538461538,
+    "net_peak_power_w": 45.994000000000014,
+    "elapsed_ms_per_batch": 1.4880814325241816,
+    "accuracy_percent_in_file": 65.635694
+  },
+  "norse_energy": {
+    "parameters": 1552,
+    "batch_size": 128,
+    "idle_power_w": 24.73,
+    "peak_power_w": 44.32,
+    "mean_power_w": 40.318518518518516,
+    "net_peak_power_w": 19.59,
+    "elapsed_ms_total": 3882.732421875,
+    "elapsed_ms_per_batch": 97.068310546875,
+    "iterations": 40,
+    "power_samples": 27
+  },
+  "comparison": {
+    "accuracy_delta_points_vs_best_cupy": -43.02233333333333,
+    "norse_peak_power_delta_w_vs_cupy": -92.33000000000001,
+    "norse_batch_latency_delta_ms_vs_cupy": 95.58022911435081,
+    "norse_params_delta_vs_cupy": -1057
+  }
+}

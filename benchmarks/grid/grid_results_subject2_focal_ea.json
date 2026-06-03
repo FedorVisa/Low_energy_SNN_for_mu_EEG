@@ -1,0 +1,40 @@
+{
+  "dataset": 0,
+  "model": "CUPY_SNN_LIF_READOUT",
+  "epoch": 1500,
+  "epoch2": 600,
+  "batch_size": 128,
+  "trial_num": 1,
+  "seed": 2023,
+  "subjects": [
+    2
+  ],
+  "variants": [
+    "aug_focal_g1",
+    "aug_focal_g15",
+    "aug_focal_g25"
+  ],
+  "runs": [
+    {
+      "subject": 2,
+      "variant": "aug_focal_g1",
+      "return_code": 0,
+      "accuracy": 0.4826,
+      "log_path": "benchmarks\\grid\\logs_subject2_focal_ea\\subject2_aug_focal_g1_20260504_180849.log"
+    },
+    {
+      "subject": 2,
+      "variant": "aug_focal_g15",
+      "return_code": 0,
+      "accuracy": 0.4965,
+      "log_path": "benchmarks\\grid\\logs_subject2_focal_ea\\subject2_aug_focal_g15_20260504_180920.log"
+    },
+    {
+      "subject": 2,
+      "variant": "aug_focal_g25",
+      "return_code": 0,
+      "accuracy": 0.4861,
+      "log_path": "benchmarks\\grid\\logs_subject2_focal_ea\\subject2_aug_focal_g25_20260504_180949.log"
+    }
+  ]
+}

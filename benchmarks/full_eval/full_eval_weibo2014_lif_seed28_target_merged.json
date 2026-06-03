@@ -1,0 +1,700 @@
+{
+  "dataset": 2,
+  "dataset_name": "Weibo2014",
+  "selection_json": "benchmarks\\grid\\subject_tuning_lif_weibo2014_seed28_target_merged.json",
+  "subjects": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "total_samples": 2370,
+  "overall_accuracy": 0.5556962025316455,
+  "balanced_accuracy": 0.5556962025316455,
+  "macro_f1": 0.5545904086871231,
+  "weighted_f1": 0.5545904086871231,
+  "per_class": [
+    {
+      "class": 0,
+      "precision": 0.5445026178010471,
+      "recall": 0.5265822784810127,
+      "f1": 0.5353925353925354,
+      "support": 395
+    },
+    {
+      "class": 1,
+      "precision": 0.5124153498871332,
+      "recall": 0.5746835443037974,
+      "f1": 0.5417661097852028,
+      "support": 395
+    },
+    {
+      "class": 2,
+      "precision": 0.6246246246246246,
+      "recall": 0.5265822784810127,
+      "f1": 0.5714285714285714,
+      "support": 395
+    },
+    {
+      "class": 3,
+      "precision": 0.5594989561586639,
+      "recall": 0.6784810126582278,
+      "f1": 0.6132723112128146,
+      "support": 395
+    },
+    {
+      "class": 4,
+      "precision": 0.5489690721649485,
+      "recall": 0.5392405063291139,
+      "f1": 0.5440613026819924,
+      "support": 395
+    },
+    {
+      "class": 5,
+      "precision": 0.5594202898550724,
+      "recall": 0.48860759493670886,
+      "f1": 0.5216216216216216,
+      "support": 395
+    }
+  ],
+  "per_subject": [
+    {
+      "subject": 1,
+      "samples": 240,
+      "accuracy": 0.5541666666666667,
+      "variant": "short_lr3e3_stage2",
+      "source_log_path": "logs\\training\\subject_tuning_weibo2014\\weibo_subjtune_lif_seed28_s1_short_lr3e3_stage2_20260519_123327.log",
+      "checkpoint": "D:\\try\\SnnForMI\\data\\Weibo2014\\250Hz_preprocess_eeg\\CUPY_SNN_LIF_READOUT_weibo_subjtune_lif_seed28_s1_short_lr3e3_stage2_id1_seed28.pth"
+    },
+    {
+      "subject": 2,
+      "samples": 240,
+      "accuracy": 0.4875,
+      "variant": "short_lr3e3_stage2",
+      "source_log_path": "logs\\training\\subject_tuning_weibo2014\\weibo_subjtune_lif_seed28_s2_short_lr3e3_stage2_20260519_123425.log",
+      "checkpoint": "D:\\try\\SnnForMI\\data\\Weibo2014\\250Hz_preprocess_eeg\\CUPY_SNN_LIF_READOUT_weibo_subjtune_lif_seed28_s2_short_lr3e3_stage2_id2_seed28.pth"
+    },
+    {
+      "subject": 3,
+      "samples": 240,
+      "accuracy": 0.4166666666666667,
+      "variant": "weak_lr1e3_light_aug",
+      "source_log_path": "logs\\training\\subject_tuning_weibo2014_weak\\weibo_subjtune_lif_seed28_weak_s3_weak_lr1e3_light_aug_20260519_125433.log",
+      "checkpoint": "D:\\try\\SnnForMI\\data\\Weibo2014\\250Hz_preprocess_eeg\\CUPY_SNN_LIF_READOUT_weibo_subjtune_lif_seed28_weak_s3_weak_lr1e3_light_aug_id3_seed28.pth"
+    },
+    {
+      "subject": 4,
+      "samples": 240,
+      "accuracy": 0.5541666666666667,
+      "variant": "global_seed28",
+      "source_log_path": "global_seed28_subject_4",
+      "checkpoint": "D:\\try\\SnnForMI\\data\\Weibo2014\\250Hz_preprocess_eeg\\CUPY_SNN_LIF_READOUT_max_lif_readout_seed23_adamw_lr3e3_id4_seed28.pth"
+    },
+    {
+      "subject": 5,
+      "samples": 240,
+      "accuracy": 0.4125,
+      "variant": "weak_lr1e3_stage2",
+      "source_log_path": "logs\\training\\subject_tuning_weibo2014_weak\\weibo_subjtune_lif_seed28_weak_s5_weak_lr1e3_stage2_20260519_125536.log",
+      "checkpoint": "D:\\try\\SnnForMI\\data\\Weibo2014\\250Hz_preprocess_eeg\\CUPY_SNN_LIF_READOUT_weibo_subjtune_lif_seed28_weak_s5_weak_lr1e3_stage2_id5_seed28.pth"
+    },
+    {
+      "subject": 6,
+      "samples": 210,
+      "accuracy": 0.6,
+      "variant": "global_seed28",
+      "source_log_path": "global_seed28_subject_6",
+      "checkpoint": "D:\\try\\SnnForMI\\data\\Weibo2014\\250Hz_preprocess_eeg\\CUPY_SNN_LIF_READOUT_max_lif_readout_seed23_adamw_lr3e3_id6_seed28.pth"
+    },
+    {
+      "subject": 7,
+      "samples": 240,
+      "accuracy": 0.42083333333333334,
+      "variant": "weak_lr2e3_trainstat",
+      "source_log_path": "logs\\training\\subject_tuning_weibo2014_weak\\weibo_subjtune_lif_seed28_weak_s7_weak_lr2e3_trainstat_20260519_130109.log",
+      "checkpoint": "D:\\try\\SnnForMI\\data\\Weibo2014\\250Hz_preprocess_eeg\\CUPY_SNN_LIF_READOUT_weibo_subjtune_lif_seed28_weak_s7_weak_lr2e3_trainstat_id7_seed28.pth"
+    },
+    {
+      "subject": 8,
+      "samples": 240,
+      "accuracy": 0.7791666666666667,
+      "variant": "short_lr2e3_light_aug",
+      "source_log_path": "logs\\training\\subject_tuning_weibo2014\\weibo_subjtune_lif_seed28_s8_short_lr2e3_light_aug_20260519_123954.log",
+      "checkpoint": "D:\\try\\SnnForMI\\data\\Weibo2014\\250Hz_preprocess_eeg\\CUPY_SNN_LIF_READOUT_weibo_subjtune_lif_seed28_s8_short_lr2e3_light_aug_id8_seed28.pth"
+    },
+    {
+      "subject": 9,
+      "samples": 240,
+      "accuracy": 0.7916666666666666,
+      "variant": "global_seed28",
+      "source_log_path": "global_seed28_subject_9",
+      "checkpoint": "D:\\try\\SnnForMI\\data\\Weibo2014\\250Hz_preprocess_eeg\\CUPY_SNN_LIF_READOUT_max_lif_readout_seed23_adamw_lr3e3_id9_seed28.pth"
+    },
+    {
+      "subject": 10,
+      "samples": 240,
+      "accuracy": 0.5458333333333333,
+      "variant": "short_lr2e3_light_aug",
+      "source_log_path": "logs\\training\\subject_tuning_weibo2014\\weibo_subjtune_lif_seed28_s10_short_lr2e3_light_aug_20260519_124159.log",
+      "checkpoint": "D:\\try\\SnnForMI\\data\\Weibo2014\\250Hz_preprocess_eeg\\CUPY_SNN_LIF_READOUT_weibo_subjtune_lif_seed28_s10_short_lr2e3_light_aug_id10_seed28.pth"
+    }
+  ],
+  "confusion_matrix": [
+    [
+      208,
+      58,
+      32,
+      40,
+      49,
+      8
+    ],
+    [
+      45,
+      227,
+      19,
+      33,
+      13,
+      58
+    ],
+    [
+      29,
+      38,
+      208,
+      64,
+      24,
+      32
+    ],
+    [
+      21,
+      38,
+      34,
+      268,
+      14,
+      20
+    ],
+    [
+      60,
+      27,
+      21,
+      40,
+      213,
+      34
+    ],
+    [
+      19,
+      55,
+      19,
+      34,
+      75,
+      193
+    ]
+  ],
+  "subject_confusions": {
+    "1": [
+      [
+        24,
+        6,
+        6,
+        0,
+        3,
+        1
+      ],
+      [
+        6,
+        26,
+        4,
+        0,
+        3,
+        1
+      ],
+      [
+        7,
+        7,
+        22,
+        0,
+        2,
+        2
+      ],
+      [
+        2,
+        6,
+        0,
+        30,
+        1,
+        1
+      ],
+      [
+        3,
+        5,
+        2,
+        0,
+        22,
+        8
+      ],
+      [
+        4,
+        4,
+        1,
+        1,
+        21,
+        9
+      ]
+    ],
+    "2": [
+      [
+        23,
+        8,
+        3,
+        1,
+        5,
+        0
+      ],
+      [
+        1,
+        37,
+        0,
+        0,
+        1,
+        1
+      ],
+      [
+        2,
+        14,
+        16,
+        0,
+        3,
+        5
+      ],
+      [
+        4,
+        20,
+        4,
+        6,
+        5,
+        1
+      ],
+      [
+        6,
+        8,
+        2,
+        1,
+        23,
+        0
+      ],
+      [
+        3,
+        11,
+        1,
+        2,
+        11,
+        12
+      ]
+    ],
+    "3": [
+      [
+        9,
+        7,
+        5,
+        2,
+        15,
+        2
+      ],
+      [
+        11,
+        15,
+        3,
+        2,
+        9,
+        0
+      ],
+      [
+        9,
+        6,
+        12,
+        5,
+        6,
+        2
+      ],
+      [
+        1,
+        1,
+        1,
+        34,
+        3,
+        0
+      ],
+      [
+        2,
+        6,
+        2,
+        3,
+        25,
+        2
+      ],
+      [
+        3,
+        4,
+        1,
+        4,
+        23,
+        5
+      ]
+    ],
+    "4": [
+      [
+        18,
+        15,
+        4,
+        0,
+        1,
+        2
+      ],
+      [
+        16,
+        19,
+        2,
+        1,
+        0,
+        2
+      ],
+      [
+        0,
+        1,
+        29,
+        10,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        8,
+        30,
+        0,
+        2
+      ],
+      [
+        5,
+        4,
+        3,
+        0,
+        23,
+        5
+      ],
+      [
+        5,
+        7,
+        6,
+        1,
+        7,
+        14
+      ]
+    ],
+    "5": [
+      [
+        17,
+        1,
+        0,
+        20,
+        2,
+        0
+      ],
+      [
+        1,
+        8,
+        0,
+        22,
+        0,
+        9
+      ],
+      [
+        1,
+        2,
+        3,
+        24,
+        7,
+        3
+      ],
+      [
+        0,
+        0,
+        0,
+        40,
+        0,
+        0
+      ],
+      [
+        4,
+        0,
+        0,
+        24,
+        11,
+        1
+      ],
+      [
+        0,
+        6,
+        0,
+        13,
+        1,
+        20
+      ]
+    ],
+    "6": [
+      [
+        22,
+        1,
+        11,
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        26,
+        7,
+        1,
+        0,
+        0
+      ],
+      [
+        5,
+        4,
+        19,
+        7,
+        0,
+        0
+      ],
+      [
+        5,
+        5,
+        1,
+        23,
+        0,
+        1
+      ],
+      [
+        5,
+        0,
+        5,
+        3,
+        21,
+        1
+      ],
+      [
+        3,
+        5,
+        5,
+        3,
+        4,
+        15
+      ]
+    ],
+    "7": [
+      [
+        9,
+        0,
+        1,
+        10,
+        18,
+        2
+      ],
+      [
+        0,
+        2,
+        2,
+        3,
+        0,
+        33
+      ],
+      [
+        1,
+        1,
+        8,
+        11,
+        3,
+        16
+      ],
+      [
+        0,
+        0,
+        2,
+        29,
+        1,
+        8
+      ],
+      [
+        10,
+        0,
+        2,
+        5,
+        23,
+        0
+      ],
+      [
+        0,
+        1,
+        3,
+        6,
+        0,
+        30
+      ]
+    ],
+    "8": [
+      [
+        39,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        37,
+        0,
+        0,
+        0,
+        3
+      ],
+      [
+        0,
+        0,
+        35,
+        1,
+        3,
+        1
+      ],
+      [
+        1,
+        0,
+        6,
+        31,
+        0,
+        2
+      ],
+      [
+        22,
+        0,
+        0,
+        0,
+        18,
+        0
+      ],
+      [
+        0,
+        12,
+        0,
+        1,
+        0,
+        27
+      ]
+    ],
+    "9": [
+      [
+        28,
+        7,
+        0,
+        1,
+        3,
+        1
+      ],
+      [
+        3,
+        32,
+        0,
+        0,
+        0,
+        5
+      ],
+      [
+        0,
+        2,
+        30,
+        6,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        10,
+        29,
+        0,
+        1
+      ],
+      [
+        1,
+        0,
+        1,
+        0,
+        34,
+        4
+      ],
+      [
+        0,
+        3,
+        0,
+        0,
+        0,
+        37
+      ]
+    ],
+    "10": [
+      [
+        19,
+        13,
+        2,
+        5,
+        1,
+        0
+      ],
+      [
+        6,
+        25,
+        1,
+        4,
+        0,
+        4
+      ],
+      [
+        4,
+        1,
+        34,
+        0,
+        0,
+        1
+      ],
+      [
+        8,
+        6,
+        2,
+        16,
+        4,
+        4
+      ],
+      [
+        2,
+        4,
+        4,
+        4,
+        13,
+        13
+      ],
+      [
+        1,
+        2,
+        2,
+        3,
+        8,
+        24
+      ]
+    ]
+  }
+}

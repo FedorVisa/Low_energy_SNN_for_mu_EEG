@@ -1,0 +1,88 @@
+{
+  "dataset": 0,
+  "model": "CUPY_SNN_LIF_READOUT",
+  "epoch": 1500,
+  "epoch2": 600,
+  "batch_size": 128,
+  "trial_num": 1,
+  "seed": 23,
+  "subjects": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "variants": [
+    "best_seed23"
+  ],
+  "runs": [
+    {
+      "subject": 1,
+      "variant": "best_seed23",
+      "return_code": 0,
+      "accuracy": 0.8194,
+      "log_path": "benchmarks\\grid\\logs_best_seed23\\subject1_best_seed23_20260504_190935.log"
+    },
+    {
+      "subject": 2,
+      "variant": "best_seed23",
+      "return_code": 0,
+      "accuracy": 0.5,
+      "log_path": "benchmarks\\grid\\logs_best_seed23\\subject2_best_seed23_20260504_191014.log"
+    },
+    {
+      "subject": 3,
+      "variant": "best_seed23",
+      "return_code": 0,
+      "accuracy": 0.8125,
+      "log_path": "benchmarks\\grid\\logs_best_seed23\\subject3_best_seed23_20260504_191048.log"
+    },
+    {
+      "subject": 4,
+      "variant": "best_seed23",
+      "return_code": 0,
+      "accuracy": 0.6042,
+      "log_path": "benchmarks\\grid\\logs_best_seed23\\subject4_best_seed23_20260504_191119.log"
+    },
+    {
+      "subject": 5,
+      "variant": "best_seed23",
+      "return_code": 0,
+      "accuracy": 0.5382,
+      "log_path": "benchmarks\\grid\\logs_best_seed23\\subject5_best_seed23_20260504_191203.log"
+    },
+    {
+      "subject": 6,
+      "variant": "best_seed23",
+      "return_code": 0,
+      "accuracy": 0.4688,
+      "log_path": "benchmarks\\grid\\logs_best_seed23\\subject6_best_seed23_20260504_191235.log"
+    },
+    {
+      "subject": 7,
+      "variant": "best_seed23",
+      "return_code": 0,
+      "accuracy": 0.6979,
+      "log_path": "benchmarks\\grid\\logs_best_seed23\\subject7_best_seed23_20260504_191309.log"
+    },
+    {
+      "subject": 8,
+      "variant": "best_seed23",
+      "return_code": 0,
+      "accuracy": 0.7743,
+      "log_path": "benchmarks\\grid\\logs_best_seed23\\subject8_best_seed23_20260504_191345.log"
+    },
+    {
+      "subject": 9,
+      "variant": "best_seed23",
+      "return_code": 0,
+      "accuracy": 0.8403,
+      "log_path": "benchmarks\\grid\\logs_best_seed23\\subject9_best_seed23_20260504_191419.log"
+    }
+  ]
+}

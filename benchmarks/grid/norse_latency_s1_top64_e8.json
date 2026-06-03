@@ -1,0 +1,84 @@
+{
+  "run_name": "norse_latency_s1_top64_e8",
+  "model": "NORSE_LATENCY_CONV_LIF_READOUT",
+  "result_mean": 20.4861,
+  "result_std": 0.0,
+  "trial_means": [
+    20.4861
+  ],
+  "records": [
+    {
+      "seed": 23,
+      "subject": 1,
+      "accuracy": 20.4861,
+      "test_loss": 1.8414403200149536
+    }
+  ],
+  "params": {
+    "dataset": 0,
+    "prep": "250Hz_preprocess_eeg",
+    "device": 0,
+    "seed": 23,
+    "trial_num": 1,
+    "subject_id": 1,
+    "trial_time_step": 1000,
+    "segment_len": 250,
+    "batch_size": 32,
+    "epoch": 8,
+    "epoch2": 2,
+    "patience": 4,
+    "lr": 0.003,
+    "lr2": 0.0001,
+    "optimizer": "adamw",
+    "weight_decay": 0.0001,
+    "scheduler": "cosine",
+    "beta": 2.0,
+    "latency_topk": 64,
+    "lif_v_threshold": 0.5,
+    "readout_v_threshold": 0.1,
+    "lif_input_scale": 2.5,
+    "readout_input_scale": 2.5,
+    "tau_mem_ms": 20.0,
+    "tau_syn_ms": 5.0,
+    "dropout": 0.05,
+    "augment_train": true,
+    "aug_copies": 1,
+    "aug_reverse_prob": 0.0,
+    "aug_gaussian_std_min": 0.005,
+    "aug_gaussian_std_max": 0.02,
+    "aug_scale_min": 0.95,
+    "aug_scale_max": 1.05,
+    "aug_shift_max": 5,
+    "zscore": false,
+    "loo": false,
+    "EA": false,
+    "run_name": "norse_latency_s1_top64_e8",
+    "log_dir": "logs\\training\\norse_latency_snn",
+    "out_json": "benchmarks\\grid\\norse_latency_s1_top64_e8.json",
+    "skip_power": true,
+    "power_batch_size": 128,
+    "power_warmup": 5,
+    "power_repeat": 20,
+    "power_min_seconds": 5.0,
+    "power_sample_interval": 0.1
+  },
+  "cupy_lif_readout_reference": {
+    "source": "benchmarks\\grid\\big_snn_experiments_seed23.json",
+    "run_name": "max_lif_readout_seed23_adamw_lr3e3",
+    "mean_accuracy_percent": 68.17666666666666,
+    "std_percent": 0.8672284504011493
+  },
+  "cupy_lif_readout_energy_reference": {
+    "source": "benchmarks\\model_efficiency\\bnci2014_001_params_power_metrics.csv",
+    "parameters": 2609,
+    "peak_power_w": 136.65,
+    "mean_power_w": 120.56461538461538,
+    "net_peak_power_w": 45.994000000000014,
+    "elapsed_ms_per_batch": 1.4880814325241816,
+    "accuracy_percent_in_file": 65.635694
+  },
+  "norse_energy": null,
+  "comparison": {
+    "accuracy_delta_points_vs_best_cupy": -47.69056666666666
+  }
+}

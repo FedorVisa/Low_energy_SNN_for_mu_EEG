@@ -1,0 +1,390 @@
+{
+  "dataset": 0,
+  "dataset_name": "BNCI2014001",
+  "model": "CUPY_SNN_SPIKING_CONV_LIF_READOUT",
+  "run_name": "spiking_conv_thr02_scale20_lif03_in30_do00_e10",
+  "seed": 23,
+  "subjects": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "checkpoint_pattern": "CUPY_SNN_SPIKING_CONV_LIF_READOUT_spiking_conv_thr02_scale20_lif03_in30_do00_e10_id{subject}_seed23.pth",
+  "total_samples": 2592,
+  "overall_accuracy": 0.4382716049382716,
+  "balanced_accuracy": 0.4382716049382716,
+  "macro_f1": 0.4328554392458173,
+  "weighted_f1": 0.43285543924581726,
+  "per_class": [
+    {
+      "class": 0,
+      "precision": 0.49913344887348354,
+      "recall": 0.4444444444444444,
+      "f1": 0.47020408163265304,
+      "support": 648
+    },
+    {
+      "class": 1,
+      "precision": 0.43015214384508993,
+      "recall": 0.4799382716049383,
+      "f1": 0.4536834427425237,
+      "support": 648
+    },
+    {
+      "class": 2,
+      "precision": 0.44254278728606355,
+      "recall": 0.279320987654321,
+      "f1": 0.3424787133396405,
+      "support": 648
+    },
+    {
+      "class": 3,
+      "precision": 0.4031710079275198,
+      "recall": 0.5493827160493827,
+      "f1": 0.465055519268452,
+      "support": 648
+    }
+  ],
+  "per_subject": [
+    {
+      "subject": 1,
+      "samples": 288,
+      "accuracy": 0.5243055555555556
+    },
+    {
+      "subject": 2,
+      "samples": 288,
+      "accuracy": 0.23958333333333334
+    },
+    {
+      "subject": 3,
+      "samples": 288,
+      "accuracy": 0.59375
+    },
+    {
+      "subject": 4,
+      "samples": 288,
+      "accuracy": 0.4027777777777778
+    },
+    {
+      "subject": 5,
+      "samples": 288,
+      "accuracy": 0.3125
+    },
+    {
+      "subject": 6,
+      "samples": 288,
+      "accuracy": 0.3506944444444444
+    },
+    {
+      "subject": 7,
+      "samples": 288,
+      "accuracy": 0.3506944444444444
+    },
+    {
+      "subject": 8,
+      "samples": 288,
+      "accuracy": 0.6111111111111112
+    },
+    {
+      "subject": 9,
+      "samples": 288,
+      "accuracy": 0.5590277777777778
+    }
+  ],
+  "confusion_matrix": [
+    [
+      288,
+      180,
+      63,
+      117
+    ],
+    [
+      121,
+      311,
+      69,
+      147
+    ],
+    [
+      95,
+      109,
+      181,
+      263
+    ],
+    [
+      73,
+      123,
+      96,
+      356
+    ]
+  ],
+  "subject_confusions": {
+    "1": [
+      [
+        13,
+        42,
+        4,
+        13
+      ],
+      [
+        1,
+        68,
+        2,
+        1
+      ],
+      [
+        2,
+        2,
+        33,
+        35
+      ],
+      [
+        0,
+        0,
+        35,
+        37
+      ]
+    ],
+    "2": [
+      [
+        13,
+        51,
+        4,
+        4
+      ],
+      [
+        17,
+        50,
+        2,
+        3
+      ],
+      [
+        6,
+        57,
+        3,
+        6
+      ],
+      [
+        7,
+        60,
+        2,
+        3
+      ]
+    ],
+    "3": [
+      [
+        44,
+        15,
+        1,
+        12
+      ],
+      [
+        1,
+        61,
+        0,
+        10
+      ],
+      [
+        9,
+        14,
+        2,
+        47
+      ],
+      [
+        2,
+        5,
+        1,
+        64
+      ]
+    ],
+    "4": [
+      [
+        25,
+        28,
+        9,
+        10
+      ],
+      [
+        21,
+        32,
+        11,
+        8
+      ],
+      [
+        3,
+        6,
+        26,
+        37
+      ],
+      [
+        2,
+        10,
+        27,
+        33
+      ]
+    ],
+    "5": [
+      [
+        45,
+        5,
+        4,
+        18
+      ],
+      [
+        43,
+        5,
+        7,
+        17
+      ],
+      [
+        35,
+        4,
+        7,
+        26
+      ],
+      [
+        30,
+        6,
+        3,
+        33
+      ]
+    ],
+    "6": [
+      [
+        32,
+        19,
+        10,
+        11
+      ],
+      [
+        24,
+        19,
+        22,
+        7
+      ],
+      [
+        11,
+        16,
+        37,
+        8
+      ],
+      [
+        18,
+        26,
+        15,
+        13
+      ]
+    ],
+    "7": [
+      [
+        2,
+        11,
+        13,
+        46
+      ],
+      [
+        4,
+        11,
+        4,
+        53
+      ],
+      [
+        1,
+        2,
+        20,
+        49
+      ],
+      [
+        1,
+        1,
+        2,
+        68
+      ]
+    ],
+    "8": [
+      [
+        52,
+        2,
+        17,
+        1
+      ],
+      [
+        0,
+        50,
+        17,
+        5
+      ],
+      [
+        15,
+        7,
+        39,
+        11
+      ],
+      [
+        11,
+        15,
+        11,
+        35
+      ]
+    ],
+    "9": [
+      [
+        62,
+        7,
+        1,
+        2
+      ],
+      [
+        10,
+        15,
+        4,
+        43
+      ],
+      [
+        13,
+        1,
+        14,
+        44
+      ],
+      [
+        2,
+        0,
+        0,
+        70
+      ]
+    ]
+  },
+  "params": {
+    "dataset": 0,
+    "model": "CUPY_SNN_SPIKING_CONV_LIF_READOUT",
+    "run_name": "spiking_conv_thr02_scale20_lif03_in30_do00_e10",
+    "seed": 23,
+    "subject_id": 0,
+    "batch_size": 32,
+    "T": 1000,
+    "prep": "250Hz_preprocess_eeg/",
+    "device": 0,
+    "cpu": false,
+    "beta": 2,
+    "loo": false,
+    "EA": false,
+    "readout_v_threshold": 0.2,
+    "readout_adapt_scale": 0.02,
+    "readout_tau_adp_scale": 6.0,
+    "readout_input_scale": 2.5,
+    "encoder_threshold": 0.2,
+    "encoder_scale": 2.0,
+    "hidden_layers": 2,
+    "dropout": 0.0,
+    "lif_v_threshold": 0.3,
+    "lif_input_scale": 3.0,
+    "out_json": "benchmarks\\full_eval\\full_eval_spiking_conv_thr02_scale20_lif03_in30_do00_e10_seed23.json",
+    "device_name": "cuda:0"
+  }
+}

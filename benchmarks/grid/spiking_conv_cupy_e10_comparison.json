@@ -1,0 +1,54 @@
+{
+  "environment": {
+    "python": "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+    "torch": "2.11.0+cu128",
+    "cupy": "14.0.1",
+    "gpu": "NVIDIA GeForce RTX 5070",
+    "norse": "1.1.0",
+    "note": "small_snn_rtx has torch+cupy+norse and is the selected environment for SNN experiments on RTX 5070. norse is not required for these CUPY runs, but is installed for follow-up Norse experiments."
+  },
+  "protocol": {
+    "dataset": "BNCI2014001",
+    "prep": "250Hz_preprocess_eeg/",
+    "seed": 23,
+    "trial_num": 1,
+    "subjects": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "epoch": 10,
+    "epoch2": 3,
+    "patience": 5,
+    "batch_size": 32,
+    "lr": 0.003,
+    "lr2": 0.0001,
+    "optimizer": "adamw",
+    "weight_decay": 0.0001,
+    "scheduler": "cosine",
+    "augment_train": true,
+    "aug_reverse_prob": 0.0
+  },
+  "models": {
+    "CUPY_SNN_LIF_READOUT": {
+      "run_name": "lif_readout_all9_e10_b32_seed23",
+      "parameters": 2609,
+      "per_subject_accuracy_percent": [65.62, 41.67, 64.58, 51.39, 29.51, 44.44, 44.44, 73.26, 66.32],
+      "mean_accuracy_percent": 53.47,
+      "latency_ms_per_batch_128": 1.554,
+      "latency_ms_per_sample": 0.0121,
+      "throughput_samples_per_s": 82384.37
+    },
+    "CUPY_SNN_SPIKING_CONV_LIF_READOUT": {
+      "run_name": "spiking_conv_all9_e10_b32_seed23",
+      "parameters": 3709,
+      "per_subject_accuracy_percent": [53.82, 26.04, 59.03, 47.92, 27.78, 41.67, 46.18, 63.54, 63.54],
+      "mean_accuracy_percent": 47.7244,
+      "latency_ms_per_batch_128": 2.871,
+      "latency_ms_per_sample": 0.0224,
+      "throughput_samples_per_s": 44576.49
+    }
+  },
+  "comparison": {
+    "spiking_conv_minus_lif_readout_accuracy_points": -5.7456,
+    "spiking_conv_latency_ratio_vs_lif_readout": 1.8475,
+    "spiking_conv_parameter_delta_vs_lif_readout": 1100,
+    "best_known_lif_readout_long_run_accuracy_percent": 68.1767
+  }
+}

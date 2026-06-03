@@ -1,0 +1,84 @@
+{
+  "dataset": 0,
+  "model": "CUPY_SNN_LIF_READOUT",
+  "epoch": 1500,
+  "epoch2": 600,
+  "batch_size": 128,
+  "trial_num": 1,
+  "seed": 23,
+  "subjects": [
+    2,
+    5,
+    6
+  ],
+  "variants": [
+    "aug_focal",
+    "aug_label_smooth_005",
+    "aug_label_smooth_010"
+  ],
+  "runs": [
+    {
+      "subject": 2,
+      "variant": "aug_focal",
+      "return_code": 0,
+      "accuracy": 0.4826,
+      "log_path": "benchmarks\\grid\\logs_seed23_weak_loss\\subject2_aug_focal_20260504_185716.log"
+    },
+    {
+      "subject": 2,
+      "variant": "aug_label_smooth_005",
+      "return_code": 0,
+      "accuracy": 0.5,
+      "log_path": "benchmarks\\grid\\logs_seed23_weak_loss\\subject2_aug_label_smooth_005_20260504_185744.log"
+    },
+    {
+      "subject": 2,
+      "variant": "aug_label_smooth_010",
+      "return_code": 0,
+      "accuracy": 0.4896,
+      "log_path": "benchmarks\\grid\\logs_seed23_weak_loss\\subject2_aug_label_smooth_010_20260504_185815.log"
+    },
+    {
+      "subject": 5,
+      "variant": "aug_focal",
+      "return_code": 0,
+      "accuracy": 0.5243,
+      "log_path": "benchmarks\\grid\\logs_seed23_weak_loss\\subject5_aug_focal_20260504_185844.log"
+    },
+    {
+      "subject": 5,
+      "variant": "aug_label_smooth_005",
+      "return_code": 0,
+      "accuracy": 0.5347,
+      "log_path": "benchmarks\\grid\\logs_seed23_weak_loss\\subject5_aug_label_smooth_005_20260504_185911.log"
+    },
+    {
+      "subject": 5,
+      "variant": "aug_label_smooth_010",
+      "return_code": 0,
+      "accuracy": 0.5174,
+      "log_path": "benchmarks\\grid\\logs_seed23_weak_loss\\subject5_aug_label_smooth_010_20260504_185937.log"
+    },
+    {
+      "subject": 6,
+      "variant": "aug_focal",
+      "return_code": 0,
+      "accuracy": 0.5312,
+      "log_path": "benchmarks\\grid\\logs_seed23_weak_loss\\subject6_aug_focal_20260504_190003.log"
+    },
+    {
+      "subject": 6,
+      "variant": "aug_label_smooth_005",
+      "return_code": 0,
+      "accuracy": 0.4896,
+      "log_path": "benchmarks\\grid\\logs_seed23_weak_loss\\subject6_aug_label_smooth_005_20260504_190034.log"
+    },
+    {
+      "subject": 6,
+      "variant": "aug_label_smooth_010",
+      "return_code": 0,
+      "accuracy": 0.5069,
+      "log_path": "benchmarks\\grid\\logs_seed23_weak_loss\\subject6_aug_label_smooth_010_20260504_190105.log"
+    }
+  ]
+}

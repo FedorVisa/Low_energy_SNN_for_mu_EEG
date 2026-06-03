@@ -1,0 +1,84 @@
+{
+  "dataset": 0,
+  "model": "CUPY_SNN_LIF_READOUT",
+  "epoch": 1500,
+  "epoch2": 600,
+  "batch_size": 128,
+  "trial_num": 1,
+  "seed": 2023,
+  "subjects": [
+    2,
+    5,
+    6
+  ],
+  "variants": [
+    "aug_focal",
+    "aug_label_smooth_005",
+    "aug_label_smooth_010"
+  ],
+  "runs": [
+    {
+      "subject": 2,
+      "variant": "aug_focal",
+      "return_code": 0,
+      "accuracy": 0.5,
+      "log_path": "benchmarks\\grid\\logs_weak_noea_loss\\subject2_aug_focal_20260504_175815.log"
+    },
+    {
+      "subject": 2,
+      "variant": "aug_label_smooth_005",
+      "return_code": 0,
+      "accuracy": 0.5,
+      "log_path": "benchmarks\\grid\\logs_weak_noea_loss\\subject2_aug_label_smooth_005_20260504_175841.log"
+    },
+    {
+      "subject": 2,
+      "variant": "aug_label_smooth_010",
+      "return_code": 0,
+      "accuracy": 0.4757,
+      "log_path": "benchmarks\\grid\\logs_weak_noea_loss\\subject2_aug_label_smooth_010_20260504_175911.log"
+    },
+    {
+      "subject": 5,
+      "variant": "aug_focal",
+      "return_code": 0,
+      "accuracy": 0.4826,
+      "log_path": "benchmarks\\grid\\logs_weak_noea_loss\\subject5_aug_focal_20260504_175943.log"
+    },
+    {
+      "subject": 5,
+      "variant": "aug_label_smooth_005",
+      "return_code": 0,
+      "accuracy": 0.5694,
+      "log_path": "benchmarks\\grid\\logs_weak_noea_loss\\subject5_aug_label_smooth_005_20260504_180010.log"
+    },
+    {
+      "subject": 5,
+      "variant": "aug_label_smooth_010",
+      "return_code": 0,
+      "accuracy": 0.4722,
+      "log_path": "benchmarks\\grid\\logs_weak_noea_loss\\subject5_aug_label_smooth_010_20260504_180038.log"
+    },
+    {
+      "subject": 6,
+      "variant": "aug_focal",
+      "return_code": 0,
+      "accuracy": 0.5208,
+      "log_path": "benchmarks\\grid\\logs_weak_noea_loss\\subject6_aug_focal_20260504_180105.log"
+    },
+    {
+      "subject": 6,
+      "variant": "aug_label_smooth_005",
+      "return_code": 0,
+      "accuracy": 0.4965,
+      "log_path": "benchmarks\\grid\\logs_weak_noea_loss\\subject6_aug_label_smooth_005_20260504_180133.log"
+    },
+    {
+      "subject": 6,
+      "variant": "aug_label_smooth_010",
+      "return_code": 0,
+      "accuracy": 0.5174,
+      "log_path": "benchmarks\\grid\\logs_weak_noea_loss\\subject6_aug_label_smooth_010_20260504_180206.log"
+    }
+  ]
+}

@@ -1,0 +1,387 @@
+{
+  "dataset": 0,
+  "dataset_name": "BNCI2014001",
+  "selection_json": "benchmarks\\grid\\subject_tuning_lif_seed26.json",
+  "subjects": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "total_samples": 2592,
+  "overall_accuracy": 0.6998456790123457,
+  "balanced_accuracy": 0.6998456790123456,
+  "macro_f1": 0.6991273142840929,
+  "weighted_f1": 0.6991273142840929,
+  "per_class": [
+    {
+      "class": 0,
+      "precision": 0.7365684575389948,
+      "recall": 0.6558641975308642,
+      "f1": 0.693877551020408,
+      "support": 648
+    },
+    {
+      "class": 1,
+      "precision": 0.6619537275064268,
+      "recall": 0.7947530864197531,
+      "f1": 0.7223001402524544,
+      "support": 648
+    },
+    {
+      "class": 2,
+      "precision": 0.7255892255892256,
+      "recall": 0.6651234567901234,
+      "f1": 0.6940418679549114,
+      "support": 648
+    },
+    {
+      "class": 3,
+      "precision": 0.6889580093312597,
+      "recall": 0.683641975308642,
+      "f1": 0.686289697908598,
+      "support": 648
+    }
+  ],
+  "per_subject": [
+    {
+      "subject": 1,
+      "samples": 288,
+      "accuracy": 0.8819444444444444,
+      "variant": "stage1_lr2e3",
+      "source_log_path": "logs\\training\\subject_tuning\\subjtune_lif_seed26_s1_stage1_lr2e3_20260519_022545.log",
+      "checkpoint": "D:\\try\\SnnForMI\\data\\BNCI2014001\\250Hz_preprocess_eeg\\CUPY_SNN_LIF_READOUT_subjtune_lif_seed26_s1_stage1_lr2e3_id1_seed26.pth"
+    },
+    {
+      "subject": 2,
+      "samples": 288,
+      "accuracy": 0.5208333333333334,
+      "variant": "stage1_lr3e3_no_aug",
+      "source_log_path": "logs\\training\\subject_tuning\\subjtune_lif_seed26_s2_stage1_lr3e3_no_aug_20260519_023443.log",
+      "checkpoint": "D:\\try\\SnnForMI\\data\\BNCI2014001\\250Hz_preprocess_eeg\\CUPY_SNN_LIF_READOUT_subjtune_lif_seed26_s2_stage1_lr3e3_no_aug_id2_seed26.pth"
+    },
+    {
+      "subject": 3,
+      "samples": 288,
+      "accuracy": 0.8402777777777778,
+      "variant": "stage1_lr1e3",
+      "source_log_path": "logs\\training\\subject_tuning\\subjtune_lif_seed26_s3_stage1_lr1e3_20260519_023736.log",
+      "checkpoint": "D:\\try\\SnnForMI\\data\\BNCI2014001\\250Hz_preprocess_eeg\\CUPY_SNN_LIF_READOUT_subjtune_lif_seed26_s3_stage1_lr1e3_id3_seed26.pth"
+    },
+    {
+      "subject": 4,
+      "samples": 288,
+      "accuracy": 0.6111111111111112,
+      "variant": "stage1_lr1e3",
+      "source_log_path": "logs\\training\\subject_tuning\\subjtune_lif_seed26_s4_stage1_lr1e3_20260519_024220.log",
+      "checkpoint": "D:\\try\\SnnForMI\\data\\BNCI2014001\\250Hz_preprocess_eeg\\CUPY_SNN_LIF_READOUT_subjtune_lif_seed26_s4_stage1_lr1e3_id4_seed26.pth"
+    },
+    {
+      "subject": 5,
+      "samples": 288,
+      "accuracy": 0.5138888888888888,
+      "variant": "stage1_lr1e3",
+      "source_log_path": "logs\\training\\subject_tuning\\subjtune_lif_seed26_s5_stage1_lr1e3_20260519_024627.log",
+      "checkpoint": "D:\\try\\SnnForMI\\data\\BNCI2014001\\250Hz_preprocess_eeg\\CUPY_SNN_LIF_READOUT_subjtune_lif_seed26_s5_stage1_lr1e3_id5_seed26.pth"
+    },
+    {
+      "subject": 6,
+      "samples": 288,
+      "accuracy": 0.5347222222222222,
+      "variant": "stage1_lr3e3_no_aug",
+      "source_log_path": "logs\\training\\subject_tuning\\subjtune_lif_seed26_s6_stage1_lr3e3_no_aug_20260519_025408.log",
+      "checkpoint": "D:\\try\\SnnForMI\\data\\BNCI2014001\\250Hz_preprocess_eeg\\CUPY_SNN_LIF_READOUT_subjtune_lif_seed26_s6_stage1_lr3e3_no_aug_id6_seed26.pth"
+    },
+    {
+      "subject": 7,
+      "samples": 288,
+      "accuracy": 0.7395833333333334,
+      "variant": "stage1_lr3e3",
+      "source_log_path": "logs\\training\\subject_tuning\\subjtune_lif_seed26_s7_stage1_lr3e3_20260519_025456.log",
+      "checkpoint": "D:\\try\\SnnForMI\\data\\BNCI2014001\\250Hz_preprocess_eeg\\CUPY_SNN_LIF_READOUT_subjtune_lif_seed26_s7_stage1_lr3e3_id7_seed26.pth"
+    },
+    {
+      "subject": 8,
+      "samples": 288,
+      "accuracy": 0.7986111111111112,
+      "variant": "stage1_lr3e3_no_aug",
+      "source_log_path": "logs\\training\\subject_tuning\\subjtune_lif_seed26_s8_stage1_lr3e3_no_aug_20260519_030800.log",
+      "checkpoint": "D:\\try\\SnnForMI\\data\\BNCI2014001\\250Hz_preprocess_eeg\\CUPY_SNN_LIF_READOUT_subjtune_lif_seed26_s8_stage1_lr3e3_no_aug_id8_seed26.pth"
+    },
+    {
+      "subject": 9,
+      "samples": 288,
+      "accuracy": 0.8576388888888888,
+      "variant": "stage1_lr2e3",
+      "source_log_path": "logs\\training\\subject_tuning\\subjtune_lif_seed26_s9_stage1_lr2e3_20260519_030935.log",
+      "checkpoint": "D:\\try\\SnnForMI\\data\\BNCI2014001\\250Hz_preprocess_eeg\\CUPY_SNN_LIF_READOUT_subjtune_lif_seed26_s9_stage1_lr2e3_id9_seed26.pth"
+    }
+  ],
+  "confusion_matrix": [
+    [
+      425,
+      118,
+      61,
+      44
+    ],
+    [
+      60,
+      515,
+      47,
+      26
+    ],
+    [
+      32,
+      55,
+      431,
+      130
+    ],
+    [
+      60,
+      90,
+      55,
+      443
+    ]
+  ],
+  "subject_confusions": {
+    "1": [
+      [
+        68,
+        3,
+        0,
+        1
+      ],
+      [
+        2,
+        69,
+        1,
+        0
+      ],
+      [
+        1,
+        0,
+        56,
+        15
+      ],
+      [
+        1,
+        0,
+        10,
+        61
+      ]
+    ],
+    "2": [
+      [
+        24,
+        24,
+        17,
+        7
+      ],
+      [
+        16,
+        37,
+        12,
+        7
+      ],
+      [
+        0,
+        8,
+        62,
+        2
+      ],
+      [
+        13,
+        25,
+        7,
+        27
+      ]
+    ],
+    "3": [
+      [
+        68,
+        3,
+        0,
+        1
+      ],
+      [
+        0,
+        72,
+        0,
+        0
+      ],
+      [
+        4,
+        7,
+        34,
+        27
+      ],
+      [
+        2,
+        1,
+        1,
+        68
+      ]
+    ],
+    "4": [
+      [
+        38,
+        16,
+        9,
+        9
+      ],
+      [
+        16,
+        43,
+        7,
+        6
+      ],
+      [
+        2,
+        0,
+        37,
+        33
+      ],
+      [
+        5,
+        4,
+        5,
+        58
+      ]
+    ],
+    "5": [
+      [
+        26,
+        27,
+        18,
+        1
+      ],
+      [
+        2,
+        67,
+        2,
+        1
+      ],
+      [
+        9,
+        23,
+        34,
+        6
+      ],
+      [
+        13,
+        25,
+        13,
+        21
+      ]
+    ],
+    "6": [
+      [
+        51,
+        12,
+        3,
+        6
+      ],
+      [
+        20,
+        45,
+        6,
+        1
+      ],
+      [
+        15,
+        11,
+        33,
+        13
+      ],
+      [
+        19,
+        25,
+        3,
+        25
+      ]
+    ],
+    "7": [
+      [
+        25,
+        25,
+        4,
+        18
+      ],
+      [
+        0,
+        70,
+        0,
+        2
+      ],
+      [
+        0,
+        0,
+        50,
+        22
+      ],
+      [
+        0,
+        0,
+        4,
+        68
+      ]
+    ],
+    "8": [
+      [
+        63,
+        0,
+        9,
+        0
+      ],
+      [
+        1,
+        57,
+        12,
+        2
+      ],
+      [
+        0,
+        2,
+        64,
+        6
+      ],
+      [
+        7,
+        8,
+        11,
+        46
+      ]
+    ],
+    "9": [
+      [
+        62,
+        8,
+        1,
+        1
+      ],
+      [
+        3,
+        55,
+        7,
+        7
+      ],
+      [
+        1,
+        4,
+        61,
+        6
+      ],
+      [
+        0,
+        2,
+        1,
+        69
+      ]
+    ]
+  }
+}

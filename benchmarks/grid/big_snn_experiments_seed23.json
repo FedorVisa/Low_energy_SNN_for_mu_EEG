@@ -1,0 +1,2409 @@
+{
+  "params": {
+    "python": "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+    "dataset": 0,
+    "device": 0,
+    "seed": 23,
+    "batch_size": 16,
+    "lr": 0.003,
+    "lr2": 0.0001,
+    "patience": 120,
+    "max_trial_num": 8,
+    "max_epoch": 1500,
+    "max_epoch2": 600,
+    "max_patience": 200,
+    "tune_trial_num": 1,
+    "tune_epoch": 300,
+    "tune_epoch2": 100,
+    "skip_tune": false,
+    "log_dir": "logs\\training\\big_snn_experiments",
+    "out_json": "benchmarks\\grid\\big_snn_experiments_seed23.json"
+  },
+  "results": [
+    {
+      "name": "max_lif_readout_seed23_adamw_lr3e3",
+      "model": "CUPY_SNN_LIF_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 5589.78,
+      "log_path": "logs\\training\\big_snn_experiments\\max_lif_readout_seed23_adamw_lr3e3_20260513_193609.log",
+      "summary": {
+        "model": "CUPY_SNN_LIF_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 0,
+          "device": 0,
+          "dropout": 0.1,
+          "encoder_scale": 1.0,
+          "encoder_threshold": 0.5,
+          "epoch": 1500,
+          "epoch2": 600,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 2.5,
+          "lif_v_threshold": 0.5,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_LIF_READOUT",
+          "optimizer": "adamw",
+          "patience": 200,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "max_lif_readout_seed23_adamw_lr3e3",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 8,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 87.15,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 49.65,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 78.82000000000001,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 57.64,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 46.18,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 53.12,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 71.88,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 79.51,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 80.21000000000001,
+            "seed": 23,
+            "subject": 9
+          },
+          {
+            "accuracy": 82.64,
+            "seed": 24,
+            "subject": 1
+          },
+          {
+            "accuracy": 47.92,
+            "seed": 24,
+            "subject": 2
+          },
+          {
+            "accuracy": 82.28999999999999,
+            "seed": 24,
+            "subject": 3
+          },
+          {
+            "accuracy": 64.58,
+            "seed": 24,
+            "subject": 4
+          },
+          {
+            "accuracy": 51.39,
+            "seed": 24,
+            "subject": 5
+          },
+          {
+            "accuracy": 53.82,
+            "seed": 24,
+            "subject": 6
+          },
+          {
+            "accuracy": 69.44,
+            "seed": 24,
+            "subject": 7
+          },
+          {
+            "accuracy": 79.51,
+            "seed": 24,
+            "subject": 8
+          },
+          {
+            "accuracy": 82.99,
+            "seed": 24,
+            "subject": 9
+          },
+          {
+            "accuracy": 88.89,
+            "seed": 25,
+            "subject": 1
+          },
+          {
+            "accuracy": 47.92,
+            "seed": 25,
+            "subject": 2
+          },
+          {
+            "accuracy": 79.17,
+            "seed": 25,
+            "subject": 3
+          },
+          {
+            "accuracy": 57.64,
+            "seed": 25,
+            "subject": 4
+          },
+          {
+            "accuracy": 35.42,
+            "seed": 25,
+            "subject": 5
+          },
+          {
+            "accuracy": 55.559999999999995,
+            "seed": 25,
+            "subject": 6
+          },
+          {
+            "accuracy": 69.44,
+            "seed": 25,
+            "subject": 7
+          },
+          {
+            "accuracy": 80.56,
+            "seed": 25,
+            "subject": 8
+          },
+          {
+            "accuracy": 84.03,
+            "seed": 25,
+            "subject": 9
+          },
+          {
+            "accuracy": 86.11,
+            "seed": 26,
+            "subject": 1
+          },
+          {
+            "accuracy": 50.349999999999994,
+            "seed": 26,
+            "subject": 2
+          },
+          {
+            "accuracy": 79.51,
+            "seed": 26,
+            "subject": 3
+          },
+          {
+            "accuracy": 58.68,
+            "seed": 26,
+            "subject": 4
+          },
+          {
+            "accuracy": 52.43,
+            "seed": 26,
+            "subject": 5
+          },
+          {
+            "accuracy": 59.03,
+            "seed": 26,
+            "subject": 6
+          },
+          {
+            "accuracy": 71.17999999999999,
+            "seed": 26,
+            "subject": 7
+          },
+          {
+            "accuracy": 80.56,
+            "seed": 26,
+            "subject": 8
+          },
+          {
+            "accuracy": 84.03,
+            "seed": 26,
+            "subject": 9
+          },
+          {
+            "accuracy": 87.85,
+            "seed": 27,
+            "subject": 1
+          },
+          {
+            "accuracy": 49.309999999999995,
+            "seed": 27,
+            "subject": 2
+          },
+          {
+            "accuracy": 81.25,
+            "seed": 27,
+            "subject": 3
+          },
+          {
+            "accuracy": 60.419999999999995,
+            "seed": 27,
+            "subject": 4
+          },
+          {
+            "accuracy": 51.39,
+            "seed": 27,
+            "subject": 5
+          },
+          {
+            "accuracy": 51.04,
+            "seed": 27,
+            "subject": 6
+          },
+          {
+            "accuracy": 68.75,
+            "seed": 27,
+            "subject": 7
+          },
+          {
+            "accuracy": 79.17,
+            "seed": 27,
+            "subject": 8
+          },
+          {
+            "accuracy": 82.99,
+            "seed": 27,
+            "subject": 9
+          },
+          {
+            "accuracy": 86.46000000000001,
+            "seed": 28,
+            "subject": 1
+          },
+          {
+            "accuracy": 47.92,
+            "seed": 28,
+            "subject": 2
+          },
+          {
+            "accuracy": 82.28999999999999,
+            "seed": 28,
+            "subject": 3
+          },
+          {
+            "accuracy": 62.150000000000006,
+            "seed": 28,
+            "subject": 4
+          },
+          {
+            "accuracy": 55.900000000000006,
+            "seed": 28,
+            "subject": 5
+          },
+          {
+            "accuracy": 53.82,
+            "seed": 28,
+            "subject": 6
+          },
+          {
+            "accuracy": 70.49,
+            "seed": 28,
+            "subject": 7
+          },
+          {
+            "accuracy": 79.51,
+            "seed": 28,
+            "subject": 8
+          },
+          {
+            "accuracy": 82.28999999999999,
+            "seed": 28,
+            "subject": 9
+          },
+          {
+            "accuracy": 86.46000000000001,
+            "seed": 29,
+            "subject": 1
+          },
+          {
+            "accuracy": 48.96,
+            "seed": 29,
+            "subject": 2
+          },
+          {
+            "accuracy": 81.6,
+            "seed": 29,
+            "subject": 3
+          },
+          {
+            "accuracy": 60.760000000000005,
+            "seed": 29,
+            "subject": 4
+          },
+          {
+            "accuracy": 54.169999999999995,
+            "seed": 29,
+            "subject": 5
+          },
+          {
+            "accuracy": 54.86,
+            "seed": 29,
+            "subject": 6
+          },
+          {
+            "accuracy": 67.71000000000001,
+            "seed": 29,
+            "subject": 7
+          },
+          {
+            "accuracy": 81.25,
+            "seed": 29,
+            "subject": 8
+          },
+          {
+            "accuracy": 84.38,
+            "seed": 29,
+            "subject": 9
+          },
+          {
+            "accuracy": 85.07000000000001,
+            "seed": 30,
+            "subject": 1
+          },
+          {
+            "accuracy": 48.61,
+            "seed": 30,
+            "subject": 2
+          },
+          {
+            "accuracy": 80.9,
+            "seed": 30,
+            "subject": 3
+          },
+          {
+            "accuracy": 61.809999999999995,
+            "seed": 30,
+            "subject": 4
+          },
+          {
+            "accuracy": 53.47,
+            "seed": 30,
+            "subject": 5
+          },
+          {
+            "accuracy": 53.82,
+            "seed": 30,
+            "subject": 6
+          },
+          {
+            "accuracy": 68.4,
+            "seed": 30,
+            "subject": 7
+          },
+          {
+            "accuracy": 78.82000000000001,
+            "seed": 30,
+            "subject": 8
+          },
+          {
+            "accuracy": 85.42,
+            "seed": 30,
+            "subject": 9
+          }
+        ],
+        "result_mean": 68.17666666666666,
+        "result_std": 0.8672284504011493,
+        "run_name": "max_lif_readout_seed23_adamw_lr3e3",
+        "trial_means": [
+          67.1288888888889,
+          68.28666666666668,
+          66.51444444444445,
+          69.09777777777778,
+          68.0188888888889,
+          68.9811111111111,
+          68.90555555555555,
+          68.47999999999999
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "0",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_LIF_READOUT",
+        "--trial_num",
+        "8",
+        "--seed",
+        "23",
+        "--epoch",
+        "1500",
+        "--epoch2",
+        "600",
+        "--patience",
+        "200",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "max_lif_readout_seed23_adamw_lr3e3",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0"
+      ]
+    },
+    {
+      "name": "signed_mlp_thr030_scale10_layers2_do00",
+      "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 442.18,
+      "log_path": "logs\\training\\big_snn_experiments\\signed_mlp_thr030_scale10_layers2_do00_20260513_210918.log",
+      "summary": {
+        "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 0,
+          "device": 0,
+          "dropout": 0.0, 
+          "encoder_scale": 1.0,
+          "encoder_threshold": 0.3,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 2.5,
+          "lif_v_threshold": 0.5,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "signed_mlp_thr030_scale10_layers2_do00",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 67.01,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 36.46,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 65.62,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 49.65,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 32.29,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 40.97,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 43.4,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 67.71000000000001,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 65.97,
+            "seed": 23,
+            "subject": 9
+          }
+        ],
+        "result_mean": 52.120000000000005,
+        "result_std": 0.0,
+        "run_name": "signed_mlp_thr030_scale10_layers2_do00",
+        "trial_means": [
+          52.120000000000005
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "0",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "signed_mlp_thr030_scale10_layers2_do00",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--encoder_threshold",
+        "0.3",
+        "--encoder_scale",
+        "1.0",
+        "--hidden_layers",
+        "2",
+        "--dropout",
+        "0.0",
+        "--lif_v_threshold",
+        "0.5"
+      ]
+    },
+    {
+      "name": "signed_mlp_thr030_scale15_layers2_do00",
+      "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 421.12,
+      "log_path": "logs\\training\\big_snn_experiments\\signed_mlp_thr030_scale15_layers2_do00_20260513_211641.log",
+      "summary": {
+        "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 0,
+          "device": 0,
+          "dropout": 0.0,
+          "encoder_scale": 1.5,
+          "encoder_threshold": 0.3,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 2.5,
+          "lif_v_threshold": 0.5,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "signed_mlp_thr030_scale15_layers2_do00",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 64.92999999999999,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 37.5,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 61.11,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 50.690000000000005,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 32.64,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 38.190000000000005,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 42.36,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 73.26,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 65.62,
+            "seed": 23,
+            "subject": 9
+          }
+        ],
+        "result_mean": 51.81111111111112,
+        "result_std": 0.0,
+        "run_name": "signed_mlp_thr030_scale15_layers2_do00",
+        "trial_means": [
+          51.81111111111112
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "0",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "signed_mlp_thr030_scale15_layers2_do00",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--encoder_threshold",
+        "0.3",
+        "--encoder_scale",
+        "1.5",
+        "--hidden_layers",
+        "2",
+        "--dropout",
+        "0.0",
+        "--lif_v_threshold",
+        "0.5"
+      ]
+    },
+    {
+      "name": "signed_mlp_thr020_scale15_layers2_do00",
+      "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 438.13,
+      "log_path": "logs\\training\\big_snn_experiments\\signed_mlp_thr020_scale15_layers2_do00_20260513_212342.log",
+      "summary": {
+        "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 0,
+          "device": 0,
+          "dropout": 0.0,
+          "encoder_scale": 1.5,
+          "encoder_threshold": 0.2,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 2.5,
+          "lif_v_threshold": 0.4,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "signed_mlp_thr020_scale15_layers2_do00",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 65.28,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 36.46,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 65.28,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 52.080000000000005,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 26.740000000000002,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 42.01,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 45.14,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 69.44,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 67.36,
+            "seed": 23,
+            "subject": 9
+          }
+        ],
+        "result_mean": 52.19888888888889,
+        "result_std": 0.0,
+        "run_name": "signed_mlp_thr020_scale15_layers2_do00",
+        "trial_means": [
+          52.19888888888889
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "0",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "signed_mlp_thr020_scale15_layers2_do00",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--encoder_threshold",
+        "0.2",
+        "--encoder_scale",
+        "1.5",
+        "--hidden_layers",
+        "2",
+        "--dropout",
+        "0.0",
+        "--lif_v_threshold",
+        "0.4"
+      ]
+    },
+    {
+      "name": "signed_mlp_thr020_scale20_layers3_do05",
+      "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 564.96,
+      "log_path": "logs\\training\\big_snn_experiments\\signed_mlp_thr020_scale20_layers3_do05_20260513_213100.log",
+      "summary": {
+        "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 0,
+          "device": 0,
+          "dropout": 0.05,
+          "encoder_scale": 2.0,
+          "encoder_threshold": 0.2,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 3,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 2.5,
+          "lif_v_threshold": 0.4,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "signed_mlp_thr020_scale20_layers3_do05",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 70.83,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 39.93,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 64.58,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 49.65,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 31.6,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 44.440000000000005,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 38.54,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 70.83,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 68.4,
+            "seed": 23,
+            "subject": 9
+          }
+        ],
+        "result_mean": 53.199999999999996,
+        "result_std": 0.0,
+        "run_name": "signed_mlp_thr020_scale20_layers3_do05",
+        "trial_means": [
+          53.199999999999996
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "0",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "signed_mlp_thr020_scale20_layers3_do05",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--encoder_threshold",
+        "0.2",
+        "--encoder_scale",
+        "2.0",
+        "--hidden_layers",
+        "3",
+        "--dropout",
+        "0.05",
+        "--lif_v_threshold",
+        "0.4"
+      ]
+    },
+    {
+      "name": "signed_mlp_thr010_scale20_layers3_do00",
+      "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 611.96,
+      "log_path": "logs\\training\\big_snn_experiments\\signed_mlp_thr010_scale20_layers3_do00_20260513_214025.log",
+      "summary": {
+        "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 0,
+          "device": 0,
+          "dropout": 0.0,
+          "encoder_scale": 2.0,
+          "encoder_threshold": 0.1,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 3,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 2.5,
+          "lif_v_threshold": 0.3,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "signed_mlp_thr010_scale20_layers3_do00",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 70.49,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 34.72,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 66.67,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 46.88,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 26.040000000000003,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 42.01,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 41.67,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 68.06,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 69.44,
+            "seed": 23,
+            "subject": 9
+          }
+        ],
+        "result_mean": 51.77555555555555,
+        "result_std": 0.0,
+        "run_name": "signed_mlp_thr010_scale20_layers3_do00",
+        "trial_means": [
+          51.77555555555555
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "0",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "signed_mlp_thr010_scale20_layers3_do00",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--encoder_threshold",
+        "0.1",
+        "--encoder_scale",
+        "2.0",
+        "--hidden_layers",
+        "3",
+        "--dropout",
+        "0.0",
+        "--lif_v_threshold",
+        "0.3"
+      ]
+    },
+    {
+      "name": "signed_mlp_thr050_scale20_layers2_do10",
+      "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 480.14,
+      "log_path": "logs\\training\\big_snn_experiments\\signed_mlp_thr050_scale20_layers2_do10_20260513_215037.log",
+      "summary": {
+        "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 0,
+          "device": 0,
+          "dropout": 0.1,
+          "encoder_scale": 2.0,
+          "encoder_threshold": 0.5,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 2.5,
+          "lif_v_threshold": 0.5,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "signed_mlp_thr050_scale20_layers2_do10",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 65.97,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 33.68,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 64.92999999999999,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 50.0,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 30.56,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 42.01,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 42.36,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 72.22,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 68.06,
+            "seed": 23,
+            "subject": 9
+          }
+        ],
+        "result_mean": 52.19888888888889,
+        "result_std": 0.0,
+        "run_name": "signed_mlp_thr050_scale20_layers2_do10",
+        "trial_means": [
+          52.19888888888889
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "0",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "signed_mlp_thr050_scale20_layers2_do10",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--encoder_threshold",
+        "0.5",
+        "--encoder_scale",
+        "2.0",
+        "--hidden_layers",
+        "2",
+        "--dropout",
+        "0.1",
+        "--lif_v_threshold",
+        "0.5"
+      ]
+    },
+    {
+      "name": "lif_plif_v05_scale25_lr3e3",
+      "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 396.09,
+      "log_path": "logs\\training\\big_snn_experiments\\lif_plif_v05_scale25_lr3e3_20260513_215837.log",
+      "summary": {
+        "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 0,
+          "device": 0,
+          "dropout": 0.1,
+          "encoder_scale": 1.0,
+          "encoder_threshold": 0.5,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 2.5,
+          "lif_v_threshold": 0.5,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "lif_plif_v05_scale25_lr3e3",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 80.21000000000001,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 46.88,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 78.47,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 57.989999999999995,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 27.08,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 43.75,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 55.900000000000006,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 72.57000000000001,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 72.92,
+            "seed": 23,
+            "subject": 9
+          }
+        ],
+        "result_mean": 59.53,
+        "result_std": 0.0,
+        "run_name": "lif_plif_v05_scale25_lr3e3",
+        "trial_means": [
+          59.53
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "0",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "lif_plif_v05_scale25_lr3e3",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--lif_v_threshold",
+        "0.5",
+        "--lif_input_scale",
+        "2.5"
+      ]
+    },
+    {
+      "name": "lif_plif_v03_scale25_lr3e3",
+      "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 396.04,
+      "log_path": "logs\\training\\big_snn_experiments\\lif_plif_v03_scale25_lr3e3_20260513_220513.log",
+      "summary": {
+        "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 0,
+          "device": 0,
+          "dropout": 0.1,
+          "encoder_scale": 1.0,
+          "encoder_threshold": 0.5,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 2.5,
+          "lif_v_threshold": 0.3,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "lif_plif_v03_scale25_lr3e3",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 75.0,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 48.96,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 77.78,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 55.21,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 43.75,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 43.75,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 55.900000000000006,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 65.62,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 77.78,
+            "seed": 23,
+            "subject": 9
+          }
+        ],
+        "result_mean": 60.416666666666664,
+        "result_std": 0.0,
+        "run_name": "lif_plif_v03_scale25_lr3e3",
+        "trial_means": [
+          60.416666666666664
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "0",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "lif_plif_v03_scale25_lr3e3",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--lif_v_threshold",
+        "0.3",
+        "--lif_input_scale",
+        "2.5"
+      ]
+    },
+    {
+      "name": "lif_plif_v03_scale40_lr3e3",
+      "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 409.37,
+      "log_path": "logs\\training\\big_snn_experiments\\lif_plif_v03_scale40_lr3e3_20260513_221149.log",
+      "summary": {
+        "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 0,
+          "device": 0,
+          "dropout": 0.1,
+          "encoder_scale": 1.0,
+          "encoder_threshold": 0.5,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 4.0,
+          "lif_v_threshold": 0.3,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "lif_plif_v03_scale40_lr3e3",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 79.51,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 48.61,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 73.61,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 51.39,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 40.28,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 44.440000000000005,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 52.43,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 73.26,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 80.21000000000001,
+            "seed": 23,
+            "subject": 9
+          }
+        ],
+        "result_mean": 60.41555555555556,
+        "result_std": 0.0,
+        "run_name": "lif_plif_v03_scale40_lr3e3",
+        "trial_means": [
+          60.41555555555556
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "0",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "lif_plif_v03_scale40_lr3e3",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--lif_v_threshold",
+        "0.3",
+        "--lif_input_scale",
+        "4.0"
+      ]
+    },
+    {
+      "name": "lif_plif_v02_scale40_lr3e3",
+      "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 377.57,
+      "log_path": "logs\\training\\big_snn_experiments\\lif_plif_v02_scale40_lr3e3_20260513_221839.log",
+      "summary": {
+        "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 0,
+          "device": 0,
+          "dropout": 0.1,
+          "encoder_scale": 1.0,
+          "encoder_threshold": 0.5,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 4.0,
+          "lif_v_threshold": 0.2,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "lif_plif_v02_scale40_lr3e3",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 68.4,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 25.0,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 72.92,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 52.78,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 35.42,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 43.4,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 54.169999999999995,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 73.61,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 80.21000000000001,
+            "seed": 23,
+            "subject": 9
+          }
+        ],
+        "result_mean": 56.21222222222223,
+        "result_std": 0.0,
+        "run_name": "lif_plif_v02_scale40_lr3e3",
+        "trial_means": [
+          56.21222222222223
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "0",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "lif_plif_v02_scale40_lr3e3",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--lif_v_threshold",
+        "0.2",
+        "--lif_input_scale",
+        "4.0"
+      ]
+    },
+    {
+      "name": "lif_plif_v02_scale60_lr3e3",
+      "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 426.37,
+      "log_path": "logs\\training\\big_snn_experiments\\lif_plif_v02_scale60_lr3e3_20260513_222456.log",
+      "summary": {
+        "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 0,
+          "device": 0,
+          "dropout": 0.1,
+          "encoder_scale": 1.0,
+          "encoder_threshold": 0.5,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 6.0,
+          "lif_v_threshold": 0.2,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "lif_plif_v02_scale60_lr3e3",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 78.12,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 45.49,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 75.69,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 53.12,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 31.94,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 41.32,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 60.760000000000005,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 69.44,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 76.03999999999999,
+            "seed": 23,
+            "subject": 9
+          }
+        ],
+        "result_mean": 59.10222222222222,
+        "result_std": 0.0,
+        "run_name": "lif_plif_v02_scale60_lr3e3",
+        "trial_means": [
+          59.10222222222222
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "0",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "lif_plif_v02_scale60_lr3e3",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--lif_v_threshold",
+        "0.2",
+        "--lif_input_scale",
+        "6.0"
+      ]
+    },
+    {
+      "name": "lif_plif_v01_scale60_lr5e3",
+      "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 434.55,
+      "log_path": "logs\\training\\big_snn_experiments\\lif_plif_v01_scale60_lr5e3_20260513_223202.log",
+      "summary": {
+        "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 0,
+          "device": 0,
+          "dropout": 0.1,
+          "encoder_scale": 1.0,
+          "encoder_threshold": 0.5,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 6.0,
+          "lif_v_threshold": 0.1,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.005,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "lif_plif_v01_scale60_lr5e3",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 80.56,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 25.0,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 78.12,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 52.080000000000005,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 43.75,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 42.01,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 53.82,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 67.71000000000001,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 74.31,
+            "seed": 23,
+            "subject": 9
+          }
+        ],
+        "result_mean": 57.48444444444445,
+        "result_std": 0.0,
+        "run_name": "lif_plif_v01_scale60_lr5e3",
+        "trial_means": [
+          57.48444444444445
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "0",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.005",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "lif_plif_v01_scale60_lr5e3",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--lif_v_threshold",
+        "0.1",
+        "--lif_input_scale",
+        "6.0"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "environment": {
+    "python": "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+    "torch": "2.11.0+cu128",
+    "cupy": "14.0.1",
+    "norse": "1.1.0",
+    "gpu": "NVIDIA GeForce RTX 5070"
+  },
+  "protocol": {
+    "dataset": "BNCI2014001",
+    "prep": "250Hz_preprocess_eeg/",
+    "model": "CUPY_SNN_SPIKING_CONV_LIF_READOUT",
+    "run_name": "spiking_conv_full_trial1_seed23",
+    "seed": 23,
+    "trial_num": 1,
+    "epoch": 1500,
+    "epoch2": 600,
+    "patience": 200,
+    "batch_size": 16,
+    "lr": 0.003,
+    "lr2": 0.0001,
+    "optimizer": "adamw",
+    "weight_decay": 0.0001,
+    "scheduler": "cosine",
+    "augment_train": true,
+    "aug_reverse_prob": 0.0,
+    "encoder_threshold": 0.5,
+    "encoder_scale": 1.0,
+    "lif_v_threshold": 0.5,
+    "lif_input_scale": 2.5,
+    "dropout": 0.1
+  },
+  "result": {
+    "mean_accuracy_percent": 54.2078,
+    "per_subject_accuracy_percent": [67.36, 34.38, 68.06, 51.74, 31.25, 43.06, 47.92, 70.14, 73.96],
+    "early_stop_epochs": {
+      "1": 653,
+      "2": 761,
+      "3": 477,
+      "4": 575,
+      "5": 370,
+      "6": 296,
+      "7": 915,
+      "8": 494,
+      "9": 389
+    }
+  },
+  "comparison": {
+    "short_same_model_e10_accuracy_percent": 47.7244,
+    "gain_vs_short_same_model_points": 6.4834,
+    "lif_readout_full_seed23_accuracy_percent": 67.1289,
+    "delta_vs_lif_readout_full_seed23_points": -12.9211,
+    "lif_readout_best_8trial_mean_accuracy_percent": 68.1767,
+    "delta_vs_lif_readout_best_8trial_mean_points": -13.9689
+  }
+}

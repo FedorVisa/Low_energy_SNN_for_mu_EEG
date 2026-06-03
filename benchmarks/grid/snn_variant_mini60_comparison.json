@@ -1,0 +1,45 @@
+{
+  "experiment": {
+    "dataset": "BNCI2014001",
+    "prep": "250Hz_preprocess_eeg/",
+    "seed": 2023,
+    "trial_num": 1,
+    "subject_ids": [1, 2, 3, 4, 5, 6, 7, 8, 9],
+    "protocol": {
+      "epoch_stage1": 60,
+      "epoch_stage2": 15,
+      "patience": 30,
+      "batch_size": 16,
+      "time_step": 1000,
+      "optimizer": "adamw",
+      "lr": 0.003,
+      "lr2": 0.0001,
+      "weight_decay": 0.0001,
+      "scheduler": "cosine",
+      "augment_train": true,
+      "aug_reverse_prob": 0.0
+    },
+    "notes": "Short same-protocol smoke comparison. Existing long-run reference for CUPY_SNN_LIF_READOUT is 65.64% over 8 trials, and the best mini-grid one-trial run reached 68.60%."
+  },
+  "models": {
+    "CUPY_SNN_LIF_READOUT": {
+      "run_name": "mini60_lif_readout",
+      "per_subject_accuracy_percent": [81.25, 49.65, 79.17, 56.6, 45.14, 47.22, 67.01, 78.12, 76.04],
+      "mean_accuracy_percent": 64.4667
+    },
+    "CUPY_SNN_SIGNED_LIF_MLP_READOUT": {
+      "run_name": "mini60_signed_lif_mlp",
+      "per_subject_accuracy_percent": [64.24, 27.08, 64.58, 50.69, 30.9, 43.06, 43.06, 66.32, 64.93],
+      "mean_accuracy_percent": 50.54
+    },
+    "CUPY_SNN_LIF_PLIF_LIF_READOUT": {
+      "run_name": "mini60_lif_plif_lif_readout",
+      "per_subject_accuracy_percent": [59.03, 42.71, 66.32, 48.61, 31.25, 46.53, 55.56, 66.32, 66.32],
+      "mean_accuracy_percent": 53.6278
+    }
+  },
+  "comparison": {
+    "signed_lif_mlp_minus_lif_readout_points": -13.9267,
+    "lif_plif_lif_readout_minus_lif_readout_points": -10.8389
+  }
+}

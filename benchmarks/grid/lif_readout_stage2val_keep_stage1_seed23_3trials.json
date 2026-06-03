@@ -1,0 +1,268 @@
+{
+  "params": {
+    "python": "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+    "dataset": 0,
+    "device": 0,
+    "seed": 23,
+    "batch_size": 16,
+    "lr": 0.003,
+    "lr2": 0.0001,
+    "patience": 120,
+    "stage2_select": "val_acc",
+    "stage2_patience": 200,
+    "max_trial_num": 3,
+    "max_run_name": "lif_readout_stage2val_keep_stage1_seed23",
+    "max_epoch": 1500,
+    "max_epoch2": 600,
+    "max_patience": 200,
+    "tune_trial_num": 1,
+    "tune_epoch": 300,
+    "tune_epoch2": 100,
+    "skip_tune": true,
+    "log_dir": "logs\\training\\big_snn_experiments",
+    "out_json": "benchmarks\\grid\\lif_readout_stage2val_keep_stage1_seed23_3trials.json"
+  },
+  "results": [
+    {
+      "name": "lif_readout_stage2val_keep_stage1_seed23",
+      "model": "CUPY_SNN_LIF_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 2764.31,
+      "log_path": "logs\\training\\big_snn_experiments\\lif_readout_stage2val_keep_stage1_seed23_20260518_200325.log",
+      "summary": {
+        "model": "CUPY_SNN_LIF_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 0,
+          "device": 0,
+          "dropout": 0.1,
+          "encoder_scale": 1.0,
+          "encoder_threshold": 0.5,
+          "epoch": 1500,
+          "epoch2": 600,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 2.5,
+          "lif_v_threshold": 0.5,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_LIF_READOUT",
+          "optimizer": "adamw",
+          "patience": 200,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "lif_readout_stage2val_keep_stage1_seed23",
+          "scheduler": "cosine",
+          "seed": 23,
+          "stage2_patience": 200,
+          "stage2_select": "val_acc",
+          "subject_id": 0,
+          "trial_num": 3,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 85.76,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 52.43,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 81.25,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 59.38,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 40.97,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 53.47,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 71.17999999999999,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 77.08,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 81.6,
+            "seed": 23,
+            "subject": 9
+          },
+          {
+            "accuracy": 85.07000000000001,
+            "seed": 24,
+            "subject": 1
+          },
+          {
+            "accuracy": 49.309999999999995,
+            "seed": 24,
+            "subject": 2
+          },
+          {
+            "accuracy": 81.25,
+            "seed": 24,
+            "subject": 3
+          },
+          {
+            "accuracy": 60.419999999999995,
+            "seed": 24,
+            "subject": 4
+          },
+          {
+            "accuracy": 54.510000000000005,
+            "seed": 24,
+            "subject": 5
+          },
+          {
+            "accuracy": 53.47,
+            "seed": 24,
+            "subject": 6
+          },
+          {
+            "accuracy": 67.36,
+            "seed": 24,
+            "subject": 7
+          },
+          {
+            "accuracy": 74.65,
+            "seed": 24,
+            "subject": 8
+          },
+          {
+            "accuracy": 87.15,
+            "seed": 24,
+            "subject": 9
+          },
+          {
+            "accuracy": 87.85,
+            "seed": 25,
+            "subject": 1
+          },
+          {
+            "accuracy": 50.0,
+            "seed": 25,
+            "subject": 2
+          },
+          {
+            "accuracy": 80.9,
+            "seed": 25,
+            "subject": 3
+          },
+          {
+            "accuracy": 61.809999999999995,
+            "seed": 25,
+            "subject": 4
+          },
+          {
+            "accuracy": 56.25,
+            "seed": 25,
+            "subject": 5
+          },
+          {
+            "accuracy": 48.61,
+            "seed": 25,
+            "subject": 6
+          },
+          {
+            "accuracy": 69.1,
+            "seed": 25,
+            "subject": 7
+          },
+          {
+            "accuracy": 80.21000000000001,
+            "seed": 25,
+            "subject": 8
+          },
+          {
+            "accuracy": 84.38,
+            "seed": 25,
+            "subject": 9
+          }
+        ],
+        "result_mean": 67.97851851851851,
+        "result_std": 0.7334188128258368,
+        "run_name": "lif_readout_stage2val_keep_stage1_seed23",
+        "trial_means": [
+          67.01333333333334,
+          68.13222222222221,
+          68.79
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "0",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_LIF_READOUT",
+        "--trial_num",
+        "3",
+        "--seed",
+        "23",
+        "--epoch",
+        "1500",
+        "--epoch2",
+        "600",
+        "--patience",
+        "200",
+        "--stage2_select",
+        "val_acc",
+        "--stage2_patience",
+        "200",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "lif_readout_stage2val_keep_stage1_seed23",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0"
+      ]
+    }
+  ]
+}

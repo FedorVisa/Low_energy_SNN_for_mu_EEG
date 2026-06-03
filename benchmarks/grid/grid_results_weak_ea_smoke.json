@@ -1,0 +1,24 @@
+{
+  "dataset": 0,
+  "model": "CUPY_SNN_LIF_READOUT",
+  "epoch": 2,
+  "epoch2": 1,
+  "batch_size": 128,
+  "trial_num": 1,
+  "seed": 2023,
+  "subjects": [
+    2
+  ],
+  "variants": [
+    "aug_label_smooth_005"
+  ],
+  "runs": [
+    {
+      "subject": 2,
+      "variant": "aug_label_smooth_005",
+      "return_code": 0,
+      "accuracy": 0.2986,
+      "log_path": "benchmarks\\grid\\logs_weak_ea_smoke\\subject2_aug_label_smooth_005_20260504_175309.log"
+    }
+  ]
+}

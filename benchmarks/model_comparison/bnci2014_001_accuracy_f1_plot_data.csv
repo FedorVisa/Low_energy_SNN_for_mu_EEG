@@ -1,0 +1,15 @@
+model,group,accuracy,macro_f1,source
+"Предложенная LIF readout
+(без донастройки)",proposed,69.09722222222221,69.03036105576406,benchmarks\full_eval\full_eval_lif_readout_best_seed26.json
+"Предложенная LIF readout
+(донастройка по субъектам)",proposed,69.98456790123457,69.91273142840929,benchmarks\full_eval\full_eval_subject_tuning_lif_seed26_selected.json
+"Предложенная LIF readout
+(выбор максимума)",proposed,71.06481481481481,71.0094719171098,benchmarks\full_eval\full_eval_subject_tuning_lif_seed26_final_merged.json
+"Lightweight SNN
+(Zhang et al.)",paper,68.92,nan,A lightweight spiking neural network for EEG-based motor imagery classification
+ShallowConvNet,moabb_conv,72.47,nan,benchmarks\moabb\moabb_benchmark.csv
+EEGNet_8_2,moabb_conv,60.46,nan,benchmarks\moabb\moabb_benchmark.csv
+EEGNeX,moabb_conv,45.62,nan,benchmarks\moabb\moabb_benchmark.csv
+DeepConvNet,moabb_conv,35.29,nan,benchmarks\moabb\moabb_benchmark.csv
+EEGITNet,moabb_conv,35.55,nan,benchmarks\moabb\moabb_benchmark.csv
+EEGTCNet,moabb_conv,41.65,nan,benchmarks\moabb\moabb_benchmark.csv

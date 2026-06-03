@@ -1,0 +1,164 @@
+{
+  "win20_thr0.4": {
+    "window": 20,
+    "threshold": 0.4,
+    "decision_rate": 1.0,
+    "mean_latency_ms": 531.72,
+    "median_latency_ms": 376.0,
+    "decided_count": 100,
+    "total": 100
+  },
+  "win20_thr0.5": {
+    "window": 20,
+    "threshold": 0.5,
+    "decision_rate": 0.0,
+    "mean_latency_ms": null,
+    "median_latency_ms": null,
+    "decided_count": 0,
+    "total": 100
+  },
+  "win20_thr0.6": {
+    "window": 20,
+    "threshold": 0.6,
+    "decision_rate": 0.0,
+    "mean_latency_ms": null,
+    "median_latency_ms": null,
+    "decided_count": 0,
+    "total": 100
+  },
+  "win20_thr0.7": {
+    "window": 20,
+    "threshold": 0.7,
+    "decision_rate": 0.0,
+    "mean_latency_ms": null,
+    "median_latency_ms": null,
+    "decided_count": 0,
+    "total": 100
+  },
+  "win20_thr0.8": {
+    "window": 20,
+    "threshold": 0.8,
+    "decision_rate": 0.0,
+    "mean_latency_ms": null,
+    "median_latency_ms": null,
+    "decided_count": 0,
+    "total": 100
+  },
+  "win20_thr0.9": {
+    "window": 20,
+    "threshold": 0.9,
+    "decision_rate": 0.0,
+    "mean_latency_ms": null,
+    "median_latency_ms": null,
+    "decided_count": 0,
+    "total": 100
+  },
+  "win50_thr0.4": {
+    "window": 50,
+    "threshold": 0.4,
+    "decision_rate": 0.77,
+    "mean_latency_ms": 1374.9610389610389,
+    "median_latency_ms": 1124.0,
+    "decided_count": 77,
+    "total": 100
+  },
+  "win50_thr0.5": {
+    "window": 50,
+    "threshold": 0.5,
+    "decision_rate": 0.0,
+    "mean_latency_ms": null,
+    "median_latency_ms": null,
+    "decided_count": 0,
+    "total": 100
+  },
+  "win50_thr0.6": {
+    "window": 50,
+    "threshold": 0.6,
+    "decision_rate": 0.0,
+    "mean_latency_ms": null,
+    "median_latency_ms": null,
+    "decided_count": 0,
+    "total": 100
+  },
+  "win50_thr0.7": {
+    "window": 50,
+    "threshold": 0.7,
+    "decision_rate": 0.0,
+    "mean_latency_ms": null,
+    "median_latency_ms": null,
+    "decided_count": 0,
+    "total": 100
+  },
+  "win50_thr0.8": {
+    "window": 50,
+    "threshold": 0.8,
+    "decision_rate": 0.0,
+    "mean_latency_ms": null,
+    "median_latency_ms": null,
+    "decided_count": 0,
+    "total": 100
+  },
+  "win50_thr0.9": {
+    "window": 50,
+    "threshold": 0.9,
+    "decision_rate": 0.0,
+    "mean_latency_ms": null,
+    "median_latency_ms": null,
+    "decided_count": 0,
+    "total": 100
+  },
+  "win100_thr0.4": {
+    "window": 100,
+    "threshold": 0.4,
+    "decision_rate": 0.17,
+    "mean_latency_ms": 2620.705882352941,
+    "median_latency_ms": 3000.0,
+    "decided_count": 17,
+    "total": 100
+  },
+  "win100_thr0.5": {
+    "window": 100,
+    "threshold": 0.5,
+    "decision_rate": 0.0,
+    "mean_latency_ms": null,
+    "median_latency_ms": null,
+    "decided_count": 0,
+    "total": 100
+  },
+  "win100_thr0.6": {
+    "window": 100,
+    "threshold": 0.6,
+    "decision_rate": 0.0,
+    "mean_latency_ms": null,
+    "median_latency_ms": null,
+    "decided_count": 0,
+    "total": 100
+  },
+  "win100_thr0.7": {
+    "window": 100,
+    "threshold": 0.7,
+    "decision_rate": 0.0,
+    "mean_latency_ms": null,
+    "median_latency_ms": null,
+    "decided_count": 0,
+    "total": 100
+  },
+  "win100_thr0.8": {
+    "window": 100,
+    "threshold": 0.8,
+    "decision_rate": 0.0,
+    "mean_latency_ms": null,
+    "median_latency_ms": null,
+    "decided_count": 0,
+    "total": 100
+  },
+  "win100_thr0.9": {
+    "window": 100,
+    "threshold": 0.9,
+    "decision_rate": 0.0,
+    "mean_latency_ms": null,
+    "median_latency_ms": null,
+    "decided_count": 0,
+    "total": 100
+  }
+}

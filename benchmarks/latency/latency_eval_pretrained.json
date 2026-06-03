@@ -1,0 +1,16 @@
+{
+  "checkpoint": "data\\BNCI2014001\\250Hz_preprocess_eeg\\CUPY_SNN_LIF_READOUT_id1_seed2023.pth",
+  "dataset": 0,
+  "pick_id": 1,
+  "threshold": 0.5,
+  "window_size": 50,
+  "total_samples": 288,
+  "decided_count": 0,
+  "decision_rate": 0.0,
+  "mean_latency_ms": null,
+  "median_latency_ms": null,
+  "accuracy_on_decisions": null,
+  "fallback_count": 288,
+  "fallback_accuracy": 0.7743055555555556,
+  "overall_accuracy_with_fallback": 0.7743055555555556
+}

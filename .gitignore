@@ -1,0 +1,50 @@
+# Python bytecode and caches
+__pycache__/
+*/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments and local configuration
+.venv/
+venv/
+env/
+.env
+.env.*
+.python-version
+.vscode/
+.idea/
+agent.MD
+
+# Build and packaging artifacts
+build/
+dist/
+*.egg-info/
+
+# Jupyter and notebook checkpoints
+.ipynb_checkpoints/
+
+# Generated checkpoints and tensor dumps
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.npy.tmp
+*.log
+
+# Generated training outputs
+logs/
+benchmarks/**/logs*/
+
+# Large local datasets can be restored or regenerated
+/data/*
+!/data/.gitkeep
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

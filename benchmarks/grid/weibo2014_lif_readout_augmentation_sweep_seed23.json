@@ -1,0 +1,472 @@
+{
+  "params": {
+    "dataset": 2,
+    "model": "CUPY_SNN_LIF_READOUT",
+    "seed": 23,
+    "trial_num": 1,
+    "epoch": 1500,
+    "epoch2": 600,
+    "patience": 200,
+    "baseline_soft_no_reverse_seed23_from_big_json": 53.346
+  },
+  "results": [
+    {
+      "name": "lif_readout_no_aug_seed23",
+      "return_code": 0,
+      "elapsed_sec": 474.75,
+      "log_path": "logs\\training\\weibo2014_augmentation_sweep\\lif_readout_no_aug_seed23_20260517_235050.log",
+      "summary": {
+        "model": "CUPY_SNN_LIF_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": false,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 2,
+          "device": 0,
+          "dropout": 0.1,
+          "encoder_scale": 1.0,
+          "encoder_threshold": 0.5,
+          "epoch": 1500,
+          "epoch2": 600,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 2.5,
+          "lif_v_threshold": 0.5,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_LIF_READOUT",
+          "optimizer": "adamw",
+          "patience": 200,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "lif_readout_no_aug_seed23",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 51.24999999999999,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 47.92,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 34.58,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 55.00000000000001,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 36.67,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 56.19,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 42.5,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 76.67,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 78.75,
+            "seed": 23,
+            "subject": 9
+          },
+          {
+            "accuracy": 47.92,
+            "seed": 23,
+            "subject": 10
+          }
+        ],
+        "result_mean": 52.74499999999999,
+        "result_std": 0.0,
+        "run_name": "lif_readout_no_aug_seed23",
+        "trial_means": [
+          52.74499999999999
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "2",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_LIF_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "1500",
+        "--epoch2",
+        "600",
+        "--patience",
+        "200",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--run_name",
+        "lif_readout_no_aug_seed23"
+      ]
+    },
+    {
+      "name": "lif_readout_soft_reverse25_seed23",
+      "return_code": 0,
+      "elapsed_sec": 997.59,
+      "log_path": "logs\\training\\weibo2014_augmentation_sweep\\lif_readout_soft_reverse25_seed23_20260517_235845.log",
+      "summary": {
+        "model": "CUPY_SNN_LIF_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.25,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 2,
+          "device": 0,
+          "dropout": 0.1,
+          "encoder_scale": 1.0,
+          "encoder_threshold": 0.5,
+          "epoch": 1500,
+          "epoch2": 600,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 2.5,
+          "lif_v_threshold": 0.5,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_LIF_READOUT",
+          "optimizer": "adamw",
+          "patience": 200,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "lif_readout_soft_reverse25_seed23",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 51.24999999999999,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 44.17,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 36.25,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 54.169999999999995,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 42.92,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 55.71,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 39.58,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 75.83,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 82.08,
+            "seed": 23,
+            "subject": 9
+          },
+          {
+            "accuracy": 52.5,
+            "seed": 23,
+            "subject": 10
+          }
+        ],
+        "result_mean": 53.446000000000005,
+        "result_std": 0.0,
+        "run_name": "lif_readout_soft_reverse25_seed23",
+        "trial_means": [
+          53.446000000000005
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "2",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_LIF_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "1500",
+        "--epoch2",
+        "600",
+        "--patience",
+        "200",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--run_name",
+        "lif_readout_soft_reverse25_seed23",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.25",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5"
+      ]
+    },
+    {
+      "name": "lif_readout_light_noise_seed23",
+      "return_code": 0,
+      "elapsed_sec": 934.37,
+      "log_path": "logs\\training\\weibo2014_augmentation_sweep\\lif_readout_light_noise_seed23_20260518_001522.log",
+      "summary": {
+        "model": "CUPY_SNN_LIF_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.01,
+          "aug_gaussian_std_min": 0.001,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.02,
+          "aug_scale_min": 0.98,
+          "aug_shift_max": 2,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 2,
+          "device": 0,
+          "dropout": 0.1,
+          "encoder_scale": 1.0,
+          "encoder_threshold": 0.5,
+          "epoch": 1500,
+          "epoch2": 600,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 2.5,
+          "lif_v_threshold": 0.5,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_LIF_READOUT",
+          "optimizer": "adamw",
+          "patience": 200,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "lif_readout_light_noise_seed23",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 55.00000000000001,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 49.17,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 34.58,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 52.080000000000005,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 37.08,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 55.24,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 42.5,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 74.58,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 78.33,
+            "seed": 23,
+            "subject": 9
+          },
+          {
+            "accuracy": 52.080000000000005,
+            "seed": 23,
+            "subject": 10
+          }
+        ],
+        "result_mean": 53.064,
+        "result_std": 0.0,
+        "run_name": "lif_readout_light_noise_seed23",
+        "trial_means": [
+          53.064
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "2",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_LIF_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "1500",
+        "--epoch2",
+        "600",
+        "--patience",
+        "200",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--run_name",
+        "lif_readout_light_noise_seed23",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.001",
+        "--aug_gaussian_std_max",
+        "0.01",
+        "--aug_scale_min",
+        "0.98",
+        "--aug_scale_max",
+        "1.02",
+        "--aug_shift_max",
+        "2"
+      ]
+    }
+  ]
+}

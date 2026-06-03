@@ -1,0 +1,24 @@
+{
+  "dataset": 0,
+  "model": "CUPY_SNN_LIF_READOUT",
+  "epoch": 2,
+  "epoch2": 1,
+  "batch_size": 128,
+  "trial_num": 1,
+  "seed": 23,
+  "subjects": [
+    5
+  ],
+  "variants": [
+    "best_seed23"
+  ],
+  "runs": [
+    {
+      "subject": 5,
+      "variant": "best_seed23",
+      "return_code": 0,
+      "accuracy": 0.2396,
+      "log_path": "benchmarks\\grid\\logs_best_seed23_smoke\\subject5_best_seed23_20260504_190922.log"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "dataset": 0,
+  "model": "CUPY_SNN_LIF_READOUT",
+  "epoch": 1500,
+  "epoch2": 600,
+  "batch_size": 128,
+  "trial_num": 1,
+  "seed": 23,
+  "subjects": [
+    2,
+    5,
+    6
+  ],
+  "variants": [
+    "aug_base",
+    "aug_boost",
+    "aug_focal",
+    "aug_label_smooth_005"
+  ],
+  "runs": [
+    {
+      "subject": 2,
+      "variant": "aug_base",
+      "return_code": 0,
+      "accuracy": 0.4444,
+      "log_path": "benchmarks\\grid\\logs_seed23_weak_ea\\subject2_aug_base_20260504_190151.log"
+    },
+    {
+      "subject": 2,
+      "variant": "aug_boost",
+      "return_code": 0,
+      "accuracy": 0.4618,
+      "log_path": "benchmarks\\grid\\logs_seed23_weak_ea\\subject2_aug_boost_20260504_190219.log"
+    },
+    {
+      "subject": 2,
+      "variant": "aug_focal",
+      "return_code": 0,
+      "accuracy": 0.4375,
+      "log_path": "benchmarks\\grid\\logs_seed23_weak_ea\\subject2_aug_focal_20260504_190258.log"
+    },
+    {
+      "subject": 2,
+      "variant": "aug_label_smooth_005",
+      "return_code": 0,
+      "accuracy": 0.5,
+      "log_path": "benchmarks\\grid\\logs_seed23_weak_ea\\subject2_aug_label_smooth_005_20260504_190335.log"
+    },
+    {
+      "subject": 5,
+      "variant": "aug_base",
+      "return_code": 0,
+      "accuracy": 0.5347,
+      "log_path": "benchmarks\\grid\\logs_seed23_weak_ea\\subject5_aug_base_20260504_190408.log"
+    },
+    {
+      "subject": 5,
+      "variant": "aug_boost",
+      "return_code": 0,
+      "accuracy": 0.4653,
+      "log_path": "benchmarks\\grid\\logs_seed23_weak_ea\\subject5_aug_boost_20260504_190441.log"
+    },
+    {
+      "subject": 5,
+      "variant": "aug_focal",
+      "return_code": 0,
+      "accuracy": 0.5243,
+      "log_path": "benchmarks\\grid\\logs_seed23_weak_ea\\subject5_aug_focal_20260504_190519.log"
+    },
+    {
+      "subject": 5,
+      "variant": "aug_label_smooth_005",
+      "return_code": 0,
+      "accuracy": 0.5417,
+      "log_path": "benchmarks\\grid\\logs_seed23_weak_ea\\subject5_aug_label_smooth_005_20260504_190549.log"
+    },
+    {
+      "subject": 6,
+      "variant": "aug_base",
+      "return_code": 0,
+      "accuracy": 0.5139,
+      "log_path": "benchmarks\\grid\\logs_seed23_weak_ea\\subject6_aug_base_20260504_190624.log"
+    },
+    {
+      "subject": 6,
+      "variant": "aug_boost",
+      "return_code": 0,
+      "accuracy": 0.5139,
+      "log_path": "benchmarks\\grid\\logs_seed23_weak_ea\\subject6_aug_boost_20260504_190655.log"
+    },
+    {
+      "subject": 6,
+      "variant": "aug_focal",
+      "return_code": 0,
+      "accuracy": 0.4757,
+      "log_path": "benchmarks\\grid\\logs_seed23_weak_ea\\subject6_aug_focal_20260504_190737.log"
+    },
+    {
+      "subject": 6,
+      "variant": "aug_label_smooth_005",
+      "return_code": 0,
+      "accuracy": 0.5035,
+      "log_path": "benchmarks\\grid\\logs_seed23_weak_ea\\subject6_aug_label_smooth_005_20260504_190813.log"
+    }
+  ]
+}

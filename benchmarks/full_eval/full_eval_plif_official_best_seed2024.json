@@ -1,0 +1,390 @@
+{
+  "dataset": 0,
+  "dataset_name": "BNCI2014001",
+  "model": "CUPY_SNN_PLIF",
+  "run_name": "official",
+  "seed": 2024,
+  "subjects": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "checkpoint_pattern": "CUPY_SNN_PLIF_official_id{subject}_seed2024.pth",
+  "total_samples": 2592,
+  "overall_accuracy": 0.6971450617283951,
+  "balanced_accuracy": 0.697145061728395,
+  "macro_f1": 0.6966648727855567,
+  "weighted_f1": 0.6966648727855566,
+  "per_class": [
+    {
+      "class": 0,
+      "precision": 0.7215815485996705,
+      "recall": 0.6759259259259259,
+      "f1": 0.69800796812749,
+      "support": 648
+    },
+    {
+      "class": 1,
+      "precision": 0.6941678520625889,
+      "recall": 0.7530864197530864,
+      "f1": 0.7224278312361214,
+      "support": 648
+    },
+    {
+      "class": 2,
+      "precision": 0.682962962962963,
+      "recall": 0.7114197530864198,
+      "f1": 0.6969009826152684,
+      "support": 648
+    },
+    {
+      "class": 3,
+      "precision": 0.6919275123558485,
+      "recall": 0.6481481481481481,
+      "f1": 0.6693227091633467,
+      "support": 648
+    }
+  ],
+  "per_subject": [
+    {
+      "subject": 1,
+      "samples": 288,
+      "accuracy": 0.8472222222222222
+    },
+    {
+      "subject": 2,
+      "samples": 288,
+      "accuracy": 0.5104166666666666
+    },
+    {
+      "subject": 3,
+      "samples": 288,
+      "accuracy": 0.8576388888888888
+    },
+    {
+      "subject": 4,
+      "samples": 288,
+      "accuracy": 0.6770833333333334
+    },
+    {
+      "subject": 5,
+      "samples": 288,
+      "accuracy": 0.5798611111111112
+    },
+    {
+      "subject": 6,
+      "samples": 288,
+      "accuracy": 0.5347222222222222
+    },
+    {
+      "subject": 7,
+      "samples": 288,
+      "accuracy": 0.78125
+    },
+    {
+      "subject": 8,
+      "samples": 288,
+      "accuracy": 0.7291666666666666
+    },
+    {
+      "subject": 9,
+      "samples": 288,
+      "accuracy": 0.7569444444444444
+    }
+  ],
+  "confusion_matrix": [
+    [
+      438,
+      92,
+      73,
+      45
+    ],
+    [
+      73,
+      488,
+      56,
+      31
+    ],
+    [
+      30,
+      46,
+      461,
+      111
+    ],
+    [
+      66,
+      77,
+      85,
+      420
+    ]
+  ],
+  "subject_confusions": {
+    "1": [
+      [
+        70,
+        1,
+        0,
+        1
+      ],
+      [
+        4,
+        66,
+        2,
+        0
+      ],
+      [
+        1,
+        0,
+        59,
+        12
+      ],
+      [
+        2,
+        0,
+        21,
+        49
+      ]
+    ],
+    "2": [
+      [
+        35,
+        4,
+        20,
+        13
+      ],
+      [
+        30,
+        18,
+        17,
+        7
+      ],
+      [
+        4,
+        1,
+        63,
+        4
+      ],
+      [
+        24,
+        1,
+        16,
+        31
+      ]
+    ],
+    "3": [
+      [
+        64,
+        6,
+        0,
+        2
+      ],
+      [
+        0,
+        72,
+        0,
+        0
+      ],
+      [
+        2,
+        8,
+        45,
+        17
+      ],
+      [
+        2,
+        2,
+        2,
+        66
+      ]
+    ],
+    "4": [
+      [
+        39,
+        20,
+        11,
+        2
+      ],
+      [
+        10,
+        53,
+        8,
+        1
+      ],
+      [
+        3,
+        1,
+        47,
+        21
+      ],
+      [
+        4,
+        6,
+        6,
+        56
+      ]
+    ],
+    "5": [
+      [
+        35,
+        16,
+        17,
+        4
+      ],
+      [
+        8,
+        59,
+        2,
+        3
+      ],
+      [
+        12,
+        9,
+        40,
+        11
+      ],
+      [
+        13,
+        9,
+        17,
+        33
+      ]
+    ],
+    "6": [
+      [
+        44,
+        19,
+        6,
+        3
+      ],
+      [
+        17,
+        46,
+        5,
+        4
+      ],
+      [
+        7,
+        12,
+        45,
+        8
+      ],
+      [
+        13,
+        34,
+        6,
+        19
+      ]
+    ],
+    "7": [
+      [
+        42,
+        10,
+        0,
+        20
+      ],
+      [
+        1,
+        68,
+        1,
+        2
+      ],
+      [
+        0,
+        0,
+        49,
+        23
+      ],
+      [
+        0,
+        0,
+        6,
+        66
+      ]
+    ],
+    "8": [
+      [
+        52,
+        2,
+        18,
+        0
+      ],
+      [
+        0,
+        67,
+        4,
+        1
+      ],
+      [
+        1,
+        9,
+        61,
+        1
+      ],
+      [
+        7,
+        24,
+        11,
+        30
+      ]
+    ],
+    "9": [
+      [
+        57,
+        14,
+        1,
+        0
+      ],
+      [
+        3,
+        39,
+        17,
+        13
+      ],
+      [
+        0,
+        6,
+        52,
+        14
+      ],
+      [
+        1,
+        1,
+        0,
+        70
+      ]
+    ]
+  },
+  "params": {
+    "dataset": 0,
+    "model": "CUPY_SNN_PLIF",
+    "run_name": "official",
+    "seed": 2024,
+    "subject_id": 0,
+    "batch_size": 128,
+    "T": 1000,
+    "prep": "250Hz_preprocess_eeg/",
+    "device": 0,
+    "cpu": false,
+    "beta": 2,
+    "loo": false,
+    "EA": false,
+    "readout_v_threshold": 0.2,
+    "readout_adapt_scale": 0.02,
+    "readout_tau_adp_scale": 6.0,
+    "readout_input_scale": 2.5,
+    "encoder_threshold": 0.5,
+    "encoder_scale": 1.0,
+    "hidden_layers": 2,
+    "dropout": 0.1,
+    "lif_v_threshold": 0.5,
+    "lif_input_scale": 2.5,
+    "out_json": "benchmarks\\full_eval\\full_eval_plif_official_best_seed2024.json",
+    "device_name": "cuda:0"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "dataset": 0,
+  "model": "CUPY_SNN_LIF_READOUT",
+  "epoch": 1500,
+  "epoch2": 600,
+  "batch_size": 128,
+  "trial_num": 1,
+  "seed": 2023,
+  "subjects": [
+    2,
+    5,
+    6
+  ],
+  "variants": [
+    "aug_base",
+    "aug_zscore",
+    "aug_label_smooth_005"
+  ],
+  "runs": [
+    {
+      "subject": 2,
+      "variant": "aug_base",
+      "return_code": 0,
+      "accuracy": 0.4861,
+      "log_path": "benchmarks\\grid\\logs_weak_ea\\subject2_aug_base_20260504_175325.log"
+    },
+    {
+      "subject": 2,
+      "variant": "aug_zscore",
+      "return_code": 0,
+      "accuracy": 0.3993,
+      "log_path": "benchmarks\\grid\\logs_weak_ea\\subject2_aug_zscore_20260504_175353.log"
+    },
+    {
+      "subject": 2,
+      "variant": "aug_label_smooth_005",
+      "return_code": 0,
+      "accuracy": 0.4375,
+      "log_path": "benchmarks\\grid\\logs_weak_ea\\subject2_aug_label_smooth_005_20260504_175429.log"
+    },
+    {
+      "subject": 5,
+      "variant": "aug_base",
+      "return_code": 0,
+      "accuracy": 0.559,
+      "log_path": "benchmarks\\grid\\logs_weak_ea\\subject5_aug_base_20260504_175454.log"
+    },
+    {
+      "subject": 5,
+      "variant": "aug_zscore",
+      "return_code": 0,
+      "accuracy": 0.4375,
+      "log_path": "benchmarks\\grid\\logs_weak_ea\\subject5_aug_zscore_20260504_175522.log"
+    },
+    {
+      "subject": 5,
+      "variant": "aug_label_smooth_005",
+      "return_code": 0,
+      "accuracy": 0.5278,
+      "log_path": "benchmarks\\grid\\logs_weak_ea\\subject5_aug_label_smooth_005_20260504_175550.log"
+    },
+    {
+      "subject": 6,
+      "variant": "aug_base",
+      "return_code": 0,
+      "accuracy": 0.5,
+      "log_path": "benchmarks\\grid\\logs_weak_ea\\subject6_aug_base_20260504_175616.log"
+    },
+    {
+      "subject": 6,
+      "variant": "aug_zscore",
+      "return_code": 0,
+      "accuracy": 0.4618,
+      "log_path": "benchmarks\\grid\\logs_weak_ea\\subject6_aug_zscore_20260504_175651.log"
+    },
+    {
+      "subject": 6,
+      "variant": "aug_label_smooth_005",
+      "return_code": 0,
+      "accuracy": 0.5417,
+      "log_path": "benchmarks\\grid\\logs_weak_ea\\subject6_aug_label_smooth_005_20260504_175723.log"
+    }
+  ]
+}

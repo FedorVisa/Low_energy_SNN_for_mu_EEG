@@ -1,0 +1,681 @@
+ 
+Contents lists available at ScienceDirect
+Neural Networks
+journal homepage: www.elsevier.com/locate/neunet  
+Full Length Article
+A lightweight spiking neural network for EEG-based motor imagery 
+classification
+Herui Zhang
+ , Haoran Wang, Jiayu An
+ , Shitao Zheng, Dongrui Wu
+ ∗
+Key Laboratory of the Ministry of Education for Image Processing and Intelligent Control, School of Artificial Intelligence and Automation, Huazhong University of 
+Science and Technology, Wuhan 430074, China
+A R T I C L E  I N F O
+Keywords:
+Spiking neural network
+Brain–computer interface
+Deep learning
+Motor imagery
+ A B S T R A C T
+Spiking neural networks (SNNs) aim to simulate the human brain neural network, using sparse spike event 
+streams for effective and energy-efficient spatio-temporal signal processing. This paper proposes a lightweight 
+SNN model for electroencephalogram (EEG) based motor imagery (MI) classification, a classical brain–
+computer interface paradigm. The model has three desirable characteristics: (1) it has a brain-inspired 
+architecture; (2) it is energy efficient; and, (3) it is dataset agnostic. Within-subject and cross-subject 
+experiments on three public datasets demonstrated the superiority of our SNN model over four classical 
+convolutional neural network based models in EEG based MI classification.
+1. Introduction
+Electroencephalogram (EEG) has been widely used in brain-
+computer interfaces (BCIs) to decode human mental states. Motor 
+imagery (MI) is a classic BCI paradigm, which involves imagining 
+performing a movement without actually executing it. It has broad 
+applications in healthcare, such as neurological rehabilitation (López-
+Larraz et al., 2018), brain-controlled wheelchairs (Fernández-Rodríguez 
+et al., 2016), and brain-controlled robotic arms (Cheng et al., 2025).
+In recent years, EEG-based MI classification has been extensively 
+studied (Hameed et al., 2025). The algorithms can be broadly catego-
+rized into traditional machine learning approaches and deep learning 
+approaches. The former use hand-crafted EEG features in traditional 
+(shallow) classifiers (Ang et al., 2012), whereas the latter use deep 
+neural networks to learn the feature extractor and classifier simulta-
+neously in an end-to-end manner (Lawhern et al., 2018; Mane et al., 
+2021; Schirrmeister et al., 2017).
+This paper belongs to the second category. However, instead of 
+using (traditional) artificial neural networks (ANNs), we use spiking 
+neural networks (SNNs), which have been proven in theory and practice 
+to be able to better capture the temporal–spatial nature of EEGs with 
+low energy consumption (Kugele et al., 2020; Shan et al., 2025; Shi 
+et al., 2025; Wu et al., 2019; Yu et al., 2022). More specifically, we 
+propose a lightweight end-to-end SNN model based on spatial–temporal 
+convolution for EEG-based MI classification. Its main advantages are:
+∗ Corresponding author.
+E-mail addresses: heruizhang@hust.edu.cn (H. Zhang), hrwang21@hust.edu.cn (H. Wang), anjiayu@hust.edu.cn (J. An), shitaozheng@hust.edu.cn 
+(S. Zheng), drwu@hust.edu.cn (D. Wu).
+1. Brain-inspired. The model emulates human brain activity by in-
+tegrating spatial–temporal convolution with leaky integrate-and-
+fire (LIF) neuron. This architecture enables the adaptive extrac-
+tion of task-relevant EEG components and enhances biological 
+interpretability.
+2. Energy-efficient. The model is lightweight and efficient, outper-
+forming four representative convolutional neural network (CNN) 
+based models for MI classification with fewer parameters and 
+more than 50% energy savings, making it well-suited for energy-
+constrained BCI applications.
+3. Dataset-agnostic. The model demonstrates robust and consistently 
+high performance across various datasets using a single set of 
+hyperparameters, thereby significantly improving deployment 
+efficiency over existing SNN approaches and enhancing its prac-
+ticality in real-world applications.
+The remainder of this paper is organized as follows: Section 2 
+introduces related works. Section 3 describes our proposed model. 
+Section 4 validates the performance of our proposed model. Finally, 
+Section 5 draws conclusions.
+2. Related works
+This section introduces ANN and SNN based MI classification algo-
+rithms.
+https://doi.org/10.1016/j.neunet.2025.107741
+Received 30 June 2024; Received in revised form 25 April 2025; Accepted 7 June 2025
+Neural Networks 191 (2025) 107741 
+Available online 24 June 2025 
+0893-6080/© 2025 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies. 
+H. Zhang et al.
+2.1. MI classification
+EEG-based MI classification algorithms can be broadly categorized 
+into traditional machine learning approaches and deep learning ap-
+proaches (Hameed et al., 2025).
+Traditional approaches may extract temporal features such as mean 
+and variance, spectral features such as power spectral density and 
+wavelets, and/or spatial features such as filter bank common spatial 
+patterns (Ang et al., 2012), and then feed them into traditional (shal-
+low) classifiers, such as linear discriminant analysis and support vector 
+machine, for classification.
+Deep learning approaches usually use end-to-end ANNs, such as 
+CNNs and long short-term memory (LSTM) networks, for simultaneous 
+feature extraction and classification. Representative approaches include 
+ShallowNet (Schirrmeister et al., 2017), DeepNet (Schirrmeister et al., 
+2017), EEGNet (Lawhern et al., 2018) and FBCNet (Mane et al., 2021).
+Although ANNs demonstrate promising performance, their high 
+energy consumption constrains the deployment on portable devices 
+and the applications to EEG-based BCIs (Kartsch et al., 2019). In 
+contrast, SNNs, which use spiking neurons representing information 
+across multiple timescales, may perform better in non-stationary signal 
+classification with reduced energy consumption (Deng et al., 2020; 
+Tang et al., 2021).
+2.2. Spiking neural network
+Many spiking neuron models have been proposed such as LIF 
+neuron (Fang et al., 2021), exponential integrate-and-fire (EIF) neu-
+ron (Fourcaud-Trocmé et al., 2003), quadratic integrate-and-fire (QIF) 
+neuron (Latham et al., 2000), Izhikevich neuron (Izhikevich, 2004) 
+and neuromorphic computing-specific neurons (Chakraborty et al., 
+2018; Xiao et al., 2025). Among them, the LIF neuron can be easily 
+implemented and has fewer floating-point operations (FLOPs), thus LIF 
+neuron and its variants are the most popular in SNN algorithms (Fang 
+et al., 2021; Wu et al., 2021; Yao et al., 2022).
+Unlike ANNs, SNNs process data in the form of spike sequences, re-
+quiring encoding the conventional analog data into spike events (Forno 
+et al., 2022). Common encoding mechanisms include rate-based, tem-
+poral, bio-inspired and direct approaches. Among them, direct encoding 
+sets spike encoding as the input layer of the neural network (Fang et al., 
+2021), having the lowest encoding costs.
+Due to the non-differentiable nature of spiking neuron models, the 
+training of SNNs is also different from ANNs. There are generally three 
+categories of methods (Tavanaei et al., 2019): ANN-to-SNN conversion, 
+direct training, and biologically plausible training. Among them, di-
+rect training replaces the non-differentiable firing function in spiking 
+neurons with a surrogate function to solve non-differentiable problem 
+when performing backpropagation. It is easy to implement and usually 
+gets better results.
+In this paper, we use the LIF neuron, direct encoding mechanism 
+and direct training method.
+2.3. SNN-based MI classification
+SNNs simulate real neurons in the human brain and use asyn-
+chronous spike event streams for information transmission, which can 
+better process time series with reduced energy consumption (Karami-
+manesh et al., 2025; Lobo et al., 2020; Tavanaei et al., 2019).
+Manually extracted features can be used in SNNs for MI classifica-
+tion.Virgilio et al. (2020) combined power spectral density and wavelet 
+transform with Izhikevich neurons for binary MI classification, demon-
+strating the advantages of SNNs in processing time information. Wang 
+et al. (2020) used common spatial pattern and filter bank common 
+spatial pattern for EEG feature extraction, and then Izhikevich neu-
+rons for online multi-classification MI classification. Wu et al. (2023) 
+extracted spatio-temporal features of EEGs, then performed binary MI 
+classification using a dynamic evolving SNN.
+End-to-end SNNs have also been proposed for MI classification. Li 
+et al. (2022) proposed an end-to-end LSTM-based SNN model with 
+Bens Spiker algorithm for transfer learning in MI classification. Kumar 
+et al. (2022) used multi-layer convolution to encode spikes, i.e., tem-
+poral convolution and recurrent form of spiking neurons to capture 
+the spatio-temporal information. Gong et al. (2023) designed a novel 
+SNN model with adaptive graph convolution and LSTM, considering 
+the intrinsic spatial topology among different EEG channels and the 
+temporal dependencies of spikes. Liao et al. (2025) proposed an ANN-
+to-SNN conversion method for MI classification that reduces conversion 
+errors and improves parameter efficiency via a fully convolutional 
+structure.
+Currently, end-to-end SNNs may achieve better performance; how-
+ever, they use dataset-specific hyperparameters, significantly reducing 
+their practicality.
+3. Methodology
+This section introduces our proposed SNN model.
+3.1. Leaky integrate-and-fire neuron
+LIF neuron is widely used due to its computational simplicity (Fang 
+et al., 2021; Gong et al., 2023; Li et al., 2022). To simplify the calcu-
+lation, we use a structure similar to Fang et al. (2021), whose neural 
+dynamic can be divided into three steps: leaky integrating (charging), 
+firing, and resetting.
+The charging process is described as (Gerstner et al., 2014): 
+𝜏 𝑑𝑣(𝑡)
+𝑑𝑡 = − ( 𝑣(𝑡) − 𝑣reset
+) + 𝑥(𝑡), (1)
+where 𝜏 is the membrane time constant, 𝑣(𝑡) the membrane potential at 
+time step 𝑡, 𝑥(𝑡) the input synaptic current, and 𝑣reset the reset potential.
+The following discrete representation of the LIF neuron charging 
+process is used in this paper: 
+𝒉𝑡 =
+(
+1 − 1
+𝜏
+)
+𝒗𝑡 + 1
+𝜏 𝒙𝑡, (2)
+where 𝒉𝑡 and 𝒗𝑡 are respectively the hidden and observable membrane 
+potentials, 𝒗reset = 0 is omitted, and 𝒙𝑡 is the input synaptic current: 
+𝒙𝑡 = 𝑾 𝑙−1 ⋅ 𝒔𝑙−1
+𝑡 , (3)
+in which 𝑙 is the layer index, 𝑾 𝑙−1 the connection weights between 
+layers 𝑙 and 𝑙 − 1, and 𝒔𝑙−1
+𝑡  the output spikes of the previous layer.
+The firing status 𝒔𝑡 is: 
+𝒔𝑡 = 𝜺 ( 𝒉𝑡 − 𝒗th
+) , (4)
+where 𝒔𝑡 is the output of the current layer at time step 𝑡, 𝜺 the heaviside 
+function, and 𝒗th the firing threshold. The neuron fires when 𝒉𝑡 exceeds 
+𝒗th , which is usually set to 𝟏. Since the 𝜺 function is non differen-
+tiable, we use the sigmoid function to replace it when performing 
+backpropagation, as in Neftci et al. (2019).
+The resetting operation is: 
+𝒗𝑡+1 = ( 𝟏 − 𝒔𝑡
+) ⊙ 𝒉𝑡 + 𝒔𝑡 ⊙ 𝒗reset , (5)
+where 𝒗reset = 𝟎 is usually used.
+3.2. Model architecture
+Table  1 shows our model architecture, which contains the spatial 
+and temporal convolutional layers, an LIF neuron layer, a rate decoding 
+layer, and a fully connected classification layer.
+The first two layers model the relationship between human brain 
+neurons and EEG, i.e., EEGs are the average voltages of the human 
+brain neurons centered at each electrode location. Thus, we use the 
+Neural Networks 191 (2025) 107741 
+2 
+H. Zhang et al.
+Table 1
+Architecture of our SNN model. 𝐶 is the number of EEG channels, and 𝑇 the number 
+of time domain samples.
+ Layer # of Size # of # of Output  
+ filters groups parameters dimensionality 
+ Input (𝐶, 𝑇 )  
+ Conv1D 2𝐶 (1,) 1 2𝐶 2 (2𝐶, 𝑇 )  
+ Conv1D 2𝐶 (𝑇 ∕32, ) 2𝐶 𝐶𝑇 ∕16 (2𝐶, 𝑇 )  
+ BatchNorm 4𝐶 (2𝐶, 𝑇 )  
+ Reshape (𝑇 , 2𝐶)  
+ LIF 1 (𝑇 , 2𝐶)  
+ Mean (2𝐶)  
+ Dense 𝑁class (2𝐶, ) 2𝐶𝑁 class 𝑁class  
+𝑇 dimension as the time step dimension, which means each neuron in 
+the subsequent LIF neuron layer is responsible for processing the time 
+series of a corresponding EEG channel.
+In the spatial and temporal convolutional layers, for an EEG trial 
+𝑿 ∈ R𝐶×𝑇 , spatial convolution is used to restructure the EEG channels, 
+and temporal convolution to filter out different frequency components 
+of each channel, getting more task-oriented signals ̂𝑿 ∈ R𝐶′×𝑇 (Gong 
+et al., 2023). The former operates along dimension 𝐶, mining the topo-
+logical information from EEG channels like common spatial patterns. 
+The latter operates along dimension 𝑇 to perform filtering, focusing on 
+different frequency components of each channel. This process can be 
+described as: 
+̄𝑿 = 𝑾 𝑆 ⋅ 𝑿,
+̂𝑿𝑖 = 𝑾 𝑇
+𝑖 ∗ ̄𝑿𝑖, 𝑖 = 1, … , 𝐶′ (6)
+where 𝑾 𝑆 ∈ R𝐶′×𝐶 and 𝑾 𝑇 ∈ R𝐶′× 𝑇
+32  are respectively the weights 
+of spatial and temporal convolutions, ̄𝑿 ∈ R𝐶′×𝑇 the restructured EEG 
+signal, and 𝑖 the output channel index. Note that 𝐶 ′ = 2 𝐶 is used to 
+increase the spatial resolution.
+Next, ̂𝑿 is sent to the LIF neuron layer to complete spike encoding, 
+using (2), (4), and (5). Let 𝛽 = 1 − 1
+𝜏 in (2). For 𝑡 ∈ [ 𝑡𝐿, 𝑡𝑁
+] , where 𝑡𝐿 is 
+the first time step after the last firing and 𝑡𝑁 the time step at the next 
+firing, the membrane potential 𝒉𝑡 can be iteratively computed using (2) 
+as:
+𝒉𝑡 = 𝛽𝒗𝑡 + (1 − 𝛽) 𝒙𝑡
+= 𝛽2𝒉𝑡−1 + 𝛽 (1 − 𝛽) 𝒙𝑡−1 + (1 − 𝛽) 𝒙𝑡
+⋮
+= 𝛽𝑡−𝑡𝐿 (1 − 𝛽) 𝒙𝑡𝐿 + ⋯ + 𝛽 (1 − 𝛽) 𝒙𝑡−1 + (1 − 𝛽) 𝒙𝑡. (7)
+Observe that 𝒉𝑡 is the convolution of previous inputs with 𝛽-based 
+kernel along the time step dimension. Since 𝛽 is trainable, the input–
+output characteristics of LIF neurons can adapt to the input EEGs. 
+The real valued sequence {𝒙𝑡}𝑡𝑅
+𝑡=𝑡𝐿
+ is transformed into a sparse spike 
+sequence. More spikes indicate more time-series components aligned 
+with the 𝛽-based kernel.
+The sparse local spatio-temporal features 𝒁 ∈ R𝐶′×𝑇 are cap-
+tured when processing the time series of each channel. This process 
+is denoted as 𝒁 = LIF ( ̂𝑿) , where LIF denotes the spiking neuron 
+calculation in (2), (4) and (5).
+Then, the rate decoding method is used to transform the sparse spike 
+features 𝒁 to rate-based features 𝒀 ∈ R𝐶′×1, which is classified by the 
+fully connected layer: 
+𝒀 = 1
+𝑇
+𝑇∑
+𝑡=1
+𝒁𝑡,
+𝑶 = 𝑾 ⋅ 𝒀 ,
+(8)
+where 𝑡 is the time step index, and 𝑾 ∈ R𝑁class×𝐶′
+ the weights of the 
+fully connected layer.
+Table 2
+Summary of the three MI datasets.
+ Dataset # Subjects # Classes # Channels # Trails 
+ MI1 9 4 22 576  
+ MI2 14 2 15 160  
+ MI3 10 6 60 480  
+Table 3
+Within-subject classification performance.
+ Model MI1 MI2 MI3 Avg.  
+ ShallowNet 54.12** 66.79** 36.61** 52.51** 
+ DeepNet 40.24** 62.16** 24.36** 42.25** 
+ EEGNet 64.40* 73.85** 42.97** 60.41** 
+ FBCnet 67.40 75.18** 59.19 67.26** 
+ Ours 68.92 82.01 56.64 69.19  
+The ∗ and ∗∗ represent the statistically significant difference between the performance 
+of our model and the given model.
+* 𝑝 < 0.05.
+** 𝑝 < 0.01.
+4. Experiments and results
+This section introduces the experiment datasets and results to 
+demonstrate the effectiveness and biological interpretability of our 
+proposed SNN model. The code will be available at https://github.com/
+Zhr1110/SnnForMI after this paper is accepted.
+4.1. Datasets
+Three publicly available MI datasets, summarized in Table  2, were 
+used in our experiments.
+The first (MI1) was BCI Competition IV Dataset 2a (Brunner et al., 
+2008), which contains 22-channel EEG signals from four classes (left 
+hand, right hand, feet, and tongue). It consists of data from two 
+sessions, one for training and the other for test.
+The second (MI2) (Steyrl et al., 2016) contains 15-channel EEG 
+signals from two classes (right hand, and feet). It has been partitioned 
+into training and test sets.
+The last (MI3) was the Weibo2014 dataset (Yi et al., 2014), which 
+contains 60-channel EEG signals from six classes (left hand, right hand, 
+feet, both hands, left hand combined with right foot, and right hand 
+combined with left foot). The first half was used for training, and the 
+second half for test.
+The same preprocessing steps were used for all three datasets: de-
+trending, 8–30 Hz bandpass filtering, and downsampling to 250 Hz. 
+Each trial contained 4s MI data. The last 1/6 training data were 
+reserved as the validation set.
+4.2. Implementation details
+We implemented our SNN model using the PyTorch-based Spik-
+ingjelly toolkit (Fang et al., 2023). We used the two-stage training 
+strategy as in Mane et al. (2021), Schirrmeister et al. (2017), which 
+was proposed to maximize the utilization of EEG training data while 
+reducing overfitting. Additionally, it fixes the batch size at 16 and 
+the learning rate at 0.001, eliminating the need for hyperparameter 
+adjusting in training. In the first stage, the maximum number of epochs 
+was set to 1500, and Adam optimizer with early stopping (patience 
+200) on the validation set was used. In the second stage, the model 
+was trained by combined the training and validation sets and for at 
+most 600 epochs. The second stage training was stopped when its loss 
+reduced below that of the first stage. The experiments were repeated 8 
+times, and the means are reported.
+Neural Networks 191 (2025) 107741 
+3 
+H. Zhang et al.
+Table 4
+Cross-subject MI classification performance of different SNN and CNN models.
+ Model MI1 MI2 MI3 Avg.
+ w/o EA w/ EA w/o EA w/ EA w/o EA w/ EA w/o EA w/ EA  
+ ShallowNet 39.31* 45.06** 64.30* 66.13** 23.99* 28.79** 42.53** 46.66** 
+ DeepNet 32.59** 40.29** 61.71** 68.59** 18.11** 23.96** 37.47** 44.28** 
+ EEGNet 42.88 50.89 62.08** 75.09 27.70 37.31 44.22** 54.43** 
+ FBCNet 39.95* 47.87* 62.95* 70.39** 27.26 36.39* 43.39** 51.55** 
+ Ours 43.84 52.13 68.94 75.89 25.79 38.45 46.19 55.49  
+The ∗ and ∗∗ represent the statistically significant difference between the performance of our model and the given model.
+* 𝑝 < 0.05.
+** 𝑝 < 0.01.
+Table 5
+Number of parameters of different models.
+ Model MI1 MI2 MI3  
+ DeepNet 320,479 294,502 365,831 
+ ShallowNet 46,084 30,002 111,766 
+ EEGNet 3476 2370 5078  
+ FBCNet 11,812 7490 25,062  
+ Ours 2600 1502 11,886  
+4.3. Classification results
+Our SNN model was compared with four CNN models (ShallowNet
+Schirrmeister et al., 2017, DeepNet Schirrmeister et al., 2017, EEG-
+Net Lawhern et al., 2018, and FBCNet Mane et al., 2021) in both 
+within-subject and cross-subject classifications. For FBCNet, we inde-
+pendently processed the data from each frequency band as described 
+in the original paper. Notably, most existing end-to-end SNNs are not 
+open source (Gong et al., 2023; Li et al., 2022), and all require extensive 
+hyperparameter tuning for each new dataset (Gong et al., 2023; Kumar 
+et al., 2022; Li et al., 2022), hindering the reproducibility of their 
+reported results. Consequently, these models were excluded from our 
+experimental comparisons.
+Table  3 summarizes the within-subject classification results on the 
+three datasets. Our SNN model achieved the best performance on MI1 
+and MI2, and second best on MI3. Compared with the four classical 
+CNN based models, the average classification accuracy increased at 
+least 1.93%.
+Table  4 shows the leave-one-subject-out cross-subject classifica-
+tion results. We conducted experiments with and without Euclidean 
+alignment (EA) (He & Wu, 2020), which has demonstrated promising 
+performance in transfer learning (Wu et al., 2022). Our proposed SNN 
+model outperformed the other four CNN-based models, and EA can be 
+used to further improve its performance.
+4.4. Energy consumption analysis
+Energy consumption is also an important consideration in practice. 
+Tables  5 shows the number of parameters of the five models. Our model 
+has the fewest parameters on MI1 and MI2, and second fewest on MI3.
+Furthermore, we evaluated the average energy consumption of the 
+five models using: 
+𝐸𝑛𝑒𝑟𝑔𝑦 = 𝐸𝑀𝐴𝐶 ⋅ 𝑁𝑀𝐴𝐶 + 𝐸𝐴𝐶 ⋅ 𝑁𝐴𝐶 ⋅ 𝑠𝑝𝑎𝑟𝑠𝑖𝑡𝑦, (9)
+where 𝑁𝑀𝐴𝐶 and 𝑁𝐴𝐶 are respectively the number of multiply-and-
+accumulate (MAC) and accumulate (AC) operations, 𝐸𝑀𝐴𝐶 and 𝐸𝐴𝐶 the 
+energy consumption of MAC and AC operations, and 𝑠𝑝𝑎𝑟𝑠𝑖𝑡𝑦 the spik-
+ing rate. As in Yao et al. (2023), we assume that 32-bit floating-point 
+implementation is adopted using 45 nm  technology, where 𝐸𝑀𝐴𝐶 =
+4.6 pJ and 𝐸𝐴𝐶 = 0 .9 pJ . Table  6 shows the average energy consump-
+tion on the three datasets. Our model has the lowest average energy 
+consumption, with at least 50% saving over others.
+Table 6
+Average energy consumption of different models on the three datasets.
+ Model 𝑁𝑀𝐴𝐶 𝑁𝐴𝐶 Sparsity Energy  
+ (M) (M) Cons. (Mpj) 
+ DeepNet 67.83 – – 312  
+ ShallowNet 82.22 – – 378  
+ EEGNet 18.34 – – 84  
+ FBCNet 12.48 – – 57  
+ Ours 5.14 0.52 0.19 24  
+Fig. 1. Spatial biological rationality analysis, showing the correlation of EEG signal 
+magnitude with the classification performance. Blue: negative correlation; red: positive 
+correlation.
+In summary, compared with the classical CNN models for MI classi-
+fication, our proposed SNN model can achieve better performance with 
+significantly reduced energy consumption.
+4.5. Biological rationality
+Two experiments were performed to examine the spatial and tem-
+poral biological rationality of the SNN model.
+In the first experiment, the EEG signal magnitude of each channel 
+was gradually increased from 0.9 to 1.1 times of the original signal, 
+and the correlation of EEG signal magnitude with the classification 
+performance was computed. A positive correlation indicates that an 
+increase in the EEG signal amplitude facilitates classification, and vice 
+versa. The results are shown in Fig.  1. Reduced noise amplitude in the 
+right (left) hemisphere facilitated left-hand (right-hand) classification, 
+aligning with the known spatial mechanisms of MI (Hamel-Thibault 
+et al., 2018).
+In the second experiment, we masked signals at various intervals to 
+evaluate their temporal impact on the classification performance. Fig.  2 
+shows the results. Generally, a higher-power segment had larger impact 
+on the SNN classification performance, which is reasonable.
+In summary, these two experiments confirmed that our SNN model 
+aligns with the spatial and temporal physiological mechanisms of MI.
+Neural Networks 191 (2025) 107741 
+4 
+H. Zhang et al.
+Fig. 2. Temporal biological rationality analysis. The first row shows the temporal 
+power distribution of the raw EEG signals, and the second row shows the impact of 
+the corresponding time period on SNN classification performance, with darker shades 
+indicating larger impact.
+Table 7
+The effect of spatial and temporal convolution.
+ Model MI1 MI2 MI3  
+ w/o SC & TC 41.97 65.64 32.09 
+ w/o SC 46.10 68.84 37.53 
+ w/o TC 64.29 79.03 51.62 
+ w/ SC & TC 68.92 82.01 56.64 
+Table 8
+Performance with different spiking neurons.
+ Neuron MI1 MI2 MI3 FLOPs 
+ Identity 25.76 51.35 17.56 ×  
+ IF 58.00 70.49 36.15 5  
+ QIF 65.88 81.71 53.51 11  
+ EIF 53.92 79.17 37.39 13  
+ Izhikevich 66.21 82.00 52.90 22  
+ Ours (LIF) 68.92 82.01 56.64 7  
+4.6. Ablation studies
+Within-subject ablation studies were performed to verify the effec-
+tiveness of spatial and temporal convolution and LIF neuron in our 
+model.
+The effect of spatial and temporal convolution. We removed 
+the spatial convolution (SC) layer and temporal convolution (TC) layer 
+individually and simultaneously to evaluate their effects. Table  7 shows 
+the results. Using both together achieved the best performance. Al-
+though both convolutions are essential, spatial convolution, which is 
+responsible for channel restructuring and spatial resolution expansion, 
+seemed more important.
+The effect of LIF neuron. Identity function and commonly used 
+spiking neurons such as integrate-and-fire (IF), Izhikevich, EIF, and QIF 
+neurons were used to replace the LIF neuron in our model to study its 
+effect. Table  8 shows the results. The LIF neuron performed best and 
+has lower computational complexity, so overall it is the best choice.
+4.7. Visualization of spatial and temporal convolution
+The spatial convolutional layer improves the spatial resolution of 
+EEG signals and facilitates the integration of information from different 
+brain regions. Meanwhile, the temporal convolutional layer acts as a 
+time-domain filter, with the help of its kernel values.
+Fig.  3 shows the spatial convolutional weights and the spectrum of 
+temporal convolutional weights corresponding to the first 10 output 
+channels of 𝐶out , using Subject 3 from MI1 as an example. Each output 
+channel focuses on distinct brain regions and aligns with different 
+filters, such as low-pass filters (𝐶6 and 𝐶10) and band-pass filters (𝐶1, 
+𝐶2, and 𝐶3).
+By integrating spatial and temporal information, spatial and tem-
+poral convolutional layers enhance the spatial comprehension of EEG 
+signals while selectively isolating different frequency components, fa-
+cilitating the extraction of more informative signals for subsequent 
+processing.
+4.8. Visualization of the LIF neuron
+The LIF neuron transforms the signals processed by the spatial and 
+temporal convolutional layers into sparse spike sequences, to obtain 
+rate-based features.
+Fig.  4 shows 𝑡-SNE visualizations of data before and after the LIF 
+neuron for some representative users. Clearly, the feature distribu-
+tions of different classes become more separated after the LIF neuron, 
+facilitating classification.
+5. Conclusions
+This paper has proposed a lightweight SNN model for EEG-based 
+MI classification. It employs a spatial convolutional layer to restructure 
+EEGs, and a temporal convolutional layer to perform filtering. Next, 
+a trainable LIF neuron adaptively encodes spikes, capturing spatial 
+and temporal information. Finally, a rate-based decoder and a fully 
+connected layer are utilized for classification.
+Compared with four CNN models, our proposed SNN model per-
+formed the best in both within-subject and cross-subject MI classifi-
+cations on three public datasets, with fewer parameters, lower energy 
+consumption, and better biological interpretability. Compared with ex-
+isting SNNs, our model eliminates the need for hyperparameter tuning 
+on different datasets, making it more convenient to use.
+While the proposed model demonstrates promising performance, 
+several limitations remain:
+• The evaluation was conducted solely on publicly available data-
+sets, leaving its generalizability to real-world scenarios unveri-
+fied.
+• Despite its lightweight design, the model may face increased 
+computational demands with high-channel-density EEGs.
+• The robustness and generalizability across heterogeneous datasets 
+have not been thoroughly investigated.
+Future work will address these limitations by:
+• Deploying the model on neuromorphic hardware and validating 
+it in real-world applications.
+• Further optimizing the model architecture to improve efficiency 
+and scalability for high-channel-density EEGs.
+• Developing MI classification models with enhanced robustness 
+and transferability across heterogeneous datasets.
+CRediT authorship contribution statement
+Herui Zhang: Writing – review & editing, Writing – original draft, 
+Visualization, Validation, Software, Methodology, Investigation, Con-
+ceptualization. Haoran Wang: Writing – original draft. Jiayu An: Writ-
+ing – original draft. Shitao Zheng: Writing – original draft. Dongrui 
+Wu: Writing – review & editing, Writing – original draft, Supervision.
+Declaration of competing interest
+The authors declare that they have no known competing finan-
+cial interests or personal relationships that could have appeared to 
+influence the work reported in this paper.
+Acknowledgment
+This research was supported by STI 2030-Major Project
+2021ZD0201300.
+Neural Networks 191 (2025) 107741 
+5 
+H. Zhang et al.
+Fig. 3. Spectrum of temporal convolution and the corresponding topology of spatial convolution, using Subject 3 in MI1 as an example. Darker portions in the spectrum vector 
+indicate frequency components closer to 0. The topology graph utilizes heatmaps to display the degree of ‘attention’ across different brain regions. The two layers extract information 
+from different brain regions and frequency components.
+Fig. 4. 𝑡-SNE visualizations of data before and after the LIF neuron. (a) Subject 3 in 
+MI1; (b) Subject 3 in MI2; (c) Subject 8 in MI3.
+References
+Ang, K. K., Chin, Z. Y., Wang, C., Guan, C., & Zhang, H. (2012). Filter bank common 
+spatial pattern algorithm on BCI competition IV datasets 2a and 2b. Frontiers in 
+Neuroscience, 6(39).
+Brunner, C., Leeb, R., Müller-Putz, G., Schlögl, A., & Pfurtscheller, G. (2008). 16, 
+BCI competition 2008–graz data set A (pp. 1–6). Institute for Knowledge Discovery 
+(Laboratory of brain–computer Interfaces), Graz University of Technology.
+Chakraborty, I., Saha, G., Sengupta, A., & Roy, K. (2018). Toward fast neural computing 
+using all-photonic phase change spiking neurons. Scientific Reports, 8(12980).
+Cheng, L., Li, W., Liang, L., Zhou, J., & Zhang, Q. (2025). Hybrid bci robotic arm 
+control system based on mi and ssvep. Biomedical Signal Processing and Control, 
+104, Article 107477.
+Deng, L., Wu, Y., Hu, X., Liang, L., Ding, Y., Li, G., Zhao, G., Li, P., & Xie, Y. (2020). 
+Rethinking the performance comparison between SNNS and ANNS. Neural Networks, 
+121, 294–307.
+Fang, W., Chen, Y., Ding, J., Yu, Z., Masquelier, T., Chen, D., Huang, L., Zhou, H., Li, G., 
+& Tian, Y. (2023). Spikingjelly: An open-source machine learning infrastructure 
+platform for spike-based intelligence. Science Advances, 9, Article eadi1480.
+Fang, W., Yu, Z., Chen, Y., Masquelier, T., Huang, T., & Tian, Y. (2021). Incorporating 
+learnable membrane time constant to enhance learning of spiking neural networks. 
+In Proc. of the IEEE/CVF int’l conf. on computer vision, virtual event (pp. 2661–2671).
+Fernández-Rodríguez, Á., Velasco-Álvarez, F., & Ron-Angevin, R. (2016). Review of real 
+brain-controlled wheelchairs. Journal of Neural Engineering, 13, Article 061001.
+Forno, E., Fra, V., Pignari, R., Macii, E., & Urgese, G. (2022). Spike encoding techniques 
+for IoT time-varying signals benchmarked on a neuromorphic classification task. 
+Frontiers in Neuroscience, 16, Article 999029.
+Fourcaud-Trocmé, N., Hansel, D., Van Vreeswijk, C., & Brunel, N. (2003). How spike 
+generation mechanisms determine the neuronal response to fluctuating inputs. 
+Journal of Neuroscience, 23, 11628–11640.
+Gerstner, W., Kistler, W. M., Naud, R., & Paninski, L. (2014). Neuronal dynamics: 
+From single neurons to networks and models of cognition. Cambridge, UK: Cambridge 
+University Press.
+Gong, P., Wang, P., Zhou, Y., & Zhang, D. (2023). A spiking neural network with 
+adaptive graph convolution and LSTM for EEG-based brain–computer interfaces. 
+IEEE Transactions on Neural Systems and Rehabilitation Engineering, 31, 1440–1450.
+Hameed, I., Khan, D. M., Ahmed, S. M., Aftab, S. S., & Fazal, H. (2025). Enhancing 
+motor imagery EEG signal decoding through machine learning: A systematic review 
+of recent progress. Computers in Biology and Medicine, 185, Article 109534.
+Hamel-Thibault, A., Thénault, F., Whittingstall, K., & Bernier, P. M. (2018). Delta-band 
+oscillations in motor regions predict hand selection for reaching. Cerebral Cortex, 
+28, 574–584.
+Neural Networks 191 (2025) 107741 
+6 
+H. Zhang et al.
+He, H., & Wu, D. (2020). Transfer learning for brain–computer interfaces: A euclidean 
+space data alignment approach. IEEE Transactions on Biomedical Engineering, 67, 
+399–410.
+Izhikevich, E. (2004). Which model to use for cortical spiking neurons? IEEE 
+Transactions on Neural Networks, 15, 1063–1070.
+Karamimanesh, M., Abiri, E., Shahsavari, M., Hassanli, K., van Schaik, A., & 
+Eshraghian, J. (2025). Spiking neural networks on fpga: A survey of methodologies 
+and recent advancements. Neural Networks, Article 107256.
+Kartsch, V., Tagliavini, G., Guermandi, M., Benatti, S., Rossi, D., & Benini, L. (2019). 
+Biowolf: A sub-10-mw 8-channel advanced brain–computer interface platform with 
+a nine-core processor and ble connectivity. IEEE Transactions on Biomedical Circuits 
+and Systems, 13, 893–906.
+Kugele, A., Pfeil, T., Pfeiffer, M., & Chicca, E. (2020). Efficient processing of spatio-
+temporal data streams with spiking neural networks. Frontiers in Neuroscience, 
+14(439).
+Kumar, N., Tang, G., Yoo, R., & Michmizos, K. P. (2022). Decoding EEG with spiking 
+neural networks on neuromorphic hardware. Transactions on Machine Learning 
+Research.
+Latham, P. E., Richmond, B., Nelson, P., & Nirenberg, S. (2000). Intrinsic dynamics in 
+neuronal networks. I. Theory. Journal of Neurophysiology, 83, 808–827.
+Lawhern, V. J., Solon, A. J., Waytowich, N. R., Gordon, S. M., Hung, C. P., & 
+Lance, B. J. (2018). EEGNet: a compact convolutional neural network for EEG-based 
+brain–computer interfaces. Journal of Neural Engineering, 15, Article 056013.
+Li, Y., Shen, H., & Hu, D. (2022). A spiking neural network for brain–computer interface 
+of four classes motor imagery. In Int’l workshop on human brain and artificial 
+intelligence (pp. 148–160).
+Liao, X., Li, G., Wang, Y., Sun, L., & Zhang, H. (2025). Constructing lightweight 
+and efficient spiking neural networks for eeg-based motor imagery classification. 
+Biomedical Signal Processing and Control, 100, Article 107000.
+Lobo, J. L., Ser, J. D., Bifet, A., & Kasabov, N. (2020). Spiking neural networks and 
+online learning: An overview and perspectives. Neural Networks, 121, 88–100.
+López-Larraz, E., Sarasola-Sanz, A., Irastorza-Landa, N., Birbaumer, N., & Ramos-
+Murguialday, A. (2018). Brain-machine interfaces for rehabilitation in stroke: A 
+review. NeuroRehabilitation, 43, 77–97.
+Mane, R., Chew, E., Chua, K., Ang, K. K., Robinson, N., Vinod, A. P., Lee, S. 
+W., & Guan, C. (2021). FBCNet: A multi-view convolutional neural network for 
+brain–computer interface. arXiv preprint arXiv:2104.01233.
+Neftci, E. O., Mostafa, H., & Zenke, F. (2019). Surrogate gradient learning in spiking 
+neural networks: Bringing the power of gradient-based optimization to spiking 
+neural networks. IEEE Signal Processing Magazine, 36, 51–63.
+Schirrmeister, R. T., Springenberg, J. T., Fiederer, L. D. J., Glasstetter, M., 
+Eggensperger, K., Tangermann, M., Hutter, F., Burgard, W., & Ball, T. (2017). Deep 
+learning with convolutional neural networks for EEG decoding and visualization. 
+Human Brain Mapping, 38, 5391–5420.
+Shan, Y., Zhang, M., Zhu, R. j., Qiu, X., Eshraghian, J. K., & Qu, H. (2025). Advancing 
+spiking neural networks towards multiscale spatiotemporal interaction learning. In 
+Proc. of the AAAI conf. on artificial intelligence (pp. 1501–1509).
+Shi, J., Zhao, Y., Wang, C., Zeng, H., & Dai, G. (2025). Eegsnet: A novel eeg cognitive 
+recognition model using spiking neural network. Biomedical Signal Processing and 
+Control, 105, Article 107610.
+Steyrl, D., Scherer, R., Faller, J., & Müller-Putz, G. R. (2016). Random forests in non-
+invasive sensorimotor rhythm brain–computer interfaces: a practical and convenient 
+non-linear classifier. Biomedical Engineering/Biomedizinische Technik, 61, 77–86.
+Tang, G., Kumar, N., Yoo, R., & Michmizos, K. (2021). Deep reinforcement learning 
+with population-coded spiking neural network for continuous control. In Conf. on 
+robot learning (pp. 2016–2029).
+Tavanaei, A., Ghodrati, M., Kheradpisheh, S. R., Masquelier, T., & Maida, A. (2019). 
+Deep learning in spiking neural networks. Neural Networks, 111, 47–63.
+Virgilio, G., C.D. Sossa, A., J.H. Antelis, J. M., & Falcón, L. E. (2020). Spiking 
+neural networks applied to the classification of motor tasks in EEG signals. Neural 
+Networks, 122, 130–143.
+Wang, H., Tang, C., Xu, T., Li, T., Xu, L., Yue, H., Chen, P., Li, J., & Bezerianos, A. 
+(2020). An approach of one-vs-rest filter bank common spatial pattern and 
+spiking neural networks for multiple motor imagery decoding. IEEE Access, 8, 
+86850–86861.
+Wu, Y., Deng, L., Li, G., Zhu, J., Xie, Y., & Shi, L. (2019). Direct training for spiking 
+neural networks: Faster, larger, better. In Proc. of the AAAI conf. on artificial 
+intelligence (pp. 1311–1318).
+Wu, X., Feng, Y., Lou, S., Zheng, H., Hu, B., Hong, Z., & Tan, J. (2023). Improving 
+NeuCube spiking neural network for EEG-based pattern recognition using transfer 
+learning. Neurocomputing, 529, 222–235.
+Wu, D., Jiang, X., & Peng, R. (2022). Transfer learning for motor imagery based 
+brain–computer interfaces: A tutorial. Neural Networks, 153, 235–253.
+Wu, Z., Zhang, H., Lin, Y., Li, G., Wang, M., & Tang, Y. (2021). LIAF-Net: Leaky 
+integrate and analog fire network for lightweight and efficient spatiotemporal 
+information processing. IEEE Transactions on Neural Networks and Learning Systems, 
+33, 6249–6262.
+Xiao, Y., Liu, Y., Zhang, B., Chen, P., Zhu, H., He, E., Zhao, J., Huo, W., 
+Jin, X., Zhang, X., et al. (2025). Bio-plausible reconfigurable spiking neuron for 
+neuromorphic computing. Science Advances, 11, Article eadr6733.
+Yao, X., Li, F., Mo, Z., & Cheng, J. (2022). GLIF: A unified gated leaky integrate-and-
+fire neuron for spiking neural networks. In Advances in neural information processing 
+systems (pp. 32160–32171).
+Yao, M., Zhao, G., Zhang, H., Hu, Y., Deng, L., Tian, Y., Xu, B., & Li, G. (2023). 
+Attention spiking neural networks. IEEE Transactions on Pattern Analysis and Machine 
+Intelligence, 45, 9393–9410.
+Yi, W., Qiu, S., Wang, K., Qi, H., Zhang, L., Zhou, P., He, F., & Ming, D. (2014). 
+Evaluation of EEG oscillatory patterns and cognitive process during simple and 
+compound limb motor imagery. PLoS One, 9, Article e114853.
+Yu, Q., Ma, C., Song, S., Zhang, G., Dang, J., & Tan, K. C. (2022). Constructing accurate 
+and efficient deep spiking neural networks with double-threshold and augmented 
+schemes. IEEE Transactions on Neural Networks and Learning Systems, 33, 1714–1726.
+Neural Networks 191 (2025) 107741 
+7 

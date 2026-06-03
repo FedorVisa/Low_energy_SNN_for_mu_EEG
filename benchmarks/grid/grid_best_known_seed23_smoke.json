@@ -1,0 +1,24 @@
+{
+  "dataset": 0,
+  "model": "CUPY_SNN_LIF_READOUT",
+  "epoch": 2,
+  "epoch2": 1,
+  "batch_size": 128,
+  "trial_num": 1,
+  "seed": 23,
+  "subjects": [
+    1
+  ],
+  "variants": [
+    "best_known"
+  ],
+  "runs": [
+    {
+      "subject": 1,
+      "variant": "best_known",
+      "return_code": 0,
+      "accuracy": 0.4201,
+      "log_path": "benchmarks\\grid\\logs_best_known_seed23_smoke\\subject1_best_known_20260504_183146.log"
+    }
+  ]
+}

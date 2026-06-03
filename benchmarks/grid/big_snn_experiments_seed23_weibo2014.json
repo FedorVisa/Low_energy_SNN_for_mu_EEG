@@ -1,0 +1,2509 @@
+{
+  "params": {
+    "python": "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+    "dataset": 2,
+    "device": 0,
+    "seed": 23,
+    "batch_size": 16,
+    "lr": 0.003,
+    "lr2": 0.0001,
+    "patience": 120,
+    "max_trial_num": 8,
+    "max_epoch": 1500,
+    "max_epoch2": 600,
+    "max_patience": 200,
+    "tune_trial_num": 1,
+    "tune_epoch": 300,
+    "tune_epoch2": 100,
+    "skip_tune": false,
+    "log_dir": "logs\\training\\big_snn_experiments_weibo2014",
+    "out_json": "benchmarks\\grid\\big_snn_experiments_seed23_weibo2014.json"
+  },
+  "results": [
+    {
+      "name": "max_lif_readout_seed23_adamw_lr3e3",
+      "model": "CUPY_SNN_LIF_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 7364.18,
+      "log_path": "logs\\training\\big_snn_experiments_weibo2014\\max_lif_readout_seed23_adamw_lr3e3_20260517_201815.log",
+      "summary": {
+        "model": "CUPY_SNN_LIF_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 2,
+          "device": 0,
+          "dropout": 0.1,
+          "encoder_scale": 1.0,
+          "encoder_threshold": 0.5,
+          "epoch": 1500,
+          "epoch2": 600,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 2.5,
+          "lif_v_threshold": 0.5,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_LIF_READOUT",
+          "optimizer": "adamw",
+          "patience": 200,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "max_lif_readout_seed23_adamw_lr3e3",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 8,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 50.42,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 52.5,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 35.0,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 50.42,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 40.0,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 54.290000000000006,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 44.17,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 77.08,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 78.33,
+            "seed": 23,
+            "subject": 9
+          },
+          {
+            "accuracy": 51.24999999999999,
+            "seed": 23,
+            "subject": 10
+          },
+          {
+            "accuracy": 49.58,
+            "seed": 24,
+            "subject": 1
+          },
+          {
+            "accuracy": 47.5,
+            "seed": 24,
+            "subject": 2
+          },
+          {
+            "accuracy": 36.67,
+            "seed": 24,
+            "subject": 3
+          },
+          {
+            "accuracy": 52.5,
+            "seed": 24,
+            "subject": 4
+          },
+          {
+            "accuracy": 40.83,
+            "seed": 24,
+            "subject": 5
+          },
+          {
+            "accuracy": 50.0,
+            "seed": 24,
+            "subject": 6
+          },
+          {
+            "accuracy": 40.0,
+            "seed": 24,
+            "subject": 7
+          },
+          {
+            "accuracy": 75.0,
+            "seed": 24,
+            "subject": 8
+          },
+          {
+            "accuracy": 79.58,
+            "seed": 24,
+            "subject": 9
+          },
+          {
+            "accuracy": 53.75,
+            "seed": 24,
+            "subject": 10
+          },
+          {
+            "accuracy": 51.24999999999999,
+            "seed": 25,
+            "subject": 1
+          },
+          {
+            "accuracy": 49.17,
+            "seed": 25,
+            "subject": 2
+          },
+          {
+            "accuracy": 36.25,
+            "seed": 25,
+            "subject": 3
+          },
+          {
+            "accuracy": 47.08,
+            "seed": 25,
+            "subject": 4
+          },
+          {
+            "accuracy": 45.0,
+            "seed": 25,
+            "subject": 5
+          },
+          {
+            "accuracy": 53.81,
+            "seed": 25,
+            "subject": 6
+          },
+          {
+            "accuracy": 43.75,
+            "seed": 25,
+            "subject": 7
+          },
+          {
+            "accuracy": 73.33,
+            "seed": 25,
+            "subject": 8
+          },
+          {
+            "accuracy": 80.42,
+            "seed": 25,
+            "subject": 9
+          },
+          {
+            "accuracy": 55.83,
+            "seed": 25,
+            "subject": 10
+          },
+          {
+            "accuracy": 52.5,
+            "seed": 26,
+            "subject": 1
+          },
+          {
+            "accuracy": 49.58,
+            "seed": 26,
+            "subject": 2
+          },
+          {
+            "accuracy": 35.83,
+            "seed": 26,
+            "subject": 3
+          },
+          {
+            "accuracy": 55.00000000000001,
+            "seed": 26,
+            "subject": 4
+          },
+          {
+            "accuracy": 41.25,
+            "seed": 26,
+            "subject": 5
+          },
+          {
+            "accuracy": 49.05,
+            "seed": 26,
+            "subject": 6
+          },
+          {
+            "accuracy": 39.17,
+            "seed": 26,
+            "subject": 7
+          },
+          {
+            "accuracy": 67.5,
+            "seed": 26,
+            "subject": 8
+          },
+          {
+            "accuracy": 77.08,
+            "seed": 26,
+            "subject": 9
+          },
+          {
+            "accuracy": 55.83,
+            "seed": 26,
+            "subject": 10
+          },
+          {
+            "accuracy": 50.83,
+            "seed": 27,
+            "subject": 1
+          },
+          {
+            "accuracy": 50.0,
+            "seed": 27,
+            "subject": 2
+          },
+          {
+            "accuracy": 36.67,
+            "seed": 27,
+            "subject": 3
+          },
+          {
+            "accuracy": 53.75,
+            "seed": 27,
+            "subject": 4
+          },
+          {
+            "accuracy": 39.17,
+            "seed": 27,
+            "subject": 5
+          },
+          {
+            "accuracy": 52.86,
+            "seed": 27,
+            "subject": 6
+          },
+          {
+            "accuracy": 38.75,
+            "seed": 27,
+            "subject": 7
+          },
+          {
+            "accuracy": 72.92,
+            "seed": 27,
+            "subject": 8
+          },
+          {
+            "accuracy": 78.33,
+            "seed": 27,
+            "subject": 9
+          },
+          {
+            "accuracy": 52.5,
+            "seed": 27,
+            "subject": 10
+          },
+          {
+            "accuracy": 52.5,
+            "seed": 28,
+            "subject": 1
+          },
+          {
+            "accuracy": 46.67,
+            "seed": 28,
+            "subject": 2
+          },
+          {
+            "accuracy": 39.58,
+            "seed": 28,
+            "subject": 3
+          },
+          {
+            "accuracy": 55.42,
+            "seed": 28,
+            "subject": 4
+          },
+          {
+            "accuracy": 40.42,
+            "seed": 28,
+            "subject": 5
+          },
+          {
+            "accuracy": 60.0,
+            "seed": 28,
+            "subject": 6
+          },
+          {
+            "accuracy": 38.33,
+            "seed": 28,
+            "subject": 7
+          },
+          {
+            "accuracy": 77.5,
+            "seed": 28,
+            "subject": 8
+          },
+          {
+            "accuracy": 79.17,
+            "seed": 28,
+            "subject": 9
+          },
+          {
+            "accuracy": 54.169999999999995,
+            "seed": 28,
+            "subject": 10
+          },
+          {
+            "accuracy": 50.42,
+            "seed": 29,
+            "subject": 1
+          },
+          {
+            "accuracy": 48.33,
+            "seed": 29,
+            "subject": 2
+          },
+          {
+            "accuracy": 36.67,
+            "seed": 29,
+            "subject": 3
+          },
+          {
+            "accuracy": 55.00000000000001,
+            "seed": 29,
+            "subject": 4
+          },
+          {
+            "accuracy": 43.33,
+            "seed": 29,
+            "subject": 5
+          },
+          {
+            "accuracy": 52.86,
+            "seed": 29,
+            "subject": 6
+          },
+          {
+            "accuracy": 44.17,
+            "seed": 29,
+            "subject": 7
+          },
+          {
+            "accuracy": 76.25,
+            "seed": 29,
+            "subject": 8
+          },
+          {
+            "accuracy": 78.75,
+            "seed": 29,
+            "subject": 9
+          },
+          {
+            "accuracy": 49.58,
+            "seed": 29,
+            "subject": 10
+          },
+          {
+            "accuracy": 50.0,
+            "seed": 30,
+            "subject": 1
+          },
+          {
+            "accuracy": 50.42,
+            "seed": 30,
+            "subject": 2
+          },
+          {
+            "accuracy": 32.92,
+            "seed": 30,
+            "subject": 3
+          },
+          {
+            "accuracy": 50.42,
+            "seed": 30,
+            "subject": 4
+          },
+          {
+            "accuracy": 40.83,
+            "seed": 30,
+            "subject": 5
+          },
+          {
+            "accuracy": 53.81,
+            "seed": 30,
+            "subject": 6
+          },
+          {
+            "accuracy": 41.25,
+            "seed": 30,
+            "subject": 7
+          },
+          {
+            "accuracy": 72.08,
+            "seed": 30,
+            "subject": 8
+          },
+          {
+            "accuracy": 80.83,
+            "seed": 30,
+            "subject": 9
+          },
+          {
+            "accuracy": 46.67,
+            "seed": 30,
+            "subject": 10
+          }
+        ],
+        "result_mean": 53.021,
+        "result_std": 0.7674890878703093,
+        "run_name": "max_lif_readout_seed23_adamw_lr3e3",
+        "trial_means": [
+          53.34599999999999,
+          52.541,
+          53.589,
+          52.278999999999996,
+          52.577999999999996,
+          54.376,
+          53.536,
+          51.923
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "2",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_LIF_READOUT",
+        "--trial_num",
+        "8",
+        "--seed",
+        "23",
+        "--epoch",
+        "1500",
+        "--epoch2",
+        "600",
+        "--patience",
+        "200",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "max_lif_readout_seed23_adamw_lr3e3",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0"
+      ]
+    },
+    {
+      "name": "signed_mlp_thr030_scale10_layers2_do00",
+      "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 493.25,
+      "log_path": "logs\\training\\big_snn_experiments_weibo2014\\signed_mlp_thr030_scale10_layers2_do00_20260517_222059.log",
+      "summary": {
+        "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 2,
+          "device": 0,
+          "dropout": 0.0,
+          "encoder_scale": 1.0,
+          "encoder_threshold": 0.3,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 2.5,
+          "lif_v_threshold": 0.5,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "signed_mlp_thr030_scale10_layers2_do00",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 48.75,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 31.25,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 27.500000000000004,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 36.67,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 27.92,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 40.949999999999996,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 40.42,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 36.67,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 58.330000000000005,
+            "seed": 23,
+            "subject": 9
+          },
+          {
+            "accuracy": 32.08,
+            "seed": 23,
+            "subject": 10
+          }
+        ],
+        "result_mean": 38.053999999999995,
+        "result_std": 0.0,
+        "run_name": "signed_mlp_thr030_scale10_layers2_do00",
+        "trial_means": [
+          38.053999999999995
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "2",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "signed_mlp_thr030_scale10_layers2_do00",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--encoder_threshold",
+        "0.3",
+        "--encoder_scale",
+        "1.0",
+        "--hidden_layers",
+        "2",
+        "--dropout",
+        "0.0",
+        "--lif_v_threshold",
+        "0.5"
+      ]
+    },
+    {
+      "name": "signed_mlp_thr030_scale15_layers2_do00",
+      "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 493.6,
+      "log_path": "logs\\training\\big_snn_experiments_weibo2014\\signed_mlp_thr030_scale15_layers2_do00_20260517_222912.log",
+      "summary": {
+        "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 2,
+          "device": 0,
+          "dropout": 0.0,
+          "encoder_scale": 1.5,
+          "encoder_threshold": 0.3,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 2.5,
+          "lif_v_threshold": 0.5,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "signed_mlp_thr030_scale15_layers2_do00",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 40.42,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 33.33,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 29.580000000000002,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 36.25,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 31.669999999999998,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 40.48,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 40.42,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 34.17,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 61.67,
+            "seed": 23,
+            "subject": 9
+          },
+          {
+            "accuracy": 34.17,
+            "seed": 23,
+            "subject": 10
+          }
+        ],
+        "result_mean": 38.216,
+        "result_std": 0.0,
+        "run_name": "signed_mlp_thr030_scale15_layers2_do00",
+        "trial_means": [
+          38.216
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "2",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "signed_mlp_thr030_scale15_layers2_do00",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--encoder_threshold",
+        "0.3",
+        "--encoder_scale",
+        "1.5",
+        "--hidden_layers",
+        "2",
+        "--dropout",
+        "0.0",
+        "--lif_v_threshold",
+        "0.5"
+      ]
+    },
+    {
+      "name": "signed_mlp_thr020_scale15_layers2_do00",
+      "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 440.07,
+      "log_path": "logs\\training\\big_snn_experiments_weibo2014\\signed_mlp_thr020_scale15_layers2_do00_20260517_223726.log",
+      "summary": {
+        "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 2,
+          "device": 0,
+          "dropout": 0.0,
+          "encoder_scale": 1.5,
+          "encoder_threshold": 0.2,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 2.5,
+          "lif_v_threshold": 0.4,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "signed_mlp_thr020_scale15_layers2_do00",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 44.17,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 35.0,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 21.67,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 36.25,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 28.33,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 40.0,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 36.67,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 31.669999999999998,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 59.17,
+            "seed": 23,
+            "subject": 9
+          },
+          {
+            "accuracy": 32.08,
+            "seed": 23,
+            "subject": 10
+          }
+        ],
+        "result_mean": 36.501,
+        "result_std": 0.0,
+        "run_name": "signed_mlp_thr020_scale15_layers2_do00",
+        "trial_means": [
+          36.501
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "2",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "signed_mlp_thr020_scale15_layers2_do00",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--encoder_threshold",
+        "0.2",
+        "--encoder_scale",
+        "1.5",
+        "--hidden_layers",
+        "2",
+        "--dropout",
+        "0.0",
+        "--lif_v_threshold",
+        "0.4"
+      ]
+    },
+    {
+      "name": "signed_mlp_thr020_scale20_layers3_do05",
+      "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 579.88,
+      "log_path": "logs\\training\\big_snn_experiments_weibo2014\\signed_mlp_thr020_scale20_layers3_do05_20260517_224446.log",
+      "summary": {
+        "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 2,
+          "device": 0,
+          "dropout": 0.05,
+          "encoder_scale": 2.0,
+          "encoder_threshold": 0.2,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 3,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 2.5,
+          "lif_v_threshold": 0.4,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "signed_mlp_thr020_scale20_layers3_do05",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 45.0,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 31.669999999999998,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 23.75,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 31.25,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 28.749999999999996,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 47.14,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 41.67,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 36.25,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 64.17,
+            "seed": 23,
+            "subject": 9
+          },
+          {
+            "accuracy": 32.5,
+            "seed": 23,
+            "subject": 10
+          }
+        ],
+        "result_mean": 38.215,
+        "result_std": 0.0,
+        "run_name": "signed_mlp_thr020_scale20_layers3_do05",
+        "trial_means": [
+          38.215
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "2",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "signed_mlp_thr020_scale20_layers3_do05",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--encoder_threshold",
+        "0.2",
+        "--encoder_scale",
+        "2.0",
+        "--hidden_layers",
+        "3",
+        "--dropout",
+        "0.05",
+        "--lif_v_threshold",
+        "0.4"
+      ]
+    },
+    {
+      "name": "signed_mlp_thr010_scale20_layers3_do00",
+      "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 470.03,
+      "log_path": "logs\\training\\big_snn_experiments_weibo2014\\signed_mlp_thr010_scale20_layers3_do00_20260517_225426.log",
+      "summary": {
+        "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 2,
+          "device": 0,
+          "dropout": 0.0,
+          "encoder_scale": 2.0,
+          "encoder_threshold": 0.1,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 3,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 2.5,
+          "lif_v_threshold": 0.3,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "signed_mlp_thr010_scale20_layers3_do00",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 38.75,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 30.0,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 21.25,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 32.92,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 27.500000000000004,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 39.050000000000004,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 38.75,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 50.83,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 58.75,
+            "seed": 23,
+            "subject": 9
+          },
+          {
+            "accuracy": 35.0,
+            "seed": 23,
+            "subject": 10
+          }
+        ],
+        "result_mean": 37.28,
+        "result_std": 0.0,
+        "run_name": "signed_mlp_thr010_scale20_layers3_do00",
+        "trial_means": [
+          37.28
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "2",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "signed_mlp_thr010_scale20_layers3_do00",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--encoder_threshold",
+        "0.1",
+        "--encoder_scale",
+        "2.0",
+        "--hidden_layers",
+        "3",
+        "--dropout",
+        "0.0",
+        "--lif_v_threshold",
+        "0.3"
+      ]
+    },
+    {
+      "name": "signed_mlp_thr050_scale20_layers2_do10",
+      "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 487.6,
+      "log_path": "logs\\training\\big_snn_experiments_weibo2014\\signed_mlp_thr050_scale20_layers2_do10_20260517_230216.log",
+      "summary": {
+        "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 2,
+          "device": 0,
+          "dropout": 0.1,
+          "encoder_scale": 2.0,
+          "encoder_threshold": 0.5,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 2.5,
+          "lif_v_threshold": 0.5,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "signed_mlp_thr050_scale20_layers2_do10",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 41.25,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 31.669999999999998,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 27.08,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 30.42,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 29.17,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 41.43,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 36.25,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 39.17,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 58.75,
+            "seed": 23,
+            "subject": 9
+          },
+          {
+            "accuracy": 31.25,
+            "seed": 23,
+            "subject": 10
+          }
+        ],
+        "result_mean": 36.644,
+        "result_std": 0.0,
+        "run_name": "signed_mlp_thr050_scale20_layers2_do10",
+        "trial_means": [
+          36.644
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "2",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_SIGNED_LIF_MLP_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "signed_mlp_thr050_scale20_layers2_do10",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--encoder_threshold",
+        "0.5",
+        "--encoder_scale",
+        "2.0",
+        "--hidden_layers",
+        "2",
+        "--dropout",
+        "0.1",
+        "--lif_v_threshold",
+        "0.5"
+      ]
+    },
+    {
+      "name": "lif_plif_v05_scale25_lr3e3",
+      "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 408.85,
+      "log_path": "logs\\training\\big_snn_experiments_weibo2014\\lif_plif_v05_scale25_lr3e3_20260517_231023.log",
+      "summary": {
+        "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 2,
+          "device": 0,
+          "dropout": 0.1,
+          "encoder_scale": 1.0,
+          "encoder_threshold": 0.5,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 2.5,
+          "lif_v_threshold": 0.5,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "lif_plif_v05_scale25_lr3e3",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 47.5,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 41.67,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 30.42,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 51.67,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 34.58,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 53.33,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 40.42,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 54.58,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 76.25,
+            "seed": 23,
+            "subject": 9
+          },
+          {
+            "accuracy": 42.08,
+            "seed": 23,
+            "subject": 10
+          }
+        ],
+        "result_mean": 47.24999999999999,
+        "result_std": 0.0,
+        "run_name": "lif_plif_v05_scale25_lr3e3",
+        "trial_means": [
+          47.24999999999999
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "2",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "lif_plif_v05_scale25_lr3e3",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--lif_v_threshold",
+        "0.5",
+        "--lif_input_scale",
+        "2.5"
+      ]
+    },
+    {
+      "name": "lif_plif_v03_scale25_lr3e3",
+      "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 393.83,
+      "log_path": "logs\\training\\big_snn_experiments_weibo2014\\lif_plif_v03_scale25_lr3e3_20260517_231712.log",
+      "summary": {
+        "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 2,
+          "device": 0,
+          "dropout": 0.1,
+          "encoder_scale": 1.0,
+          "encoder_threshold": 0.5,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 2.5,
+          "lif_v_threshold": 0.3,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "lif_plif_v03_scale25_lr3e3",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 48.33,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 27.92,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 33.33,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 56.25,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 33.33,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 52.38,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 40.0,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 45.83,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 73.33,
+            "seed": 23,
+            "subject": 9
+          },
+          {
+            "accuracy": 48.33,
+            "seed": 23,
+            "subject": 10
+          }
+        ],
+        "result_mean": 45.903,
+        "result_std": 0.0,
+        "run_name": "lif_plif_v03_scale25_lr3e3",
+        "trial_means": [
+          45.903
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "2",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "lif_plif_v03_scale25_lr3e3",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--lif_v_threshold",
+        "0.3",
+        "--lif_input_scale",
+        "2.5"
+      ]
+    },
+    {
+      "name": "lif_plif_v03_scale40_lr3e3",
+      "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 389.68,
+      "log_path": "logs\\training\\big_snn_experiments_weibo2014\\lif_plif_v03_scale40_lr3e3_20260517_232346.log",
+      "summary": {
+        "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 2,
+          "device": 0,
+          "dropout": 0.1,
+          "encoder_scale": 1.0,
+          "encoder_threshold": 0.5,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 4.0,
+          "lif_v_threshold": 0.3,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "lif_plif_v03_scale40_lr3e3",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 47.92,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 35.42,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 23.330000000000002,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 49.17,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 31.669999999999998,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 53.33,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 37.92,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 46.25,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 70.42,
+            "seed": 23,
+            "subject": 9
+          },
+          {
+            "accuracy": 32.5,
+            "seed": 23,
+            "subject": 10
+          }
+        ],
+        "result_mean": 42.793,
+        "result_std": 0.0,
+        "run_name": "lif_plif_v03_scale40_lr3e3",
+        "trial_means": [
+          42.793
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "2",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "lif_plif_v03_scale40_lr3e3",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--lif_v_threshold",
+        "0.3",
+        "--lif_input_scale",
+        "4.0"
+      ]
+    },
+    {
+      "name": "lif_plif_v02_scale40_lr3e3",
+      "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 361.24,
+      "log_path": "logs\\training\\big_snn_experiments_weibo2014\\lif_plif_v02_scale40_lr3e3_20260517_233016.log",
+      "summary": {
+        "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 2,
+          "device": 0,
+          "dropout": 0.1,
+          "encoder_scale": 1.0,
+          "encoder_threshold": 0.5,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 4.0,
+          "lif_v_threshold": 0.2,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "lif_plif_v02_scale40_lr3e3",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 43.75,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 28.749999999999996,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 23.330000000000002,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 46.67,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 30.42,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 50.949999999999996,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 39.17,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 50.42,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 70.0,
+            "seed": 23,
+            "subject": 9
+          },
+          {
+            "accuracy": 32.92,
+            "seed": 23,
+            "subject": 10
+          }
+        ],
+        "result_mean": 41.638000000000005,
+        "result_std": 0.0,
+        "run_name": "lif_plif_v02_scale40_lr3e3",
+        "trial_means": [
+          41.638000000000005
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "2",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "lif_plif_v02_scale40_lr3e3",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--lif_v_threshold",
+        "0.2",
+        "--lif_input_scale",
+        "4.0"
+      ]
+    },
+    {
+      "name": "lif_plif_v02_scale60_lr3e3",
+      "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 412.42,
+      "log_path": "logs\\training\\big_snn_experiments_weibo2014\\lif_plif_v02_scale60_lr3e3_20260517_233617.log",
+      "summary": {
+        "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 2,
+          "device": 0,
+          "dropout": 0.1,
+          "encoder_scale": 1.0,
+          "encoder_threshold": 0.5,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 6.0,
+          "lif_v_threshold": 0.2,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.003,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "lif_plif_v02_scale60_lr3e3",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 43.33,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 35.0,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 30.830000000000002,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 48.33,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 27.500000000000004,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 55.24,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 34.58,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 50.42,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 67.92,
+            "seed": 23,
+            "subject": 9
+          },
+          {
+            "accuracy": 33.33,
+            "seed": 23,
+            "subject": 10
+          }
+        ],
+        "result_mean": 42.648,
+        "result_std": 0.0,
+        "run_name": "lif_plif_v02_scale60_lr3e3",
+        "trial_means": [
+          42.648
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "2",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.003",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "lif_plif_v02_scale60_lr3e3",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--lif_v_threshold",
+        "0.2",
+        "--lif_input_scale",
+        "6.0"
+      ]
+    },
+    {
+      "name": "lif_plif_v01_scale60_lr5e3",
+      "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+      "return_code": 0,
+      "elapsed_sec": 390.27,
+      "log_path": "logs\\training\\big_snn_experiments_weibo2014\\lif_plif_v01_scale60_lr5e3_20260517_234309.log",
+      "summary": {
+        "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "params": {
+          "EA": false,
+          "T": 1000,
+          "aug_copies": 1,
+          "aug_gaussian_std_max": 0.02,
+          "aug_gaussian_std_min": 0.005,
+          "aug_reverse_prob": 0.0,
+          "aug_scale_max": 1.05,
+          "aug_scale_min": 0.95,
+          "aug_shift_max": 5,
+          "augment_train": true,
+          "batch_size": 16,
+          "beta": 2,
+          "dataset": 2,
+          "device": 0,
+          "dropout": 0.1,
+          "encoder_scale": 1.0,
+          "encoder_threshold": 0.5,
+          "epoch": 300,
+          "epoch2": 100,
+          "hidden_layers": 2,
+          "label_smoothing": 0.0,
+          "lif_input_scale": 6.0,
+          "lif_v_threshold": 0.1,
+          "loo": false,
+          "loss": "ce",
+          "lr": 0.005,
+          "lr2": 0.0001,
+          "model": "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+          "optimizer": "adamw",
+          "patience": 120,
+          "prep": "250Hz_preprocess_eeg/",
+          "readout_adapt_scale": 0.02,
+          "readout_input_scale": 2.5,
+          "readout_tau_adp_scale": 6.0,
+          "readout_v_threshold": 0.2,
+          "run_name": "lif_plif_v01_scale60_lr5e3",
+          "scheduler": "cosine",
+          "seed": 23,
+          "subject_id": 0,
+          "trial_num": 1,
+          "weight_decay": 0.0001
+        },
+        "records": [
+          {
+            "accuracy": 46.25,
+            "seed": 23,
+            "subject": 1
+          },
+          {
+            "accuracy": 35.0,
+            "seed": 23,
+            "subject": 2
+          },
+          {
+            "accuracy": 32.5,
+            "seed": 23,
+            "subject": 3
+          },
+          {
+            "accuracy": 45.0,
+            "seed": 23,
+            "subject": 4
+          },
+          {
+            "accuracy": 34.17,
+            "seed": 23,
+            "subject": 5
+          },
+          {
+            "accuracy": 50.949999999999996,
+            "seed": 23,
+            "subject": 6
+          },
+          {
+            "accuracy": 37.92,
+            "seed": 23,
+            "subject": 7
+          },
+          {
+            "accuracy": 17.919999999999998,
+            "seed": 23,
+            "subject": 8
+          },
+          {
+            "accuracy": 74.17,
+            "seed": 23,
+            "subject": 9
+          },
+          {
+            "accuracy": 35.0,
+            "seed": 23,
+            "subject": 10
+          }
+        ],
+        "result_mean": 40.888000000000005,
+        "result_std": 0.0,
+        "run_name": "lif_plif_v01_scale60_lr5e3",
+        "trial_means": [
+          40.888000000000005
+        ]
+      },
+      "command": [
+        "C:\\Users\\Kotozavrik\\anaconda3\\envs\\small_snn_rtx\\python.exe",
+        "run_official_lif_readout.py",
+        "--dataset",
+        "2",
+        "--device",
+        "0",
+        "--model",
+        "CUPY_SNN_LIF_PLIF_LIF_READOUT",
+        "--trial_num",
+        "1",
+        "--seed",
+        "23",
+        "--epoch",
+        "300",
+        "--epoch2",
+        "100",
+        "--patience",
+        "120",
+        "--batch_size",
+        "16",
+        "--lr",
+        "0.005",
+        "--lr2",
+        "0.0001",
+        "--run_name",
+        "lif_plif_v01_scale60_lr5e3",
+        "--optimizer",
+        "adamw",
+        "--weight_decay",
+        "0.0001",
+        "--scheduler",
+        "cosine",
+        "--augment_train",
+        "--aug_reverse_prob",
+        "0.0",
+        "--aug_gaussian_std_min",
+        "0.005",
+        "--aug_gaussian_std_max",
+        "0.02",
+        "--aug_scale_min",
+        "0.95",
+        "--aug_scale_max",
+        "1.05",
+        "--aug_shift_max",
+        "5",
+        "--lif_v_threshold",
+        "0.1",
+        "--lif_input_scale",
+        "6.0"
+      ]
+    }
+  ]
+}
