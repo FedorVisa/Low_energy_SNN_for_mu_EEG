@@ -6,6 +6,7 @@ import json
 import math
 import re
 import subprocess
+import sys
 import threading
 import time
 from pathlib import Path
@@ -14,6 +15,10 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Patch
 import pandas as pd
 import torch
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
 from tools import functional
 from src.models.ConvNet import ShallowConvNet, deepconv

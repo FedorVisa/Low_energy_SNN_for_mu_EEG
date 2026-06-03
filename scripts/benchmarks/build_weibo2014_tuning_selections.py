@@ -5,12 +5,12 @@ from copy import deepcopy
 from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parent
-GRID_JSON = ROOT / "benchmarks" / "grid" / "big_snn_experiments_seed23_weibo2014.json"
-SHORT_JSON = ROOT / "benchmarks" / "grid" / "subject_tuning_lif_weibo2014_seed28_short.json"
-WEAK_JSON = ROOT / "benchmarks" / "grid" / "subject_tuning_lif_weibo2014_seed28_weak.json"
-COMBINED_OUT = ROOT / "benchmarks" / "grid" / "subject_tuning_lif_weibo2014_seed28_combined_tune.json"
-TARGET_OUT = ROOT / "benchmarks" / "grid" / "subject_tuning_lif_weibo2014_seed28_target_merged.json"
+ROOT = Path(__file__).resolve().parents[2]
+GRID_JSON = ROOT / "benchmarks" / "results" / "grid" / "big_snn_experiments_seed23_weibo2014.json"
+SHORT_JSON = ROOT / "benchmarks" / "results" / "grid" / "subject_tuning_lif_weibo2014_seed28_short.json"
+WEAK_JSON = ROOT / "benchmarks" / "results" / "grid" / "subject_tuning_lif_weibo2014_seed28_weak.json"
+COMBINED_OUT = ROOT / "benchmarks" / "results" / "grid" / "subject_tuning_lif_weibo2014_seed28_combined_tune.json"
+TARGET_OUT = ROOT / "benchmarks" / "results" / "grid" / "subject_tuning_lif_weibo2014_seed28_target_merged.json"
 
 
 def load_json(path):

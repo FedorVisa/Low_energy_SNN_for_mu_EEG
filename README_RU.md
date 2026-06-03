@@ -53,6 +53,7 @@ SnnForMI - исследовательский проект для классиф
 - `src/data/`: загрузчики датасетов, препроцессинг, Euclidean alignment, filterbank-подготовка и PyTorch dataset wrapper.
 - `src/models/`: архитектуры EEGNet, ConvNet, FBCNet, Norse и CuPy-based SNN.
 - `src/training/`: основные training entry points, grid runner'ы, subject tuning и скрипты обучения для отдельных наборов данных.
+- `scripts/`: дополнительные helper scripts для графиков, evaluation, benchmark assembly, загрузки данных и training launchers.
 - `tools/`: низкоуровневый spiking backend, CUDA helpers, surrogate gradients, аугментации и compatibility wrappers.
 - `benchmarks/results/`: отобранные JSON/CSV summaries для таблиц README и plotting scripts.
 - `benchmarks/figures/`: сгенерированные графики, сгруппированные по типу benchmark'а.
@@ -90,13 +91,13 @@ python main.py --dataset 0 --model CUPY_SNN_LIF_READOUT --subject_id 1 --trial_n
 Запуск полного grid по выбранным вариантам:
 
 ```bash
-python run_full_grid.py --dataset 0 --model CUPY_SNN_LIF_READOUT --epoch 1500 --epoch2 600 --batch_size 128 --device 0
+python -m src.training.run_full_grid --dataset 0 --model CUPY_SNN_LIF_READOUT --epoch 1500 --epoch2 600 --batch_size 128 --device 0
 ```
 
 Быстрый smoke grid:
 
 ```bash
-python run_full_grid.py --smoke --subjects 1 --variants aug_base
+python -m src.training.run_full_grid --smoke --subjects 1 --variants aug_base
 ```
 
 ## Примечания

@@ -3,11 +3,16 @@
 import argparse
 import json
 import os
+import sys
 from pathlib import Path
 
 import numpy as np
 import torch
 from torch.utils.data import Dataset
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
 from tools import functional
 from src import models
@@ -216,7 +221,7 @@ def evaluate_one_subject(data_path, args, subject_id, all_confusion):
 
 
 def evaluate(args):
-    data_path = Path(__file__).resolve().parent / "data" / DATASETS[args.dataset] / args.prep
+    data_path = Path(__file__).resolve().parents[2] / "data" / DATASETS[args.dataset] / args.prep
     subject_ids = [args.subject_id] if args.subject_id else list(SUBJECT_RANGES[args.dataset])
     num_classes = OUT_NUM[args.dataset]
 
@@ -296,7 +301,7 @@ def evaluate_selection(args):
         raise ValueError(f"No selected subjects found in {args.selection_json}")
 
     dataset = selected[0][1].dataset
-    data_path = Path(__file__).resolve().parent / "data" / DATASETS[dataset] / selected[0][1].prep
+    data_path = Path(__file__).resolve().parents[2] / "data" / DATASETS[dataset] / selected[0][1].prep
     num_classes = OUT_NUM[dataset]
     all_confusion = np.zeros((num_classes, num_classes), dtype=np.int64)
     subject_confusions = {}

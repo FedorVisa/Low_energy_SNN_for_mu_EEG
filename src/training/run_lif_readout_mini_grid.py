@@ -202,7 +202,7 @@ def main():
     parser.add_argument("--lr2", type=float, default=0.0001)
     parser.add_argument("--variants", default="official_adam,adamw_wd1e4,adamw_cosine_wd1e4,soft_aug_no_reverse_adamw_cosine,soft_aug_reverse_adamw_cosine,soft_aug_no_reverse_label_smooth")
     parser.add_argument("--log_dir", default=os.path.join("logs", "training", "lif_readout_grid"))
-    parser.add_argument("--out_json", default=os.path.join("benchmarks", "grid", "lif_readout_mini_grid.json"))
+    parser.add_argument("--out_json", default=os.path.join("benchmarks", "results", "grid", "lif_readout_mini_grid.json"))
     args = parser.parse_args()
 
     os.makedirs(args.log_dir, exist_ok=True)
@@ -220,7 +220,8 @@ def main():
         log_path = os.path.join(args.log_dir, f"{variant}_{stamp}.log")
         cmd = [
             args.python,
-            "run_official_lif_readout.py",
+            "-m",
+            "src.training.run_official_lif_readout",
             "--dataset",
             str(args.dataset),
             "--device",

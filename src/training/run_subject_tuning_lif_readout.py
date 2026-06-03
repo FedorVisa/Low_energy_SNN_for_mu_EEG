@@ -202,7 +202,8 @@ def run_one(args, subject, spec):
     log_path = os.path.join(args.log_dir, f"{run_name}_{stamp}.log")
     cmd = [
         args.python,
-        "run_official_lif_readout.py",
+        "-m",
+        "src.training.run_official_lif_readout",
         "--dataset", str(args.dataset),
         "--device", str(args.device),
         "--model", "CUPY_SNN_LIF_READOUT",
@@ -278,7 +279,7 @@ def main():
     parser.add_argument("--run_prefix", default="subjtune_lif_seed26")
     parser.add_argument("--preset", default="basic", choices=["basic", "weak_round2", "weibo_short", "weibo_weak"])
     parser.add_argument("--log_dir", default=os.path.join("logs", "training", "subject_tuning"))
-    parser.add_argument("--out_json", default=os.path.join("benchmarks", "grid", "subject_tuning_lif_seed26.json"))
+    parser.add_argument("--out_json", default=os.path.join("benchmarks", "results", "grid", "subject_tuning_lif_seed26.json"))
     args = parser.parse_args()
 
     os.makedirs(args.log_dir, exist_ok=True)

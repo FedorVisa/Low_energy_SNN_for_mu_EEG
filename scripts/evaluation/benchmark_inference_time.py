@@ -2,10 +2,16 @@
 
 import argparse
 import os
+import sys
+from pathlib import Path
 from statistics import mean, pstdev
 
 import torch
 from torch.utils.data import DataLoader
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
 from tools import functional
 from src import models
@@ -37,7 +43,7 @@ def setup_cuda_device(requested_device):
 
 
 def build_data_path(dataset, prep):
-    root = os.path.dirname(os.path.abspath(__file__))
+    root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
     dataset_folder = ['BNCI2014001/', 'BNCI2014002/', 'Weibo2014/'][dataset]
     return os.path.join(root, 'data', dataset_folder, prep)
 

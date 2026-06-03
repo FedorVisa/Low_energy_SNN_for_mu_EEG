@@ -8,14 +8,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-ROOT = Path(__file__).resolve().parent
-MOABB_CSV = ROOT / "benchmarks" / "moabb" / "moabb_benchmark.csv"
-GRID_JSON = ROOT / "benchmarks" / "grid" / "big_snn_experiments_seed23_weibo2014.json"
-BEST_F1_JSON = ROOT / "benchmarks" / "full_eval" / "full_eval_weibo2014_lif_readout_best_seed28.json"
-COMBINED_TUNE_JSON = ROOT / "benchmarks" / "full_eval" / "full_eval_weibo2014_lif_seed28_combined_tune.json"
-TARGET_MERGED_JSON = ROOT / "benchmarks" / "full_eval" / "full_eval_weibo2014_lif_seed28_target_merged.json"
-OUT_DIR = ROOT / "benchmarks" / "model_comparison" / "plots"
-DATA_OUT = ROOT / "benchmarks" / "model_comparison" / "weibo2014_accuracy_f1_plot_data.csv"
+ROOT = Path(__file__).resolve().parents[2]
+MOABB_CSV = ROOT / "benchmarks" / "results" / "moabb" / "moabb_benchmark.csv"
+GRID_JSON = ROOT / "benchmarks" / "results" / "grid" / "big_snn_experiments_seed23_weibo2014.json"
+BEST_F1_JSON = ROOT / "benchmarks" / "results" / "full_eval" / "full_eval_weibo2014_lif_readout_best_seed28.json"
+COMBINED_TUNE_JSON = ROOT / "benchmarks" / "results" / "full_eval" / "full_eval_weibo2014_lif_seed28_combined_tune.json"
+TARGET_MERGED_JSON = ROOT / "benchmarks" / "results" / "full_eval" / "full_eval_weibo2014_lif_seed28_target_merged.json"
+OUT_DIR = ROOT / "benchmarks" / "figures" / "model_comparison"
+DATA_OUT = ROOT / "benchmarks" / "results" / "model_comparison" / "weibo2014_accuracy_f1_plot_data.csv"
 
 
 MOABB_MODELS = {

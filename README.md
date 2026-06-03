@@ -54,6 +54,7 @@ Efficiency snapshot for BNCI2014-001:
 - `src/data/`: dataset downloaders, preprocessing pipelines, Euclidean alignment, filterbank preparation, and the PyTorch dataset wrapper.
 - `src/models/`: EEGNet, ConvNet, FBCNet, Norse, and CuPy-based SNN model architectures.
 - `src/training/`: main training entry points, grid runners, subject tuning scripts, and dataset-specific training scripts.
+- `scripts/`: optional helper scripts for plotting, evaluation, benchmark assembly, data downloads, and training launchers.
 - `tools/`: low-level spiking backend, CUDA helpers, surrogate gradients, augmentations, and compatibility wrappers.
 - `benchmarks/results/`: curated JSON/CSV benchmark summaries used in the README tables and plotting scripts.
 - `benchmarks/figures/`: generated figures grouped by benchmark family.
@@ -91,13 +92,13 @@ python main.py --dataset 0 --model CUPY_SNN_LIF_READOUT --subject_id 1 --trial_n
 Run a full grid over selected variants:
 
 ```bash
-python run_full_grid.py --dataset 0 --model CUPY_SNN_LIF_READOUT --epoch 1500 --epoch2 600 --batch_size 128 --device 0
+python -m src.training.run_full_grid --dataset 0 --model CUPY_SNN_LIF_READOUT --epoch 1500 --epoch2 600 --batch_size 128 --device 0
 ```
 
 Run a smoke grid:
 
 ```bash
-python run_full_grid.py --smoke --subjects 1 --variants aug_base
+python -m src.training.run_full_grid --smoke --subjects 1 --variants aug_base
 ```
 
 ## Notes

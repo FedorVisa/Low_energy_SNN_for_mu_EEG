@@ -33,7 +33,8 @@ def run_one(args, spec):
     log_path = os.path.join(args.log_dir, f"{run_name}_{stamp}.log")
     cmd = [
         args.python,
-        "run_official_lif_readout.py",
+        "-m",
+        "src.training.run_official_lif_readout",
         "--dataset", str(args.dataset),
         "--device", str(args.device),
         "--model", spec["model"],
@@ -176,7 +177,7 @@ def main():
     parser.add_argument("--tune_epoch2", type=int, default=100)
     parser.add_argument("--skip_tune", action="store_true")
     parser.add_argument("--log_dir", default=os.path.join("logs", "training", "big_snn_experiments"))
-    parser.add_argument("--out_json", default=os.path.join("benchmarks", "grid", "big_snn_experiments_seed23.json"))
+    parser.add_argument("--out_json", default=os.path.join("benchmarks", "results", "grid", "big_snn_experiments_seed23.json"))
     args = parser.parse_args()
 
     os.makedirs(args.log_dir, exist_ok=True)

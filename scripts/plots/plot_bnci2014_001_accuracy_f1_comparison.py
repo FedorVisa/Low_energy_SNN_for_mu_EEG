@@ -8,26 +8,26 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-ROOT = Path(__file__).resolve().parent
-MOABB_CSV = ROOT / "benchmarks" / "moabb" / "moabb_benchmark.csv"
-OUT_DIR = ROOT / "benchmarks" / "model_comparison" / "plots"
-DATA_OUT = ROOT / "benchmarks" / "model_comparison" / "bnci2014_001_accuracy_f1_plot_data.csv"
+ROOT = Path(__file__).resolve().parents[2]
+MOABB_CSV = ROOT / "benchmarks" / "results" / "moabb" / "moabb_benchmark.csv"
+OUT_DIR = ROOT / "benchmarks" / "figures" / "model_comparison"
+DATA_OUT = ROOT / "benchmarks" / "results" / "model_comparison" / "bnci2014_001_accuracy_f1_plot_data.csv"
 
 
 PROPOSED = [
     (
         "Предложенная LIF readout\n(без донастройки)",
-        ROOT / "benchmarks" / "full_eval" / "full_eval_lif_readout_best_seed26.json",
+        ROOT / "benchmarks" / "results" / "full_eval" / "full_eval_lif_readout_best_seed26.json",
         "proposed",
     ),
     (
         "Предложенная LIF readout\n(донастройка по субъектам)",
-        ROOT / "benchmarks" / "full_eval" / "full_eval_subject_tuning_lif_seed26_selected.json",
+        ROOT / "benchmarks" / "results" / "full_eval" / "full_eval_subject_tuning_lif_seed26_selected.json",
         "proposed",
     ),
     (
         "Предложенная LIF readout\n(выбор максимума)",
-        ROOT / "benchmarks" / "full_eval" / "full_eval_subject_tuning_lif_seed26_final_merged.json",
+        ROOT / "benchmarks" / "results" / "full_eval" / "full_eval_subject_tuning_lif_seed26_final_merged.json",
         "proposed",
     ),
 ]

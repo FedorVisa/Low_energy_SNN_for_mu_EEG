@@ -3,8 +3,10 @@
 import argparse
 import csv
 import os
+import sys
 import threading
 import time
+from pathlib import Path
 
 import torch
 from pynvml import (
@@ -14,6 +16,10 @@ from pynvml import (
     nvmlShutdown,
 )
 from torch.utils.data import ConcatDataset, DataLoader
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 
 from tools import functional
 from src import models
@@ -176,7 +182,7 @@ def main():
     parser.add_argument("--device", type=int, default=0)
     args = parser.parse_args()
 
-    repo_root = os.path.dirname(os.path.abspath(__file__))
+    repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
     data_root = os.path.join(repo_root, "data", "BNCI2014001", "250Hz_preprocess_eeg")
     if not os.path.isdir(data_root):
         raise RuntimeError(f"Missing data directory: {data_root}")
