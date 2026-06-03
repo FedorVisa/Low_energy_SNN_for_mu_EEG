@@ -54,7 +54,9 @@ SnnForMI - исследовательский проект для классиф
 - `src/models/`: архитектуры EEGNet, ConvNet, FBCNet, Norse и CuPy-based SNN.
 - `src/training/`: основные training entry points, grid runner'ы, subject tuning и скрипты обучения для отдельных наборов данных.
 - `tools/`: низкоуровневый spiking backend, CUDA helpers, surrogate gradients, аугментации и compatibility wrappers.
-- `benchmarks/`: сохраненные результаты benchmark'ов и входные данные для графиков.
+- `benchmarks/results/`: отобранные JSON/CSV summaries для таблиц README и plotting scripts.
+- `benchmarks/figures/`: сгенерированные графики, сгруппированные по типу benchmark'а.
+- `benchmarks/runs/`: локальные сырые логи запусков и scratch experiment traces; обычно не хранятся в Git history.
 - `data/`: raw и preprocessed файлы датасетов.
 
 ## Подготовка Данных

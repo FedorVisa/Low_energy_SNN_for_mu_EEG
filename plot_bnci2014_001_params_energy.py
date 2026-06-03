@@ -420,9 +420,9 @@ def save_power_distribution_plots(trace_df, output_dir):
 
 def main():
     parser = argparse.ArgumentParser(description="BNCI2014_001 accuracy/parameters/power comparison")
-    parser.add_argument("--moabb-csv", default="benchmarks/moabb/moabb_benchmark.csv")
-    parser.add_argument("--proposed-json", default="benchmarks/full_eval/full_trials_plif_vs_lif_accuracy_table.json")
-    parser.add_argument("--output-dir", default="benchmarks/model_efficiency")
+    parser.add_argument("--moabb-csv", default="benchmarks/results/moabb/moabb_benchmark.csv")
+    parser.add_argument("--proposed-json", default="benchmarks/results/full_eval/full_trials_plif_vs_lif_accuracy_table.json")
+    parser.add_argument("--output-dir", default="benchmarks/results/model_efficiency")
     parser.add_argument("--time-step", type=int, default=1000)
     parser.add_argument("--batch-size", type=int, default=128)
     parser.add_argument("--beta", type=float, default=2.0)

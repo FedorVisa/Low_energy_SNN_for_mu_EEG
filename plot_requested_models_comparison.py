@@ -31,7 +31,7 @@ def main():
         )
 
     metrics_df = pd.DataFrame(rows).sort_values("MeanAcc", ascending=False).reset_index(drop=True)
-    metrics_path = Path("benchmarks/model_comparison/requested_models_metrics.csv")
+    metrics_path = Path("benchmarks/results/model_comparison/requested_models_metrics.csv")
     metrics_path.parent.mkdir(parents=True, exist_ok=True)
     metrics_df.to_csv(metrics_path, index=False)
 
@@ -49,7 +49,7 @@ def main():
     plt.xticks(rotation=15)
     plt.tight_layout()
 
-    plot_path = Path("benchmarks/model_comparison/plots/requested_models_bnci2014001_250hz.png")
+    plot_path = Path("benchmarks/figures/model_comparison/requested_models_bnci2014001_250hz.png")
     plot_path.parent.mkdir(parents=True, exist_ok=True)
     plt.savefig(plot_path, dpi=220)
 

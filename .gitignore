@@ -39,6 +39,7 @@ dist/
 # Generated training outputs
 logs/
 benchmarks/**/logs*/
+benchmarks/runs/
 
 # Large local datasets can be restored or regenerated
 /data/*

@@ -32,12 +32,12 @@ def main():
     parser = argparse.ArgumentParser(description="Plot BNCI2014_001 benchmark accuracies")
     parser.add_argument(
         "--csv",
-        default="benchmarks/moabb/moabb_benchmark.csv",
+        default="benchmarks/results/moabb/moabb_benchmark.csv",
         help="Path to moabb benchmark CSV file",
     )
     parser.add_argument(
         "--output",
-        default="benchmarks/moabb/plots/bnci2014_001_accuracy.png",
+        default="benchmarks/figures/moabb/bnci2014_001_accuracy.png",
         help="Output image path",
     )
     parser.add_argument(

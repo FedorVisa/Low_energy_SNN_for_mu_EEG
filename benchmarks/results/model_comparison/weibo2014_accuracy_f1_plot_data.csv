@@ -1,0 +1,17 @@
+model,group,accuracy,macro_f1,source
+"Предложенная LIF readout
+(среднее по 8 seed)",proposed,53.021,nan,benchmarks\results\grid\big_snn_experiments_seed23_weibo2014.json
+"Предложенная LIF readout
+(без tuning, seed 28)",proposed,54.30379746835443,54.079786971478825,benchmarks\results\full_eval\full_eval_weibo2014_lif_readout_best_seed28.json
+"Предложенная LIF readout
+(subject-tuning)",proposed,54.55696202531646,54.401146270468715,benchmarks\results\full_eval\full_eval_weibo2014_lif_seed28_combined_tune.json
+"Предложенная LIF readout
+(target max)",proposed_target,55.56962025316455,55.45904086871231,benchmarks\results\full_eval\full_eval_weibo2014_lif_seed28_target_merged.json
+"Lightweight SNN
+(Zhang et al.)",paper,56.64,nan,A lightweight spiking neural network for EEG-based motor imagery classification
+ShallowConvNet,moabb_conv,48.94,nan,benchmarks\results\moabb\moabb_benchmark.csv
+EEGNet_8_2,moabb_conv,35.35,nan,benchmarks\results\moabb\moabb_benchmark.csv
+EEGNeX,moabb_conv,30.22,nan,benchmarks\results\moabb\moabb_benchmark.csv
+DeepConvNet,moabb_conv,24.17,nan,benchmarks\results\moabb\moabb_benchmark.csv
+EEGITNet,moabb_conv,25.78,nan,benchmarks\results\moabb\moabb_benchmark.csv
+EEGTCNet,moabb_conv,17.95,nan,benchmarks\results\moabb\moabb_benchmark.csv

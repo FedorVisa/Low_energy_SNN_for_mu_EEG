@@ -32,7 +32,7 @@ def main():
         plt.text(x, y + 1.2, label_text, ha="center", va="bottom", fontsize=10)
 
     plt.tight_layout()
-    out_path = Path("benchmarks/model_comparison/plots/requested_models_weibo2014_250hz.png")
+    out_path = Path("benchmarks/figures/model_comparison/requested_models_weibo2014_250hz.png")
     out_path.parent.mkdir(parents=True, exist_ok=True)
     plt.savefig(out_path, dpi=220)
     print(f"Saved plot: {out_path.resolve()}")

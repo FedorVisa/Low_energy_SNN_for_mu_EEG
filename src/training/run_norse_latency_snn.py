@@ -260,7 +260,7 @@ def train_stage_two(model, train_set, validate_set, model_path, train_loss, args
 
 def parse_cupy_reference():
     candidates = []
-    grid_path = Path("benchmarks/grid/big_snn_experiments_seed23.json")
+    grid_path = Path("benchmarks/results/grid/big_snn_experiments_seed23.json")
     if grid_path.exists():
         with grid_path.open("r", encoding="utf-8") as f:
             payload = json.load(f)
@@ -299,7 +299,7 @@ def parse_cupy_reference():
 
 
 def read_cupy_energy_reference():
-    path = Path("benchmarks/model_efficiency/bnci2014_001_params_power_metrics.csv")
+    path = Path("benchmarks/results/model_efficiency/bnci2014_001_params_power_metrics.csv")
     if not path.exists():
         return None
     with path.open("r", encoding="utf-8", newline="") as f:

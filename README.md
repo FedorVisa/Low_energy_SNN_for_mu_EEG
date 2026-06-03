@@ -55,7 +55,9 @@ Efficiency snapshot for BNCI2014-001:
 - `src/models/`: EEGNet, ConvNet, FBCNet, Norse, and CuPy-based SNN model architectures.
 - `src/training/`: main training entry points, grid runners, subject tuning scripts, and dataset-specific training scripts.
 - `tools/`: low-level spiking backend, CUDA helpers, surrogate gradients, augmentations, and compatibility wrappers.
-- `benchmarks/`: stored benchmark summaries and plotting inputs.
+- `benchmarks/results/`: curated JSON/CSV benchmark summaries used in the README tables and plotting scripts.
+- `benchmarks/figures/`: generated figures grouped by benchmark family.
+- `benchmarks/runs/`: local raw run logs and scratch experiment traces; these are kept out of normal Git history.
 - `data/`: raw and preprocessed dataset files.
 
 ## Data Preparation

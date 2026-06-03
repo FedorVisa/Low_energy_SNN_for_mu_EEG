@@ -20,7 +20,7 @@
     "tune_epoch2": 100,
     "skip_tune": true,
     "log_dir": "logs\\training\\big_snn_experiments",
-    "out_json": "benchmarks/grid/lif_readout_stage1only_seed26_20260518_220534.json"
+    "out_json": "benchmarks/results/grid/lif_readout_stage1only_seed26_20260518_220534.json"
   },
   "results": [
     {

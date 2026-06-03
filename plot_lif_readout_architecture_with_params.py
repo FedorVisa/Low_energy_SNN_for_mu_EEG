@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
 
 
-OUTPUT_DIR = Path("benchmarks/model_efficiency/plots")
+OUTPUT_DIR = Path("benchmarks/figures/model_efficiency")
 VERTICAL_OUTPUT = OUTPUT_DIR / "cupy_snn_lif_readout_architecture_vertical_with_params.png"
 HORIZONTAL_OUTPUT = OUTPUT_DIR / "cupy_snn_lif_readout_architecture_horizontal_presentation.png"
 

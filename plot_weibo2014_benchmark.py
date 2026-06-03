@@ -28,8 +28,8 @@ def parse_custom_accuracy(value: str, custom_std: float | None):
 
 def main():
     parser = argparse.ArgumentParser(description="Plot MOABB benchmark accuracies for Weibo2014")
-    parser.add_argument("--csv", default="benchmarks/moabb/moabb_benchmark.csv", help="Path to benchmark CSV file")
-    parser.add_argument("--output", default="benchmarks/moabb/plots/weibo2014_benchmark_accuracy.png", help="Output image path")
+    parser.add_argument("--csv", default="benchmarks/results/moabb/moabb_benchmark.csv", help="Path to benchmark CSV file")
+    parser.add_argument("--output", default="benchmarks/figures/moabb/weibo2014_benchmark_accuracy.png", help="Output image path")
     parser.add_argument("--custom-acc", type=str, default=None, help="Optional custom accuracy: 'mean±std' or 'mean'")
     parser.add_argument("--custom-std", type=float, default=None, help="Optional std when --custom-acc is plain mean")
     parser.add_argument("--custom-label", type=str, default="proposed network", help="Label for custom accuracy")

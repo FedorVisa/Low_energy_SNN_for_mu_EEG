@@ -15,8 +15,8 @@
     "out_json": "benchmarks\\grid\\subject_tuning_lif_seed26.json"
   },
   "source_jsons": [
-    "benchmarks/grid/subject_tuning_lif_seed26.json",
-    "benchmarks/grid/subject_tuning_lif_seed26_round2_weak.json"
+    "benchmarks/results/grid/subject_tuning_lif_seed26.json",
+    "benchmarks/results/grid/subject_tuning_lif_seed26_round2_weak.json"
   ],
   "merge_note": "Best per subject from round1, original global seed26, and round2 weak-subject grid.",
   "results": [

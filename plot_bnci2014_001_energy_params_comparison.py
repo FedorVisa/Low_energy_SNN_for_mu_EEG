@@ -7,8 +7,8 @@ import pandas as pd
 
 
 PROFILE_CSV = Path("bnci2014001_inference_profile.csv")
-OUTPUT_DIR = Path("benchmarks/model_efficiency/plots")
-OUTPUT_DATA = Path("benchmarks/model_efficiency/bnci2014_001_energy_params_plot_data.csv")
+OUTPUT_DIR = Path("benchmarks/figures/model_efficiency")
+OUTPUT_DATA = Path("benchmarks/results/model_efficiency/bnci2014_001_energy_params_plot_data.csv")
 
 DISPLAY_NAMES = {
     "ShallowConvNet": "ShallowConvNet",
